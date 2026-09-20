@@ -14,4 +14,4 @@ if not exist "node_modules" (
 echo جاري تشغيل Nuxt Dev Server على المنفذ 3000...
 echo الرابط المحلي: http://127.0.0.1:3000
 echo ==========================================================
-call npx nuxi dev --port 3000
+call npx nuxi dev --host 0.0.0.0 --port 3000
