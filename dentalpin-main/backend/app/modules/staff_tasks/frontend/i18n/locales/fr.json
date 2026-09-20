@@ -1,0 +1,34 @@
+{
+  "staffTasks": {
+    "title": "Tâches de l'équipe",
+    "add": "Nouvelle tâche",
+    "taskTitle": "Tâche",
+    "details": "Détails",
+    "priority": "Priorité",
+    "dueDate": "Échéance",
+    "status": "Statut",
+    "assignee": "Assignée à",
+    "filterByStatus": "Filtrer par statut",
+    "all": "Toutes",
+    "delete": "Supprimer",
+    "deleteTitle": "Supprimer la tâche",
+    "deleteMessage": "Supprimer cette tâche ? Cette action est irréversible.",
+    "updateFailed": "Impossible de mettre à jour la tâche.",
+    "saveFailed": "Impossible d'enregistrer la tâche.",
+    "deleteFailed": "Impossible de supprimer la tâche.",
+    "statuses": {
+      "open": "Ouverte",
+      "claimed": "Prise en charge",
+      "done": "Terminée",
+      "cancelled": "Annulée"
+    },
+    "priorities": {
+      "low": "Basse",
+      "normal": "Normale",
+      "high": "Haute"
+    }
+  },
+  "nav": {
+    "staffTasks": "Tâches de l'équipe"
+  }
+}

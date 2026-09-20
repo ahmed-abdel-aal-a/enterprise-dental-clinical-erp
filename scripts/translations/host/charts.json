@@ -1,0 +1,8 @@
+{
+  "trend": {
+    "ariaLabel": "الاتجاه عبر {count} نقطة"
+  },
+  "donut": {
+    "ariaLabel": "مخطط حلقي، {count} قطاعات"
+  }
+}

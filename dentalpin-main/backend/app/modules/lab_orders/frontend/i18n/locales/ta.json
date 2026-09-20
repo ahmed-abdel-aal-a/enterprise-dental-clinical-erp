@@ -1,0 +1,27 @@
+{
+  "labOrders": {
+    "title": "Lab work orders",
+    "add": "New lab order",
+    "patient": "Patient",
+    "lab": "Laboratory",
+    "loading": "Loading…",
+    "selectPatient": "Select patient",
+    "selectLab": "Select laboratory",
+    "workType": "Work type",
+    "tooth": "Tooth / reference",
+    "impressionType": "Impression",
+    "antagonistInfo": "Antagonist information",
+    "shade": "Shade",
+    "sentDate": "Sent date",
+    "expectedDate": "Expected date",
+    "status": "Status",
+    "notes": "Notes",
+    "save": "Send order",
+    "cancel": "Cancel",
+    "noLabsHint": "Create a lab contact first in Contacts.",
+    "workTypes": {"crown":"Crown","bridge":"Bridge","denture":"Denture","implant":"Implant","veneer":"Veneer","orthodontic":"Orthodontic","repair":"Repair","other":"Other"},
+    "impressionTypes": {"alginate":"Alginate","pvs_silicone":"PVS / silicone","digital_scan":"Digital scan","other":"Other"},
+    "statuses": {"sent":"Sent","in_progress":"In progress","ready":"Ready","received":"Received","cancelled":"Cancelled"}
+  },
+  "nav": {"labOrdersForm":"New lab order","labOrdersStatus":"Lab orders"}
+}

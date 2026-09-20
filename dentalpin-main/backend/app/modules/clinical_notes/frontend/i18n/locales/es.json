@@ -1,0 +1,124 @@
+{
+  "clinicalNotes": {
+    "types": {
+      "administrative": "Administrativa",
+      "diagnosis": "Diagnóstico",
+      "treatment": "Tratamiento",
+      "treatment_plan": "Plan",
+      "appointment_clinical": "Clínica",
+      "appointment_administrative": "Administrativa"
+    },
+    "appointment": {
+      "addByType": "Añadir nota {label}",
+      "empty": "Sin notas en esta cita. Usa los botones de arriba para añadir una."
+    },
+    "feed": {
+      "filterLabel": "Filtros",
+      "filterAll": "Todas",
+      "filterClear": "Quitar filtros",
+      "filterStatus": "Filtrando {n} de {total} tipos",
+      "addAdministrative": "Nota administrativa",
+      "loadMore": "Cargar más",
+      "empty": {
+        "title": "Sin notas todavía",
+        "help": "Las notas administrativas, de diagnóstico y de tratamiento aparecerán aquí en orden cronológico."
+      }
+    },
+    "diagnosisSidebar": {
+      "title": "Notas",
+      "addNote": "Añadir nota",
+      "empty": "Sin notas en esta categoría."
+    },
+    "treatmentButton": {
+      "title": "Notas del tratamiento",
+      "add": "Añadir nota",
+      "empty": "Sin notas para este tratamiento.",
+      "aria": "Notas del tratamiento ({n})"
+    },
+    "timeline": {
+      "addPlanNote": "Nota del plan",
+      "empty": "Sin notas todavía.",
+      "emptyForFilter": "Sin notas que coincidan con el filtro.",
+      "source": {
+        "plan": "Plan",
+        "treatment": "Tratamiento",
+        "visit": "Visita"
+      }
+    },
+    "byPlan": {
+      "empty": "Este paciente aún no tiene notas clínicas vinculadas a planes.",
+      "planNotesLabel": "Notas del plan",
+      "unknownTreatment": "Tratamiento",
+      "noNotesForTreatment": "Sin notas en este tratamiento todavía."
+    },
+    "composer": {
+      "placeholder": "Escribe la nota…",
+      "templates": "Plantillas",
+      "attach": "Adjuntar foto o documento",
+      "bindToTooth": "Asociar al diente {n}"
+    },
+    "linked": {
+      "tooth": "Diente {n}",
+      "treatment": "Tratamiento",
+      "treatmentOnTooth": "{label} (diente {n})",
+      "plan": "Plan",
+      "planNamed": "Plan: {label}"
+    },
+    "actions": {
+      "showMore": "Ver más",
+      "showLess": "Ver menos",
+      "openLinked": "Abrir contexto"
+    },
+    "author": {
+      "unknown": "Autor desconocido"
+    },
+    "time": {
+      "justNow": "ahora mismo",
+      "minutesAgo": "hace {n} min",
+      "hoursAgo": "hace {n} h",
+      "daysAgo": "hace {n} d"
+    },
+    "toasts": {
+      "saved": "Nota guardada",
+      "deleted": "Nota eliminada",
+      "saveFailed": "No se pudo guardar la nota"
+    },
+    "confirms": {
+      "delete": "¿Eliminar esta nota? Se podrá recuperar contactando con soporte."
+    },
+    "templates": {
+      "endo": {
+        "singleVisit": "Endodoncia (sesión única)",
+        "multiVisit": "Endodoncia (varias sesiones)"
+      },
+      "perio": {
+        "scaling": "Tartrectomía / RAR"
+      },
+      "implant": {
+        "placement": "Colocación de implante"
+      },
+      "diagnosis": {
+        "caries": "Caries",
+        "periapical": "Lesión periapical"
+      },
+      "admin": {
+        "phoneCall": "Llamada del paciente",
+        "reschedule": "Solicita cambio de cita"
+      },
+      "general": {
+        "followUp": "Seguimiento general"
+      }
+    },
+    "templateBodies": {
+      "endo_single_visit": "Diagnóstico: \nAnestesia: \nCanales localizados: \nLongitud de trabajo: \nObturación: \nPost-op: ",
+      "endo_multi_visit": "Sesión: \nCanales trabajados: \nMedicación intracanala: \nPróxima cita: ",
+      "perio_scaling": "Cuadrantes tratados: \nProfundidad de sondaje: \nSangrado al sondaje: \nIndicaciones higiene: ",
+      "implant_placement": "Implante (marca / diámetro / longitud): \nTorque final (Ncm): \nEstabilidad primaria: \nInjerto: \nPost-op: ",
+      "diagnosis_caries": "Hallazgo: caries \nProfundidad: \nSíntomas: \nPrueba de vitalidad: \nTratamiento sugerido: ",
+      "diagnosis_periapical": "Lesión periapical \nDiente: \nRadiografía: \nPruebas (percusión, palpación): \nDiagnóstico: ",
+      "admin_phone_call": "Llamada del paciente: \nMotivo: \nAcción tomada: \nSeguimiento: ",
+      "admin_reschedule": "Solicita cambio de cita: \nFecha actual: \nNueva propuesta: ",
+      "general_follow_up": "Hallazgos: \nProcedimiento realizado: \nIndicaciones al paciente: "
+    }
+  }
+}

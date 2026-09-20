@@ -1,0 +1,24 @@
+{
+  "expenses": {
+    "title": "Dépenses",
+    "add": "Ajouter une dépense",
+    "date": "Date",
+    "category": "Catégorie",
+    "amount": "Montant",
+    "description": "Description",
+    "filterByCategory": "Filtrer par catégorie",
+    "delete": "Supprimer",
+    "deleteTitle": "Supprimer la dépense",
+    "deleteMessage": "Supprimer cette dépense ? Cette action est irréversible.",
+    "categories": {
+      "rent": "Loyer",
+      "utilities": "Charges",
+      "salaries": "Salaires",
+      "supplies": "Fournitures",
+      "equipment": "Équipement",
+      "insurance": "Assurance",
+      "maintenance": "Entretien",
+      "other": "Autre"
+    }
+  }
+}

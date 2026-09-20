@@ -1,0 +1,20 @@
+{
+  "journal": {
+    "title": "Activity log",
+    "subtitle": "Append-only record of who did what, when — fed by module events.",
+    "filterByType": "Filter by event type",
+    "filterByDateFrom": "From",
+    "filterByDateTo": "To",
+    "event": "Event",
+    "actor": "Actor",
+    "patient": "Patient",
+    "when": "When",
+    "source": "Source",
+    "empty": "No activity recorded yet.",
+    "total": "{total} entries",
+    "detailTitle": "Event payload",
+    "unattributed": "—",
+    "allEvents": "All events",
+    "viewPayload": "View details"
+  }
+}

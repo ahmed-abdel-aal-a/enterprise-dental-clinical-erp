@@ -1,0 +1,34 @@
+{
+  "staffTasks": {
+    "title": "Csapatfeladatok",
+    "add": "Új feladat",
+    "taskTitle": "Feladat",
+    "details": "Részletek",
+    "priority": "Prioritás",
+    "dueDate": "Határidő",
+    "status": "Állapot",
+    "assignee": "Felelős",
+    "filterByStatus": "Szűrés állapot szerint",
+    "all": "Összes",
+    "delete": "Törlés",
+    "deleteTitle": "Feladat törlése",
+    "deleteMessage": "Törli ezt a feladatot? A művelet nem vonható vissza.",
+    "updateFailed": "A feladat frissítése nem sikerült.",
+    "saveFailed": "A feladat mentése nem sikerült.",
+    "deleteFailed": "A feladat törlése nem sikerült.",
+    "statuses": {
+      "open": "Nyitott",
+      "claimed": "Vállalva",
+      "done": "Kész",
+      "cancelled": "Visszavonva"
+    },
+    "priorities": {
+      "low": "Alacsony",
+      "normal": "Normál",
+      "high": "Magas"
+    }
+  },
+  "nav": {
+    "staffTasks": "Csapatfeladatok"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "indiaGst": "نظام ضرائب GST"
+  },
+  "indiaGst": {
+    "badge": {
+      "gst": "ضريبة GST",
+      "irnGenerated": "تم توليد رقم IRN",
+      "einvoiceIssue": "مشكلة في الفاتورة الإلكترونية",
+      "needsAttention": "يتطلب مراجعة واهتمام",
+      "missingGst": "بيانات ضريبة GST مفقودة — أعد إصدار هذه الفاتورة لتوليد بيانات GST"
+    },
+    "banner": {
+      "unregisteredTitle": "رقم GSTIN غير مهيأ",
+      "unregisteredDescription": "يمكنك مواصلة إصدار فواتير المرضى في الوقت الحالي — الفواتير القياسية تعمل بدون GSTIN.",
+      "configureAction": "تهيئة ضريبة GST"
+    },
+    "listFilter": {
+      "needsAttention": "تتطلب مراجعة"
+    },
+    "panel": {
+      "title": "ضريبة GST والفوترة الإلكترونية",
+      "correctsDocument": "تصحيح للمستند",
+      "documentNumber": "رقم مستند GST",
+      "placeOfSupply": "مكان التوريد والخدمة",
+      "gstinOnInvoice": "رقم GSTIN على الفاتورة",
+      "notProvided": "غير مدخل",
+      "calculation": "طريقة حساب ضريبة GST",
+      "intraState": "داخل الولاية · CGST + SGST",
+      "interState": "بين الولايات · IGST",
+      "einvoiceStatus": "حالة الفاتورة الإلكترونية"
+    },
+    "einvoice": {
+      "notRequired": "غير مطلوبة",
+      "notConfigured": "غير مهيأة",
+      "pending": "قيد الانتظار",
+      "generated": "تم توليد رقم المرجع IRN",
+      "rejected": "مرفوضة",
+      "error": "خطأ في الاتصال بالبوابة",
+      "notRequiredHint": "إيرادات عيادتك تقع دون الحد الأدنى الملزم المحدد في الإعدادات، لذا لم يتم إرسال الفاتورة لبوابة الضرائب.",
+      "notConfiguredHint": "تنطبق الفوترة الإلكترونية على العيادات التي تتجاوز حد الإيرادات المحدد في الإعدادات. لم يتم إرسال أي بيانات.",
+      "reviewSettings": "مراجعة إعدادات الفاتورة الإلكترونية"
+    },
+    "form": {
+      "title": "تفاصيل ضريبة GST للفاتورة",
+      "clinicGstDetails": "بيانات ضريبة العيادة",
+      "placeOfSupply": "مكان التوريد",
+      "placeOfSupplyHint": "يحدد ما إذا كان ينطبق CGST+SGST أو IGST",
+      "selectState": "اختر الولاية / المنطقة",
+      "selectPlaceOfSupplyHint": "اختر مكان التوريد لاحتساب الضريبة",
+      "sacCodes": "أكواد تصنيف الخدمات (SAC)",
+      "sacCode": "كود SAC",
+      "sacOverrideHint": "تؤخذ أكواد SAC من دليل خدماتك السنية. لا تعدلها إلا بتوجيه من محاسبك القانوني.",
+      "save": "حفظ تفاصيل GST",
+      "saved": "تم حفظ تفاصيل ضريبة GST",
+      "saveError": "تعذر حفظ تفاصيل GST"
+    },
+    "settingsCards": {
+      "title": "نظام ضرائب GST",
+      "description": "تهيئة رقم GSTIN، مكان التوريد الافتراضي وأكواد SAC للعيادات في الهند.",
+      "open": "فتح الإعدادات"
+    },
+    "settings": {
+      "title": "إعدادات ضريبة GST",
+      "description": "تهيئة بيانات GST والقيم الافتراضية لفواتير العيادة.",
+      "loadError": "تعذر تحميل إعدادات GST",
+      "saved": "تم حفظ الإعدادات بنجاح",
+      "saveError": "تعذر حفظ الإعدادات",
+      "clinicDetails": "بيانات GST للعيادة",
+      "nonRegularNotice": "احتساب ضريبة GST غير مفعل للفوترة تحت نوع التسجيل الحالي.",
+      "tradeName": "الاسم التجاري للعيادة",
+      "gstin": "رقم التسجيل الضريبي (GSTIN)",
+      "gstinHint": "رقم GSTIN الخاص بالعيادة نفسها (المورد) — وليس رقم المريض المستلم",
+      "registrationType": "نوع التسجيل الضريبي",
+      "registrationRegular": "نظامي (Regular)",
+      "registrationComposition": "مقطوع (Composition)",
+      "registrationUnregistered": "غير مسجل (Unregistered)",
+      "registrationExempt": "معفى من الضريبة (Exempt)",
+      "clinicState": "ولاية / مقر العيادة",
+      "gstinStateMismatch": "أول خانتين من رقم GSTIN تمثلان كود الولاية ولا تطابقان الولاية المختارة — هذا يقلب تصنيف الضريبة بين داخل/خارج الولاية. تأكد من تطابقهما.",
+      "catalogDefaults": "القيم الافتراضية لدليل الخدمات",
+      "allSacConfigured": "كافة الإجراءات السنية مهيأة بكود SAC صالح.",
+      "missingSacCount": "{count} إجراء سنياً بحاجة لتعيين كود SAC ونسبة ضريبية.",
+      "autoconfigure": "تهيئة تلقائية",
+      "autoconfigureHint": "التهيئة التلقائية تسند كود SAC 999312 (خدمات صحة الإنسان) لكافة العلاجات أعلاه، مع ترك نسبة الضريبة لنوع ضريبة كل علاج. العلاجات المهيأة مسبقاً لن تتأثر.",
+      "autoconfigureDone": "تم ضبط {count} إجراء بكود SAC {sac}.",
+      "autoconfigureError": "تعذر التعيين التلقائي لأكواد SAC",
+      "einvoiceIntegration": "الربط مع الفاتورة الإلكترونية",
+      "einvoiceProfessionalNotice": "تحقق من أهليتك والتزاماتك التنظيمية مع محاسب قانوني مؤهل قبل تفعيل الفوترة الإلكترونية. نظام Dentalpin لا يحدد ما إذا كانت الفوترة تنطبق على عيادتك.",
+      "turnoverThreshold": "حد الإيرادات السنوي الملزم",
+      "turnoverThresholdHint": "العيادات التي تتجاوز هذا الحد ملزمة بإصدار فواتير إلكترونية",
+      "einvoiceNotConfigured": "غير مهيأة",
+      "displayOptions": "خيارات العرض والطباعة",
+      "showGstin": "إظهار رقم GSTIN على الفاتورة",
+      "showSac": "إظهار أكواد SAC على الفاتورة",
+      "creditNoteWorkflow": "مسار الإشعارات الدائنة",
+      "creditNoteWorkflowDescription": "أي تعديل على فاتورة صادرة يتم عبر إلغاء الفاتورة أو إصدار إشعار دائن، ويبقى قابلاً للتدقيق والتتبع للمستخدم المنفذ."
+    },
+    "reports": {
+      "title": "تقارير ضريبة GST",
+      "description": "الإجماليات وتفاصيل المعاملات للمطابقة ودعم الإقرارات الضريبية.",
+      "export": "تصدير كملف CSV",
+      "creditNotes": "الإشعارات الدائنة",
+      "byPlaceOfSupply": "حسب مكان التوريد",
+      "transactions": "المعاملات المالية",
+      "taxableValue": "القيمة الخاضعة للضريبة",
+      "empty": "لا توجد معاملات مسجلة في هذه الفترة."
+    }
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "nav": {
+    "copilot": "IA"
+  },
+  "copilot": {
+    "title": "IA",
+    "open": "Open IA",
+    "empty": "Ask me about patients, the schedule, or to book an appointment.",
+    "placeholder": "Type your message…",
+    "send": "Send",
+    "copy": "Copy",
+    "new": "New conversation",
+    "thinking": "Thinking…",
+    "you": "You",
+    "assistant": "IA",
+    "trust": "Your data is protected",
+    "phase": {
+      "working": "Working…",
+      "writing": "Writing…"
+    },
+    "tabs": {
+      "pending": "To do",
+      "chat": "Chat"
+    },
+    "pending": {
+      "empty": "Nothing pending. You're all caught up.",
+      "unknownPatient": "Unknown patient",
+      "group": {
+        "recall": "Recalls to follow up",
+        "budget": "Budgets awaiting response"
+      }
+    },
+    "nudge": {
+      "act": "Look into it",
+      "dismiss": "Dismiss",
+      "appointmentCancelled": {
+        "text": "The {time} appointment was cancelled — a slot just opened up.",
+        "prompt": "The {time} appointment was cancelled. Find recall patients who could fill that slot."
+      }
+    },
+    "suggest": {
+      "heading": "How can I help?",
+      "cat": {
+        "workflows": "Workflows",
+        "patients": "Patients",
+        "agenda": "Schedule",
+        "recalls": "Recalls",
+        "money": "Collections & budgets",
+        "reports": "Reports"
+      },
+      "dailyBriefing": "Daily briefing",
+      "prepareVisit": "Prepare a visit",
+      "fillGap": "Fill a gap",
+      "searchPatient": "Find a patient",
+      "patientSummary": "Summarize a patient",
+      "freeSlots": "Free slots today",
+      "bookAppointment": "Book an appointment",
+      "dueRecalls": "Due recalls",
+      "pendingBudgets": "Unanswered budgets",
+      "recordPayment": "Record a payment",
+      "monthCollections": "This month's collections",
+      "agendaSummary": "Schedule overview",
+      "prompt": {
+        "dailyBriefing": "Give me the daily briefing: today's appointments, overdue recalls and unanswered budgets",
+        "prepareVisit": "Prepare a patient's next visit for me",
+        "fillGap": "A slot opened up in the schedule, who can we call?",
+        "searchPatient": "Find a patient",
+        "patientSummary": "Give me a summary of a patient",
+        "freeSlots": "What free slots are there today?",
+        "bookAppointment": "I want to book an appointment",
+        "dueRecalls": "Which recalls are due this month?",
+        "pendingBudgets": "Which budgets are sent and unanswered?",
+        "recordPayment": "I want to record a patient payment",
+        "monthCollections": "Summary of this month's collections",
+        "agendaSummary": "Give me an overview of today's schedule"
+      }
+    },
+    "settings": {
+      "title": "Copilot",
+      "description": "AI assistant: daily briefing and engine",
+      "saved": "Settings saved",
+      "digest": {
+        "title": "Morning briefing email",
+        "description": "Every morning: today's appointments, overdue recalls and unanswered budgets.",
+        "enabled": "Send daily briefing",
+        "hour": "Send hour",
+        "hourHelp": "Interpreted in the clinic's timezone.",
+        "recipients": "Recipients",
+        "recipientsHelp": "Each recipient gets their own briefing, limited to what their role can see.",
+        "recipientsPlaceholder": "Select staff…"
+      },
+      "engine": {
+        "title": "Engine",
+        "provider": "Provider",
+        "model": "Model",
+        "redaction": "PHI redaction",
+        "redactionOn": "Enabled",
+        "redactionOff": "Disabled"
+      },
+      "metrics": {
+        "title": "Usage",
+        "description": "Last {days} days.",
+        "toolCalls": "Tool calls",
+        "errorRate": "Error rate",
+        "avgLatency": "Avg. latency",
+        "conversations": "Conversations",
+        "tokenBudget": "Monthly token budget",
+        "topTools": "Most-used tools",
+        "toolNames": {
+          "recalls_list_due_recalls": "Overdue recalls",
+          "budget_list_budgets": "Pending estimates",
+          "patients_list_patients": "Patient search",
+          "appointments_list_appointments": "Appointments",
+          "invoices_list_invoices": "Invoices"
+        }
+      }
+    },
+    "tool": {
+      "running": "Running {name}…",
+      "done": "{name} done",
+      "failed": "{name} failed"
+    },
+    "card": {
+      "viewPatient": "View record",
+      "noResults": "No results",
+      "notFound": "Not found",
+      "more": "+{n} more",
+      "freeSlots": "Free slots",
+      "appointments": "Appointments",
+      "patients": "Patients"
+    },
+    "patientStatus": {
+      "active": "active",
+      "archived": "archived"
+    },
+    "apptStatus": {
+      "scheduled": "Scheduled",
+      "confirmed": "Confirmed",
+      "checked_in": "Checked in",
+      "in_treatment": "In treatment",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "no_show": "No-show"
+    },
+    "confirm": {
+      "title": "Confirm action",
+      "body": "The IA wants to run {name}.",
+      "approve": "Confirm",
+      "reject": "Cancel",
+      "approved": "Confirmed",
+      "rejected": "Cancelled",
+      "destructiveNote": "This action can't be undone.",
+      "action": {
+        "book_appointment": "The IA wants to book an appointment.",
+        "cancel_appointment": "The IA wants to cancel an appointment.",
+        "create_patient": "The IA wants to create a patient.",
+        "create_invoice": "The IA wants to create a draft invoice."
+      },
+      "field": {
+        "patient_id": "Patient",
+        "patient": "Patient",
+        "professional_id": "Professional",
+        "professional": "Professional",
+        "appointment_id": "Appointment",
+        "branch_id": "Branch",
+        "branch": "Branch",
+        "cabinet_id": "Cabinet",
+        "cabinet": "Cabinet",
+        "start_time": "Date",
+        "end_time": "End",
+        "datetime": "Date",
+        "service": "Service",
+        "reason": "Reason",
+        "duration_minutes": "Duration (min)",
+        "items": "Invoice Items",
+        "payment_term_days": "Payment Term (days)",
+        "internal_notes": "Internal Notes",
+        "public_notes": "Public Notes",
+        "notes": "Notes",
+        "first_name": "First name",
+        "last_name": "Last name",
+        "phone": "Phone",
+        "email": "Email",
+        "date_of_birth": "Date of birth",
+        "query": "Search"
+      }
+    },
+    "budgetExceeded": "The monthly IA usage limit has been reached.",
+    "error": "Something went wrong.",
+    "page": {
+      "title": "IA",
+      "subtitle": "Your clinic assistant, scoped to your permissions."
+    }
+  }
+}

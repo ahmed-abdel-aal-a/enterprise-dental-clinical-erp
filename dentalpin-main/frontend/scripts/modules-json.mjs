@@ -1,0 +1,35 @@
+// Write `modules.json` listing every module layer under <layers-root>.
+//
+//   node scripts/modules-json.mjs <layers-root> [--prefix <path-prefix>]
+//
+// The backend regenerates this file at runtime as modules are installed;
+// build/CI contexts have no backend, so they bake every layer instead:
+//   Dockerfile.prod  → /module_layers            (COPY of backend/app/modules)
+//   CI e2e           → $GITHUB_WORKSPACE/backend/app/modules
+//   CI typecheck     → ./module_layers           (symlink, same trick as ESLint)
+//
+// `--prefix` decouples the emitted paths from the scanned directory: the
+// modules-json-freshness CI job scans backend/app/modules on the runner
+// but emits the canonical committed form (`/module_layers/...`, the
+// Docker mount) so the snapshot can be diffed against git (#264).
+import { existsSync, readdirSync, writeFileSync } from 'node:fs'
+
+const args = process.argv.slice(2)
+const prefixIdx = args.indexOf('--prefix')
+const prefix = prefixIdx === -1 ? null : args[prefixIdx + 1]
+const positional = args.filter((_, i) => prefixIdx === -1 || (i !== prefixIdx && i !== prefixIdx + 1))
+const root = positional[0]
+if (!root || (prefixIdx !== -1 && !prefix)) {
+  console.error('usage: node scripts/modules-json.mjs <layers-root> [--prefix <path-prefix>]')
+  process.exit(1)
+}
+const base = prefix ?? root
+const names = readdirSync(root)
+  .filter(name => existsSync(`${root}/${name}/frontend/nuxt.config.ts`))
+  .sort()
+const modules = names.map(name => ({ name, path: `${base}/${name}/frontend` }))
+writeFileSync(
+  'modules.json',
+  JSON.stringify({ layers: modules.map(m => m.path), modules, version: 1 }, null, 2) + '\n'
+)
+console.log('modules.json:', names.join(', '))

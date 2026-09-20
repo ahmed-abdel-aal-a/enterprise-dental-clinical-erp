@@ -1,0 +1,18 @@
+# Reviews from the listed owner are required on these paths (branch protection on main).
+# Module directories not listed here only need one approving review from any maintainer.
+
+
+# Core: kernel, auth, events, plugin registry, shared schemas
+backend/app/core/**                 @martinezsalmeron
+backend/app/main.py                 @martinezsalmeron
+backend/alembic.ini                 @martinezsalmeron
+frontend/app/**                     @martinezsalmeron
+frontend/nuxt.config.ts             @martinezsalmeron
+
+# Repo governance and CI
+.github/**                          @martinezsalmeron
+CLAUDE.md                           @martinezsalmeron
+CONTRIBUTING.md                     @martinezsalmeron
+SECURITY.md                         @martinezsalmeron
+LICENSE                             @martinezsalmeron
+docs/adr/**                         @martinezsalmeron

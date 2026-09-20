@@ -1,0 +1,24 @@
+{
+  "expenses": {
+    "title": "Despesas",
+    "add": "Adicionar despesa",
+    "date": "Data",
+    "category": "Categoria",
+    "amount": "Valor",
+    "description": "Descrição",
+    "filterByCategory": "Filtrar por categoria",
+    "delete": "Excluir",
+    "deleteTitle": "Excluir despesa",
+    "deleteMessage": "Excluir esta despesa? Esta ação não pode ser desfeita.",
+    "categories": {
+      "rent": "Aluguel",
+      "utilities": "Serviços públicos",
+      "salaries": "Salários",
+      "supplies": "Material",
+      "equipment": "Equipamento",
+      "insurance": "Seguro",
+      "maintenance": "Manutenção",
+      "other": "Outro"
+    }
+  }
+}

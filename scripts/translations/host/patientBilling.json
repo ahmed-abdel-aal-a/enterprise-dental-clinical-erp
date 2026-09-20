@@ -1,0 +1,20 @@
+{
+  "title": "الفوترة والحسابات المالية",
+  "balanceDue": "المبلغ المتبقي المستحق",
+  "totalInvoiced": "إجمالي المفوتر",
+  "totalPaid": "إجمالي المدفوع",
+  "newInvoice": "إصدار فاتورة جديدة",
+  "recordPayment": "تسجيل سند قبض",
+  "invoicesList": "قائمة الفواتير",
+  "paymentsList": "سجل الدفعات والتحصيلات",
+  "noInvoices": "لا توجد فواتير مسجلة لهذا المريض بعد",
+  "noPayments": "لا توجد دفعات مسجلة",
+  "totalBudgeted": "إجمالي التقديرات",
+  "workInProgress": "أعمال قيد التنفيذ",
+  "workCompleted": "أعمال منجزة",
+  "balancePending": "الرصيد المستحق",
+  "invoices": "الفواتير",
+  "createInvoice": "إصدار فاتورة",
+  "pending": "معلق",
+  "totalDiscount": "في الخصومات"
+}

@@ -1,0 +1,20 @@
+{
+  "journal": {
+    "title": "Journal d'activité",
+    "subtitle": "Historique immuable de qui a fait quoi et quand, alimenté par les événements des modules.",
+    "filterByType": "Filtrer par type d'événement",
+    "filterByDateFrom": "Du",
+    "filterByDateTo": "Au",
+    "event": "Événement",
+    "actor": "Auteur",
+    "patient": "Patient",
+    "when": "Date",
+    "source": "Source",
+    "empty": "Aucune activité enregistrée pour le moment.",
+    "total": "{total} entrées",
+    "detailTitle": "Données de l'événement",
+    "unattributed": "—",
+    "allEvents": "Tous les événements",
+    "viewPayload": "Voir les détails"
+  }
+}

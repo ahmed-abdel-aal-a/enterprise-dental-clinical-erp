@@ -1,0 +1,20 @@
+{
+  "journal": {
+    "title": "Tevékenységnapló",
+    "subtitle": "Megváltoztathatatlan napló arról, hogy ki mit és mikor tett — a modulesemények alapján.",
+    "filterByType": "Szűrés eseménytípus szerint",
+    "filterByDateFrom": "Ettől",
+    "filterByDateTo": "Eddig",
+    "event": "Esemény",
+    "actor": "Felhasználó",
+    "patient": "Páciens",
+    "when": "Dátum",
+    "source": "Forrás",
+    "empty": "Még nincs rögzített tevékenység.",
+    "total": "{total} bejegyzés",
+    "detailTitle": "Esemény adatai",
+    "unattributed": "—",
+    "allEvents": "Minden esemény",
+    "viewPayload": "Részletek megtekintése"
+  }
+}

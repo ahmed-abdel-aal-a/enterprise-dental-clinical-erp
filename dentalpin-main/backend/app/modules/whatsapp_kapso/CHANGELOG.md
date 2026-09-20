@@ -1,0 +1,35 @@
+# Changelog — whatsapp_kapso module
+
+## Unreleased
+
+- fix(#91): `KapsoAdapter` is registered in the channel registry from `on_activate()` — on every boot the module is installed — instead of at import time, so an uninstalled module no longer serves WhatsApp (and no longer queries `whatsapp_kapso_settings` once its tables are gone).
+- i18n: add Tamil locale (`ta.json`) with full UI coverage.
+
+- style(lint): first ESLint pass over this module's frontend layer —
+  module layers were outside the linter's base path until now, so
+  CI had never checked them. Mostly auto-fixed formatting; see the
+  PR for the handful of manual fixes.
+
+- fix(ui): surface the API error instead of a generic toast in the settings page (save, sync, map, test).
+  `catch {}` discarded the server's message, so any failure read as
+  "Error" with no way to tell what went wrong. Now via
+  `errorMessage()` / `errorDetail()`.
+
+- i18n: add Portuguese locale (`pt.json`) with full UI coverage.
+
+- i18n: add French locale (`fr.json`) with full UI coverage.
+
+- feat: initial release. WhatsApp delivery for the notifications gateway via
+  Kapso (Meta Cloud API). Community, installable/removable (issue #63).
+- `KapsoAdapter` (template + free-form session sends) registered into the
+  notifications channel registry at import time; unregistered on uninstall.
+- Public signed `/webhook` (HMAC-SHA256 per clinic, resolved by
+  `phone_number_id`): inbound → `record_inbound_reply`, status →
+  `record_delivery_status`. Idempotent on the Kapso message id.
+- Per-clinic credentials (`WhatsappKapsoSettings`) + template cache
+  (`WhatsappKapsoTemplate`); secrets Fernet-encrypted. Alembic branch
+  `wak_0001`.
+- Template auto-sync from Kapso + type→template mapping written into
+  `notification_templates` via the gateway's public seam.
+- Frontend connect/settings layer (credentials, webhook URL, template sync +
+  mapping, test send). i18n ES/EN.

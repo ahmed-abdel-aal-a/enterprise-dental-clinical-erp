@@ -1,0 +1,84 @@
+{
+  "periodontogram": {
+    "tab": {
+      "label": "مخطط دواعم السن وجيوب اللثة"
+    },
+    "empty": {
+      "title": "لا توجد فحوصات دورية للثة مسجلة حتى الآن",
+      "description": "ابدأ جلسة فحص جديدة لتسجيل عمق الجيوب السنية، النزيف، مؤشر اللويحة، وباقي معايير SEPA اللثوية.",
+      "cta": "بدء فحص اللثة السريري"
+    },
+    "session": {
+      "draftBadge": "مسودة فحص جارية",
+      "closedBadge": "جلسة فحص مكتملة ومغلقة",
+      "recordedAt": "سُجلت بتاريخ {date}",
+      "openDraft": "فتح جلسة فحص جديدة",
+      "continueDraft": "متابعة المسودة",
+      "closeTitle": "إغلاق جلسة فحص اللثة",
+      "closeDescription": "بمجرد الإغلاق تصبح الجلسة غير قابلة للتعديل وتظهر في السجل التاريخي. لإجراء تصحيحات ستحتاج لفتح جلسة جديدة.",
+      "closeButton": "إغلاق الجلسة",
+      "discardTitle": "إلغاء المسودة",
+      "discardDescription": "سيتم حذف كافة البيانات المدخلة في هذه الجلسة. لا يمكن التراجع عن هذا الإجراء.",
+      "discardButton": "تجاهل وحذف",
+      "cancel": "إلغاء",
+      "closeSession": "إغلاق الجلسة",
+      "discardDraft": "إلغاء المسودة"
+    },
+    "indices": {
+      "bop": "النزيف (BOP)",
+      "pi": "اللويحة (PI)",
+      "calMean": "متوسط الارتباط (CAL)",
+      "deepPockets": "جيوب ≥5 ملم"
+    },
+    "saveState": {
+      "saving": "جاري الحفظ...",
+      "dirty": "تعديلات غير محفوظة",
+      "saved": "تم حفظ التعديلات"
+    },
+    "history": {
+      "viewingSession": "عرض جلسة فحص من تاريخ {date} (للقراءة فقط).",
+      "returnToCurrent": "العودة للجلسة الحالية"
+    },
+    "arch": {
+      "upper": "الفك العلوي",
+      "lower": "الفك السفلي",
+      "palatal": "حنكي",
+      "lingual": "لساني",
+      "vestibular": "دهليزي",
+      "probing": "عمق السبر",
+      "margin": "حافة اللثة",
+      "bleeding": "نزيف",
+      "plaque": "لويحة",
+      "probingTitle": "{code} عمق السبر (0–15 ملم)",
+      "marginTitle": "{code} حافة اللثة (-5 إلى 10 ملم)",
+      "plaqueTitle": "{code} لويحة (انقر للتبديل)",
+      "bleedingTitle": "{code} نزيف (انقر للتبديل)",
+      "implant": "زرعة سنية",
+      "implantToggleOn": "زرعة (انقر للإزالة)",
+      "implantToggleOff": "انقر للتعيين كزرعة سنية",
+      "mobility": "حركة السن",
+      "mobilityTitle": "انقر لتغيير درجة حركة السن (0–3)",
+      "prognosis": "الإنذار السريري",
+      "prognosisTitle": "ممتاز / مقبول / مشكوك فيه / ميؤوس منه",
+      "furcaV": "مفترق دهليزي",
+      "furcaVTitle": "إصابة المفترق الدهليزي (0/I/II/III)",
+      "furcaLP": "مفترق لساني/حنكي",
+      "furcaLPTitle": "إصابة المفترق اللساني/الحنكي (0/I/II/III)",
+      "gingivalWidth": "عرض اللثة الملتصقة",
+      "siteMarkerAria": "موضع {code}، عمق سبر {depth}"
+    },
+    "chart": {
+      "ariaLabel": "مخطط اللثة — القوس السني العلوي والسفلي"
+    },
+    "indicesBanner": {
+      "observationsPlaceholder": "ملاحظات وتوصيات فحص اللثة...",
+      "noteLabel": "ملاحظة سريرية (اختيارية)"
+    },
+    "loading": "جاري تحميل مخطط اللثة...",
+    "errors": {
+      "loadFailed": "تعذر تحميل مخطط اللثة.",
+      "saveFailed": "تعذر حفظ التغييرات.",
+      "checkConnection": "تحقق من اتصال الشبكة ثم أعد المحاولة."
+    }
+  }
+}

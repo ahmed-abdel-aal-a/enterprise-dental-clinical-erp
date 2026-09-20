@@ -1,0 +1,27 @@
+{
+  "labOrders": {
+    "title": "Trabalhos de laboratório",
+    "add": "Novo trabalho",
+    "patient": "Paciente",
+    "lab": "Laboratório",
+    "loading": "A carregar…",
+    "selectPatient": "Selecionar paciente",
+    "selectLab": "Selecionar laboratório",
+    "workType": "Tipo de trabalho",
+    "tooth": "Dente / referência",
+    "impressionType": "Impressão",
+    "antagonistInfo": "Informação antagonista",
+    "shade": "Cor",
+    "sentDate": "Data de envio",
+    "expectedDate": "Data prevista",
+    "status": "Estado",
+    "notes": "Notas",
+    "save": "Enviar trabalho",
+    "cancel": "Cancelar",
+    "noLabsHint": "Crie primeiro um contacto de laboratório em Contactos.",
+    "workTypes": {"crown":"Coroa","bridge":"Ponte","denture":"Prótese","implant":"Implante","veneer":"Faceta","orthodontic":"Ortodontia","repair":"Reparação","other":"Outro"},
+    "impressionTypes": {"alginate":"Alginato","pvs_silicone":"PVS / silicone","digital_scan":"Digital","other":"Outro"},
+    "statuses": {"sent":"Enviado","in_progress":"Em curso","ready":"Pronto","received":"Recebido","cancelled":"Cancelado"}
+  },
+  "nav": {"labOrdersForm":"Novo trabalho de laboratório","labOrdersStatus":"Trabalhos de laboratório"}
+}

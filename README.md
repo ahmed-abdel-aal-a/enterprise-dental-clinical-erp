@@ -1,12 +1,11 @@
 <div align="center">
 
 # 🦷 Enterprise Clinical Dental Practice Management & AI Copilot ERP
-### *High-Performance, Dual-Engine Architecture for Multi-Branch Dental Polyclinics*
+### *DentApex Enterprise - High-Performance Architecture for Dental Polyclinics*
 
 [![Engineered by Apex Agency](https://img.shields.io/badge/Engineered_by-Apex_Agency-0ea5e9?style=for-the-badge&logo=google-chrome&logoColor=white)](https://apex-agency.tech)
 [![Lead Architect](https://img.shields.io/badge/Architect-Eng._Ahmed_Abdel--Aal-10b981?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ahmed-abdel-aal-a)
-[![Architecture Mode](https://img.shields.io/badge/Deployment-Cloud_Native_%26_Native_Edge-f59e0b?style=for-the-badge)](https://apex-agency.tech)
-[![Memory Footprint](https://img.shields.io/badge/Edge_RAM_Budget-%3C_130MB_Total-purple?style=for-the-badge)](https://apex-agency.tech)
+[![Architecture Mode](https://img.shields.io/badge/Deployment-Enterprise_Full_Stack-f59e0b?style=for-the-badge)](https://apex-agency.tech)
 
 ---
 
@@ -18,42 +17,95 @@
 
 ---
 
-## 🏛️ Executive Architectural Overview
+## 🌟 نظرة عامة (Overview)
 
-The **Enterprise Clinical Dental ERP** was designed to solve the critical friction points of modern healthcare facilities: slow legacy electronic dental record (EDR) software, high server operating costs, vulnerability to regional internet outages, and clunky user interfaces. 
-
-This platform introduces an institutional-grade **Dual-Engine Deployment Architecture**:
-1. **Cloud-Native Mode:** Horizontally scalable containerized deployment for multi-branch healthcare hospital groups (Kubernetes / Docker, centralized cloud database).
-2. **Resource-Optimized Native Edge Mode:** An ultra-lightweight, zero-virtualization runtime designed to operate natively on entry-level on-premise clinic workstations (e.g. legacy quad-core CPUs with 4GB RAM) with an aggregate system footprint of **under 130MB RAM** for the web server, backend API, and database engine combined.
-
-```mermaid
-graph TD
-    Client[Clinical Desktop / Tablet Browser - Nuxt 3 SPA] -->|Port 7070 - Reverse Proxy & Ingress| Caddy[Caddy 2.8 Native Ingress - Auto TLS]
-    Caddy -->|Static Assets| Cache[In-Memory Static SPA Layer]
-    Caddy -->|API Proxy /api/v1| FastAPI[Python 3.11 FastAPI Async API - Port 7071]
-    FastAPI -->|SCRAM-SHA-256 Async Connection Pool| PG[(PostgreSQL 16 Enterprise Engine)]
-    FastAPI -->|Streaming SSE Context| AICopilot[Clinical AI Copilot Engine - Cloud & Edge LLMs]
-    FastAPI -->|Headless Render Pipe| PDFGen[Native Headless Document & Invoicing Engine]
-```
+نظام **DentApex Enterprise** هو الحل الشامل والمتقدم لإدارة مراكز وعيادات طب الأسنان، يجمع بين:
+- **المخطط السني التفاعلي (Interactive Odontogram)**: دعم كامل للأسنان الدائمة واللبنية، الإجراءات السريرية، التشخيص، وتاريخ التعديلات الزمني.
+- **محرك الحسابات والخزينة السريعة (Quick Cashier & Clinical Ledger)**: تسجيل الدفعات، توزيع الأرصدة على خطط العلاج والميزانيات، منع تعارض المعاملات (Row-level Locking) وسجل محاسبي مدقق.
+- **مساعد الذكاء الاصطناعي السريري (Night Copilot)**: تكامل مع نماذج الذكاء الاصطناعي المحلية (Ollama / LLaMA 3.2) والسحابية (Groq / Gemini) لدعم اتخاذ القرار وتلخيص الحالات والبحث باللغة العربية.
+- **تعدد الفروع والصلاحيات (Multi-Branch & Role-Based Access)**: إدارة فروع متعددة مع عزل البيانات وصلاحيات مخصصة لكل دور وظيفي.
 
 ---
 
-## ⚡ Core Technical Capabilities & Benchmarks
+## 🏗️ الهيكل المعماري (Architecture)
 
-### 1. Ultra-Low-Footprint Native Edge Engine
-- **Memory Budget Allocation:**
-  - Database Layer (PostgreSQL 16): **~45MB RAM** idle/working state.
-  - Backend API Layer (FastAPI Async): **~47MB RAM**.
-  - Ingress & Asset Server (Caddy 2.8): **~34MB RAM**.
-  - **Total System Footprint:** **~126MB RAM**, operating at a fraction of standard containerized overhead while retaining full enterprise ACID transaction guarantees.
-- **Offline-First Operational Continuity:** Clinics continue charting, scheduling, and billing during wide-area network (WAN) cuts, with automatic cryptographic synchronization upon reconnection.
+- **الواجهة الخلفية (Backend)**:
+  - إطار العمل: `FastAPI` (Python 3.11)
+  - قاعدة البيانات: `PostgreSQL` عبر `SQLAlchemy 2.0` (Async) و `Alembic`
+  - الأمان والتحقق: `OAuth2 with JWT`, `Passlib/Bcrypt`
+  - الخادم: `Uvicorn` على المنفذ `8000`
 
-### 2. High-Performance Clinical Domain Modeling (DDD)
-Structured into strictly decoupled Domain-Driven Design (DDD) bounded contexts:
-- **Electronic Dental Records (EDR) Context:** Patient medical history, allergies, systemic conditions, and periodontal indices.
-- **Interactive Odontogram Context:** Hardware-accelerated SVG dental charting engine supporting adult and pediatric tooth numbering systems (FDI Two-Digit & Universal Numbering). Real-time tooth surface condition tracking (restorations, crowns, endodontic treatments, extractions).
-- **Clinical AI Copilot Context:** Streamed diagnostic triaging, differential analysis assistance, and Arabic/English clinical note summarization via low-latency inference pipelines.
-- **Medical Invoicing & Regulatory Billing Context:** Multi-branch fee schedules, automated treatment plan quote generation, insurance pre-authorization workflows, and headless Edge-rendered cryptographic PDF invoices.
+- **الواجهة الأمامية (Frontend)**:
+  - إطار العمل: `Nuxt 4` / `Vue 3`
+  - التصميم والمكونات: `@nuxt/ui`, `TailwindCSS`
+  - التدويل: `@nuxtjs/i18n` مع دعم كامل للغة العربية و RTL
+  - إدارة الحالة: `Pinia`
+  - الخادم: `Nuxt Dev / Nitro` على المنفذ `3000`
+
+---
+
+## 🚀 التشغيل بنقرة واحدة (Quick Start)
+
+تم تزويد هذا المستودع بملفات تشغيل تلقائية مخصصة لبيئة ويندوز:
+
+1. **تشغيل النظام بالكامل (الباك إند + الفرونت إند + المتصفح)**:
+   ```cmd
+   run_all.bat
+   ```
+   *يقوم السكريبت تلقائياً بفحص وتنظيف المنافذ 8000 و 3000، تشغيل خادم FastAPI، تشغيل خادم Nuxt، ثم فتح المتصفح على `http://127.0.0.1:3000`.*
+
+2. **تشغيل الباك إند فقط (Port 8000)**:
+   ```cmd
+   start_backend.bat
+   ```
+
+3. **تشغيل الواجهة الأمامية فقط (Port 3000)**:
+   ```cmd
+   start_frontend.bat
+   ```
+
+4. **إيقاف جميع الخوادم وتحرير المنافذ**:
+   ```cmd
+   stop_all.bat
+   ```
+
+---
+
+## 🧪 فحص جاهزية النظام (Health Checks)
+
+- **فحص صحة الخادم (Liveness)**:
+  ```http
+  GET http://127.0.0.1:8000/health
+  Response: {"status": "healthy", "version": "2.0.0"}
+  ```
+
+- **فحص جاهزية قاعدة البيانات (Readiness)**:
+  ```http
+  GET http://127.0.0.1:8000/health/ready
+  Response: {"status": "ready", "version": "2.0.0"}
+  ```
+
+---
+
+## 📁 بنية المجلدات (Project Structure)
+
+```text
+dentapex-enterprise-original/
+├── dentalpin-main/
+│   ├── backend/               # خادم FastAPI، الموديولات، ونماذج قاعدة البيانات
+│   │   ├── app/
+│   │   │   ├── core/          # النواة: المصادقة، الفروع، نظام الملحقات
+│   │   │   └── modules/       # موديولات النظام (28 موديول مستقل)
+│   │   └── alembic/           # ملفات وترقيات قاعدة البيانات
+│   ├── frontend/              # واجهة Nuxt 4 والمكونات السريرية
+│   └── docs/                  # التوثيق الفني المعماري
+├── tasks/                     # ملفات مهام التطوير المعماري والخطط
+├── scripts/                   # سكريبتات مساعدة للنظام
+├── run_all.bat                # مشغل النظام المتكامل
+├── start_backend.bat          # مشغل الباك إند المستقل
+├── start_frontend.bat         # مشغل الفرونت إند المستقل
+└── stop_all.bat               # إيقاف الخوادم وتحرير المنافذ
+```
 
 ---
 
@@ -66,26 +118,5 @@ Structured into strictly decoupled Domain-Driven Design (DDD) bounded contexts:
 
 ---
 
-## 📐 System Specifications Matrix
-
-| Dimension | Specification |
-| :--- | :--- |
-| **Frontend Runtime** | Nuxt 3 Single Page Application (Pre-rendered, Zero-Lag Hydration) |
-| **Backend Framework** | Python 3.11+ FastAPI (High-concurrency ASGI via Uvicorn) |
-| **Database Engine** | PostgreSQL 16 Enterprise with asynchronous connection pooling (`asyncpg`) |
-| **Ingress & TLS** | Caddy 2.8 (Automated cryptographic certs, sub-millisecond reverse proxying) |
-| **Document Pipeline** | Microsoft Edge Headless engine (Native zero-dependency PDF rendering) |
-| **Clinical Intelligence** | Dual-tier LLM inference (Ultra-fast edge inference + Multimodal reasoning) |
-| **Latency SLA** | Sub-12ms API response time on local networks; <45ms over secure WAN |
-
----
-
-## 🔒 Confidentiality & Institutional Licensing Notice
-
-> [!NOTE]
-> **Proprietary Enterprise Architecture:**
-> This repository contains the public architectural specification, domain boundary definitions, and performance benchmarks of the Clinical Dental ERP engineered by **Apex Agency**. In strict adherence to institutional Non-Disclosure Agreements (NDAs) and commercial IP protections, internal database schemas, proprietary procedure catalogs, and proprietary business logic implementations have been abstracted.
-> 
-> Enterprise licensing, source code escrow, and white-label deployments are provisioned exclusively under commercial contracts.
-> 
-> **Inquiries & Architectural Consulting:** [contact@apex-agency.tech](mailto:contact@apex-agency.tech) | [https://apex-agency.tech](https://apex-agency.tech)
+## 📄 الترخيص (License)
+جميع الحقوق محفوظة لمشروع DentApex Enterprise © 2026.

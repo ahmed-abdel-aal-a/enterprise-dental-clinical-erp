@@ -1,0 +1,21 @@
+{
+  "totals": "الإجماليات",
+  "info": "التفاصيل",
+  "moreActions": "إجراءات إضافية",
+  "criticalBanner": {
+    "dismiss": "إغلاق التنبيه"
+  },
+  "collect": {
+    "amountLabel": "المبلغ المراد تحصيله",
+    "methodLabel": "طريقة الدفع",
+    "dateLabel": "تاريخ الدفع",
+    "today": "اليوم",
+    "quickFull": "المبلغ كاملاً",
+    "optionalDetails": "إضافة مرجع أو ملاحظات (اختياري)",
+    "referenceLabel": "المرجع",
+    "referencePlaceholder": "مثال: رقم إيصال نقطة البيع POS",
+    "notesLabel": "ملاحظات داخلية",
+    "submit": "تحصيل",
+    "cancel": "إلغاء"
+  }
+}

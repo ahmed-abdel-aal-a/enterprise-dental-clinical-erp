@@ -1,0 +1,73 @@
+{
+  "title": "معرض صور المريض السريرية",
+  "add": "إضافة صورة",
+  "empty": "لا توجد صور سريرية مرفوعة بعد",
+  "uploadFirst": "رفع أول صورة سريرية",
+  "showingOf": "عرض {count} من أصل {total}",
+  "upload": "رفع صورة جديدة",
+  "uploadHelp": "صنف الصورة لتظهر في الفئة والزاوية السريرية الصحيحة",
+  "dropHere": "اسحب الصورة إلى هنا أو انقر للاختيار",
+  "category": "الفئة",
+  "subtype": "زاوية التصوير السريرية",
+  "titlePlaceholder": "صورة فموية أمامية — 02/05",
+  "capturedAt": "تاريخ الالتقاط",
+  "exifHint": "استخراج تلقائي من بيانات الكاميرا EXIF",
+  "cat": {
+    "all": "الكل",
+    "intraoral": "داخل الفم (Intraoral)",
+    "extraoral": "خارج الفم / الوجه (Extraoral)",
+    "xray": "أشعة سينية (X-ray)",
+    "clinical": "مقارنة قبل / بعد (Clinical)",
+    "other": "أخرى"
+  },
+  "catDesc": {
+    "intraoral": "تصوير الأسنان واللثة من داخل الفم",
+    "extraoral": "ملامح الوجه والابتسامة والبروفيل",
+    "xray": "الصور الشعاعية والتصوير الطبقي",
+    "clinical": "مقارنة مراحل العلاج والنتائج",
+    "other": "صور سريرية غير مصنفة"
+  },
+  "sub": {
+    "frontal": "أمامي إطباقي",
+    "lateral_left": "جانبي أيسر",
+    "lateral_right": "جانبي أيمن",
+    "occlusal_upper": "إطباقي فك علوي",
+    "occlusal_lower": "إطباقي فك سفلي",
+    "palatal": "حنكي (Palatal)",
+    "lingual": "لساني (Lingual)",
+    "smile": "ابتسامة طبيعية",
+    "rest": "وضع الراحة",
+    "frontal_face": "وجه أمامي كامل",
+    "profile_left": "جانبي (بروفيل) أيسر",
+    "profile_right": "جانبي (بروفيل) أيمن",
+    "three_quarter_left": "مائل 3/4 أيسر",
+    "three_quarter_right": "مائل 3/4 أيمن",
+    "panoramic": "بانوراما (OPG)",
+    "periapical": "ذروية (Periapical)",
+    "bitewing": "أجنحة إطباقية (Bitewing)",
+    "ceph_lat": "سيفالومتريك جانبي",
+    "ceph_pa": "سيفالومتريك أمامي خلفي",
+    "cbct": "أشعة مقطعية مخروطية (CBCT)",
+    "occlusal_xray": "أشعة إطباقية",
+    "before": "قبل العلاج",
+    "after": "بعد العلاج",
+    "progress": "أثناء تقدم العلاج",
+    "reference": "مرجع تخطيطي",
+    "portrait": "بورتريه شخصي",
+    "document_scan": "مسح ضوئي لمستند",
+    "model_photo": "صورة قوالب دراسة (Cast)"
+  },
+  "compare": {
+    "before": "قبل العلاج",
+    "after": "بعد العلاج"
+  },
+  "pair": {
+    "pickHint": "اختر الصورة المقابلة للمقارنة:",
+    "noCandidates": "لا تتوفر صور أخرى. يرجى رفع صورة ثانية للمقارنة.",
+    "paired": "مقترنة",
+    "exitCompare": "إنهاء وضع المقارنة",
+    "compare": "مقارنة",
+    "unpair": "فك الاقتران",
+    "pair": "اقتران قبل / بعد"
+  }
+}

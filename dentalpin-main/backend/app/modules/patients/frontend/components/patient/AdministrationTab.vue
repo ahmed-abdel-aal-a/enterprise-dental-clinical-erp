@@ -1,0 +1,301 @@
+<script setup lang="ts">
+/**
+ * AdministrationTab - Main administration tab with multiple sub-modes.
+ *
+ * Built-in modes (this module):
+ * - budgets: View and manage patient budgets
+ * - billing: View invoices and billing summary
+ * - documents: Patient documents gallery
+ *
+ * Slot-driven modes (other modules):
+ * - payments: Patient ledger panel contributed by the `payments` module
+ *   via slot `patient.detail.administracion.payments`. Renders only when
+ *   the slot has providers; URL `adminMode=payments` falls back to the
+ *   default when unavailable.
+ */
+
+import type { AdministrationMode } from './AdministrationModeToggle.vue'
+import type { BudgetListItem, PaginatedResponse, PatientExtended } from '~~/app/types'
+import { PERMISSIONS } from '~~/app/config/permissions'
+import { useModuleSlots } from '~~/app/composables/useModuleSlots'
+
+interface Props {
+  patientId: string
+  patient?: PatientExtended | null
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  patient: null
+})
+const { t, locale } = useI18n()
+const { can } = usePermissions()
+const { resolve } = useModuleSlots()
+const api = useApi()
+const router = useRouter()
+const route = useRoute()
+
+// Current mode (default to budgets)
+const currentMode = ref<AdministrationMode>('budgets')
+
+// Slot availability for the optional `payments` mode. Reactive against
+// the slot registry so HMR / late module registration is picked up.
+const paymentsAvailable = computed(() =>
+  resolve('patient.detail.administracion.payments', {}).length > 0
+)
+
+const availableModes = computed<AdministrationMode[]>(() => {
+  const modes: AdministrationMode[] = ['budgets', 'billing']
+  if (paymentsAvailable.value) modes.push('payments')
+  modes.push('documents')
+  return modes
+})
+
+// Budgets list (paginated)
+const budgets = ref<BudgetListItem[]>([])
+const budgetsTotal = ref(0)
+const budgetsLoading = ref(false)
+const budgetsPage = ref(1)
+const budgetsPageSize = 20
+const budgetsTotalPages = computed(() => Math.ceil(budgetsTotal.value / budgetsPageSize))
+
+async function loadBudgets() {
+  if (!can(PERMISSIONS.budget.read)) return
+  budgetsLoading.value = true
+  try {
+    const params = new URLSearchParams({
+      patient_id: props.patientId,
+      page: String(budgetsPage.value),
+      page_size: String(budgetsPageSize)
+    })
+    const response = await api.get<PaginatedResponse<BudgetListItem>>(
+      `/api/v1/budget/budgets?${params.toString()}`
+    )
+    budgets.value = response.data
+    budgetsTotal.value = response.total
+  } catch {
+    budgets.value = []
+    budgetsTotal.value = 0
+  } finally {
+    budgetsLoading.value = false
+  }
+}
+
+watch(budgetsPage, loadBudgets)
+watch(() => props.patientId, () => {
+  budgetsPage.value = 1
+  loadBudgets()
+})
+
+onMounted(loadBudgets)
+
+// Sync mode with URL query param
+watch(currentMode, (mode) => {
+  router.replace({
+    query: {
+      ...route.query,
+      adminMode: mode
+    }
+  })
+})
+
+// Initialize from URL on mount — validate against the modes actually
+// available right now so a stale `adminMode=payments` link falls back
+// gracefully when the slot has no providers.
+onMounted(() => {
+  const queryMode = route.query.adminMode as AdministrationMode
+  if (queryMode && availableModes.value.includes(queryMode)) {
+    currentMode.value = queryMode
+  }
+})
+
+// If the active mode disappears at runtime (e.g. permission revoked,
+// late slot registration races), drop back to the default.
+watch(availableModes, (modes) => {
+  if (!modes.includes(currentMode.value)) {
+    currentMode.value = 'budgets'
+  }
+})
+
+// Format date
+function formatDate(dateStr: string): string {
+  return new Date(dateStr).toLocaleDateString(locale.value, {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+  })
+}
+
+// Format currency — clinic-wide via useCurrency.
+const { format: formatCurrency } = useCurrency()
+</script>
+
+<template>
+  <div class="administration-tab space-y-4">
+    <!-- Mode pill-bar -->
+    <AdministrationModeToggle
+      v-model="currentMode"
+      :badges="{ budgets: budgetsTotal || undefined }"
+    />
+
+    <!-- Budgets Mode -->
+    <div v-if="currentMode === 'budgets' && can(PERMISSIONS.budget.read)">
+      <SectionHeader
+        icon="i-lucide-file-text"
+        class="mb-4"
+      >
+        <span class="truncate">{{ t('patientDetail.tabs.budgets') }}</span>
+        <UBadge
+          v-if="budgetsTotal > 0"
+          color="neutral"
+          size="xs"
+          variant="subtle"
+        >
+          {{ budgetsTotal }}
+        </UBadge>
+        <template
+          v-if="can(PERMISSIONS.budget.write)"
+          #action
+        >
+          <UButton
+            size="sm"
+            icon="i-lucide-plus"
+            color="primary"
+            :to="`/budgets/new?patient_id=${patientId}&from=patient`"
+          >
+            {{ t('patientDetail.createBudget') }}
+          </UButton>
+        </template>
+      </SectionHeader>
+
+      <!-- Loading -->
+      <div
+        v-if="budgetsLoading"
+        class="space-y-3"
+      >
+        <USkeleton
+          v-for="i in 3"
+          :key="i"
+          class="h-12 w-full"
+        />
+      </div>
+
+      <!-- Empty state -->
+      <UCard
+        v-else-if="budgets.length === 0"
+        class="text-center py-8"
+      >
+        <UIcon
+          name="i-lucide-file-text"
+          class="w-12 h-12 text-subtle mx-auto mb-3"
+        />
+        <p class="text-muted mb-4">
+          {{ t('patientDetail.noBudgets') }}
+        </p>
+        <UButton
+          v-if="can(PERMISSIONS.budget.write)"
+          :to="`/budgets/new?patient_id=${patientId}&from=patient`"
+          icon="i-lucide-plus"
+        >
+          {{ t('patientDetail.createBudget') }}
+        </UButton>
+      </UCard>
+
+      <!-- Budget list -->
+      <UCard v-else>
+        <ul class="divide-y divide-[var(--color-border-subtle)]">
+          <li
+            v-for="budget in budgets"
+            :key="budget.id"
+            class="py-3 first:pt-0 last:pb-0"
+          >
+            <NuxtLink
+              :to="`/budgets/${budget.id}?from=patient&patientId=${patientId}`"
+              class="flex items-center justify-between hover:bg-surface-muted -mx-4 px-4 py-2 rounded-lg transition-colors"
+            >
+              <div>
+                <div class="flex items-center gap-3">
+                  <span class="font-medium text-default">
+                    {{ budget.budget_number }}
+                  </span>
+                  <UBadge
+                    color="neutral"
+                    size="xs"
+                    variant="subtle"
+                  >
+                    v{{ budget.version }}
+                  </UBadge>
+                  <BudgetStatusBadge :status="budget.status" />
+                </div>
+                <div class="flex items-center gap-2 mt-1">
+                  <span class="text-sm text-muted">
+                    {{ formatDate(budget.created_at) }}
+                  </span>
+                  <span
+                    v-if="budget.plan_number_snapshot"
+                    class="text-caption text-subtle flex items-center gap-1"
+                  >
+                    <UIcon
+                      name="i-lucide-link"
+                      class="w-3 h-3"
+                    />
+                    {{ t('budget.linkedToPlan') }} {{ budget.plan_number_snapshot }}
+                  </span>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <span class="font-semibold text-default">
+                  {{ formatCurrency(budget.total) }}
+                </span>
+                <UIcon
+                  name="i-lucide-chevron-right"
+                  class="w-5 h-5 text-subtle"
+                />
+              </div>
+            </NuxtLink>
+          </li>
+        </ul>
+
+        <PaginationBar
+          v-model:page="budgetsPage"
+          :total-pages="budgetsTotalPages"
+          :total="budgetsTotal"
+          :page-size="budgetsPageSize"
+        />
+
+        <!-- View all link -->
+        <div class="pt-3 border-t border-default mt-3">
+          <NuxtLink
+            :to="`/budgets?patient_id=${patientId}`"
+            class="text-caption text-primary-accent hover:underline inline-flex items-center gap-1"
+          >
+            {{ t('patientDetail.viewAllBudgets') }}
+            <UIcon
+              name="i-lucide-arrow-right"
+              class="w-4 h-4"
+            />
+          </NuxtLink>
+        </div>
+      </UCard>
+    </div>
+
+    <!-- Billing Mode -->
+    <div v-else-if="currentMode === 'billing' && can(PERMISSIONS.billing.read)">
+      <PatientBillingSummary :patient-id="patientId" />
+    </div>
+
+    <!-- Payments Mode — contributed by the `payments` module via the
+         `patient.detail.administracion.payments` slot. The patients
+         module never imports payments code; the slot is the contract. -->
+    <div v-else-if="currentMode === 'payments'">
+      <ModuleSlot
+        name="patient.detail.administracion.payments"
+        :ctx="{ patient, patientId }"
+      />
+    </div>
+
+    <!-- Documents Mode -->
+    <div v-else-if="currentMode === 'documents' && can(PERMISSIONS.documents.read)">
+      <DocumentGallery :patient-id="patientId" />
+    </div>
+  </div>
+</template>

@@ -1,0 +1,35 @@
+{
+  "inventory": {
+    "title": "Inventario",
+    "add": "Añadir artículo",
+    "edit": "Editar artículo",
+    "item": "Artículo",
+    "category": "Categoría",
+    "unit": "Unidad",
+    "stock": "Stock",
+    "minimum": "Mínimo",
+    "notes": "Notas",
+    "status": "Estado",
+    "ok": "OK",
+    "low": "Bajo",
+    "filterByCategory": "Filtrar por categoría",
+    "lowStockOnly": "Solo stock bajo",
+    "increment": "Aumentar stock",
+    "decrement": "Reducir stock",
+    "delete": "Eliminar",
+    "deleteTitle": "Eliminar artículo",
+    "deleteMessage": "¿Eliminar este artículo del inventario? No se puede deshacer.",
+    "allCategories": "Todas las categorías",
+    "adjustBy": "Ajustar en…",
+    "apply": "Aplicar",
+    "categories": {
+      "consumables": "Consumibles",
+      "equipment": "Equipamiento",
+      "office": "Oficina",
+      "other": "Otro"
+    }
+  },
+  "nav": {
+    "inventory": "Inventario"
+  }
+}

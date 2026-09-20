@@ -1,0 +1,35 @@
+{
+  "inventory": {
+    "title": "Inventory",
+    "add": "Add item",
+    "edit": "Edit item",
+    "item": "Item",
+    "category": "Category",
+    "unit": "Unit",
+    "stock": "Stock",
+    "minimum": "Minimum",
+    "notes": "Notes",
+    "status": "Status",
+    "ok": "OK",
+    "low": "Low",
+    "filterByCategory": "Filter by category",
+    "lowStockOnly": "Low stock only",
+    "increment": "Increase stock",
+    "decrement": "Decrease stock",
+    "delete": "Delete",
+    "deleteTitle": "Delete item",
+    "deleteMessage": "Delete this stock item? This cannot be undone.",
+    "allCategories": "All categories",
+    "adjustBy": "Adjust by…",
+    "apply": "Apply",
+    "categories": {
+      "consumables": "Consumables",
+      "equipment": "Equipment",
+      "office": "Office",
+      "other": "Other"
+    }
+  },
+  "nav": {
+    "inventory": "Inventory"
+  }
+}

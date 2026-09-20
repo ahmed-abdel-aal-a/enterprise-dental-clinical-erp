@@ -1,0 +1,24 @@
+{
+  "expenses": {
+    "title": "Gastos",
+    "add": "Añadir gasto",
+    "date": "Fecha",
+    "category": "Categoría",
+    "amount": "Importe",
+    "description": "Descripción",
+    "filterByCategory": "Filtrar por categoría",
+    "delete": "Eliminar",
+    "deleteTitle": "Eliminar gasto",
+    "deleteMessage": "¿Eliminar este gasto? No se puede deshacer.",
+    "categories": {
+      "rent": "Alquiler",
+      "utilities": "Suministros",
+      "salaries": "Salarios",
+      "supplies": "Material",
+      "equipment": "Equipamiento",
+      "insurance": "Seguro",
+      "maintenance": "Mantenimiento",
+      "other": "Otro"
+    }
+  }
+}

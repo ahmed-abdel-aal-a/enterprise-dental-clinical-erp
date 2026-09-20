@@ -1,0 +1,12 @@
+// Nuxt layer for the `medical_reference` module.
+export default defineNuxtConfig({
+  i18n: {
+    locales: [
+      { code: 'en', file: 'en.json' },
+      { code: 'ar', file: 'ar.json' },
+      { code: 'es', file: 'es.json' },
+      { code: 'fr', file: 'fr.json' }
+    ],
+    langDir: 'locales'
+  }
+})

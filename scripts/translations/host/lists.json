@@ -1,0 +1,35 @@
+{
+  "empty": {
+    "title": "لا توجد نتائج",
+    "description": "قم بتعديل الفلاتر أو مسحها لعرض كافة السجلات."
+  },
+  "resultCount": "{shown} من أصل {total}",
+  "filter": {
+    "title": "الفلاتر",
+    "more": "فلاتر إضافية",
+    "moreCount": "فلاتر ({count})",
+    "clear": "مسح",
+    "apply": "تطبيق",
+    "date": "التواريخ",
+    "dateFrom": "من",
+    "dateTo": "إلى",
+    "searchPlaceholder": "بحث...",
+    "noResults": "لا توجد تطابقات",
+    "all": "الكل"
+  },
+  "sort": {
+    "label": "ترتيب",
+    "asc": "تصاعدي",
+    "desc": "تنازلي"
+  },
+  "datePreset": {
+    "today": "اليوم",
+    "last7": "آخر 7 أيام",
+    "last30": "آخر 30 يوماً",
+    "thisMonth": "هذا الشهر",
+    "thisQuarter": "هذا الربع",
+    "thisYear": "هذه السنة",
+    "custom": "مخصص"
+  },
+  "truncatedWarning": "تم تقليص النتائج (>1000 سجل). يرجى تضييق نطاق الفلاتر."
+}

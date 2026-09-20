@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Tu próxima revisión en {{ clinic_name | default('DentalPin') }}{% endblock %}
+
+{% block content %}
+<h2>Es hora de tu próxima revisión</h2>
+
+<p>Hola {{ patient_name }},</p>
+
+<p>Hemos programado tu próxima revisión{% if due_month %} para <strong>{{ due_month }}</strong>{% endif %}{% if reason %} ({{ reason }}){% endif %} en <strong>{{ clinic_name | default('DentalPin') }}</strong>.</p>
+
+<p>Contáctanos para reservar el horario que mejor te venga.</p>
+
+{% if clinic_phone %}
+<div class="button-container">
+    <a href="tel:{{ clinic_phone }}" class="button">Reservar mi cita</a>
+</div>
+{% endif %}
+
+<p>No dudes en contactarnos si tienes alguna pregunta.</p>
+{% endblock %}

@@ -1,0 +1,177 @@
+{
+  "layers": [
+    "../backend/app/modules/accounting_export/frontend",
+    "../backend/app/modules/activity_journal/frontend",
+    "../backend/app/modules/agenda/frontend",
+    "../backend/app/modules/billing/frontend",
+    "../backend/app/modules/budget/frontend",
+    "../backend/app/modules/catalog/frontend",
+    "../backend/app/modules/clinical_notes/frontend",
+    "../backend/app/modules/contacts/frontend",
+    "../backend/app/modules/copilot/frontend",
+    "../backend/app/modules/expenses/frontend",
+    "../backend/app/modules/india_gst/frontend",
+    "../backend/app/modules/inventory/frontend",
+    "../backend/app/modules/lab_orders/frontend",
+    "../backend/app/modules/media/frontend",
+    "../backend/app/modules/medical_reference/frontend",
+    "../backend/app/modules/medication_catalog/frontend",
+    "../backend/app/modules/migration_import/frontend",
+    "../backend/app/modules/notifications/frontend",
+    "../backend/app/modules/odontogram/frontend",
+    "../backend/app/modules/patient_relationships/frontend",
+    "../backend/app/modules/patient_timeline/frontend",
+    "../backend/app/modules/patients/frontend",
+    "../backend/app/modules/patients_clinical/frontend",
+    "../backend/app/modules/payments/frontend",
+    "../backend/app/modules/periodontogram/frontend",
+    "../backend/app/modules/recall_reminders/frontend",
+    "../backend/app/modules/recalls/frontend",
+    "../backend/app/modules/reports/frontend",
+    "../backend/app/modules/schedules/frontend",
+    "../backend/app/modules/staff_tasks/frontend",
+    "../backend/app/modules/treatment_consumables/frontend",
+    "../backend/app/modules/treatment_plan/frontend",
+    "../backend/app/modules/verifactu/frontend",
+    "../backend/app/modules/whatsapp_kapso/frontend"
+  ],
+  "modules": [
+    {
+      "name": "accounting_export",
+      "path": "../backend/app/modules/accounting_export/frontend"
+    },
+    {
+      "name": "activity_journal",
+      "path": "../backend/app/modules/activity_journal/frontend"
+    },
+    {
+      "name": "agenda",
+      "path": "../backend/app/modules/agenda/frontend"
+    },
+    {
+      "name": "billing",
+      "path": "../backend/app/modules/billing/frontend"
+    },
+    {
+      "name": "budget",
+      "path": "../backend/app/modules/budget/frontend"
+    },
+    {
+      "name": "catalog",
+      "path": "../backend/app/modules/catalog/frontend"
+    },
+    {
+      "name": "clinical_notes",
+      "path": "../backend/app/modules/clinical_notes/frontend"
+    },
+    {
+      "name": "contacts",
+      "path": "../backend/app/modules/contacts/frontend"
+    },
+    {
+      "name": "copilot",
+      "path": "../backend/app/modules/copilot/frontend"
+    },
+    {
+      "name": "expenses",
+      "path": "../backend/app/modules/expenses/frontend"
+    },
+    {
+      "name": "india_gst",
+      "path": "../backend/app/modules/india_gst/frontend"
+    },
+    {
+      "name": "inventory",
+      "path": "../backend/app/modules/inventory/frontend"
+    },
+    {
+      "name": "lab_orders",
+      "path": "../backend/app/modules/lab_orders/frontend"
+    },
+    {
+      "name": "media",
+      "path": "../backend/app/modules/media/frontend"
+    },
+    {
+      "name": "medical_reference",
+      "path": "../backend/app/modules/medical_reference/frontend"
+    },
+    {
+      "name": "medication_catalog",
+      "path": "../backend/app/modules/medication_catalog/frontend"
+    },
+    {
+      "name": "migration_import",
+      "path": "../backend/app/modules/migration_import/frontend"
+    },
+    {
+      "name": "notifications",
+      "path": "../backend/app/modules/notifications/frontend"
+    },
+    {
+      "name": "odontogram",
+      "path": "../backend/app/modules/odontogram/frontend"
+    },
+    {
+      "name": "patient_relationships",
+      "path": "../backend/app/modules/patient_relationships/frontend"
+    },
+    {
+      "name": "patient_timeline",
+      "path": "../backend/app/modules/patient_timeline/frontend"
+    },
+    {
+      "name": "patients",
+      "path": "../backend/app/modules/patients/frontend"
+    },
+    {
+      "name": "patients_clinical",
+      "path": "../backend/app/modules/patients_clinical/frontend"
+    },
+    {
+      "name": "payments",
+      "path": "../backend/app/modules/payments/frontend"
+    },
+    {
+      "name": "periodontogram",
+      "path": "../backend/app/modules/periodontogram/frontend"
+    },
+    {
+      "name": "recall_reminders",
+      "path": "../backend/app/modules/recall_reminders/frontend"
+    },
+    {
+      "name": "recalls",
+      "path": "../backend/app/modules/recalls/frontend"
+    },
+    {
+      "name": "reports",
+      "path": "../backend/app/modules/reports/frontend"
+    },
+    {
+      "name": "schedules",
+      "path": "../backend/app/modules/schedules/frontend"
+    },
+    {
+      "name": "staff_tasks",
+      "path": "../backend/app/modules/staff_tasks/frontend"
+    },
+    {
+      "name": "treatment_consumables",
+      "path": "../backend/app/modules/treatment_consumables/frontend"
+    },
+    {
+      "name": "treatment_plan",
+      "path": "../backend/app/modules/treatment_plan/frontend"
+    },
+    {
+      "name": "verifactu",
+      "path": "../backend/app/modules/verifactu/frontend"
+    },
+    {
+      "name": "whatsapp_kapso",
+      "path": "../backend/app/modules/whatsapp_kapso/frontend"
+    }
+  ],
+  "version": 1
+}

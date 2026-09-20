@@ -1,0 +1,20 @@
+{
+  "journal": {
+    "title": "Registro de actividad",
+    "subtitle": "Historial inmutable de quién hizo qué y cuándo, alimentado por los eventos de los módulos.",
+    "filterByType": "Filtrar por tipo de evento",
+    "filterByDateFrom": "Desde",
+    "filterByDateTo": "Hasta",
+    "event": "Evento",
+    "actor": "Autor",
+    "patient": "Paciente",
+    "when": "Fecha",
+    "source": "Origen",
+    "empty": "Aún no hay actividad registrada.",
+    "total": "{total} registros",
+    "detailTitle": "Datos del evento",
+    "unattributed": "—",
+    "allEvents": "Todos los eventos",
+    "viewPayload": "Ver detalles"
+  }
+}

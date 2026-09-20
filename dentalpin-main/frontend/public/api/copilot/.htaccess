@@ -1,0 +1,8 @@
+# ==============================================================================
+# DentApex AI Copilot - Security Protection
+# ==============================================================================
+
+# Deny direct access to all dotfiles, key files, and configurations
+<FilesMatch "^\.groq_key$|^\.|\.(key|env|ini|log|json)$">
+  Require all denied
+</FilesMatch>

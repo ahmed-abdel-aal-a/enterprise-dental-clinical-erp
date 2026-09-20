@@ -1,0 +1,34 @@
+{
+  "staffTasks": {
+    "title": "Team-Aufgaben",
+    "add": "Neue Aufgabe",
+    "taskTitle": "Aufgabe",
+    "details": "Details",
+    "priority": "Priorität",
+    "dueDate": "Fällig am",
+    "status": "Status",
+    "assignee": "Zugewiesen an",
+    "filterByStatus": "Nach Status filtern",
+    "all": "Alle",
+    "delete": "Löschen",
+    "deleteTitle": "Aufgabe löschen",
+    "deleteMessage": "Diese Aufgabe löschen? Dies kann nicht rückgängig gemacht werden.",
+    "updateFailed": "Die Aufgabe konnte nicht aktualisiert werden.",
+    "saveFailed": "Die Aufgabe konnte nicht gespeichert werden.",
+    "deleteFailed": "Die Aufgabe konnte nicht gelöscht werden.",
+    "statuses": {
+      "open": "Offen",
+      "claimed": "Übernommen",
+      "done": "Erledigt",
+      "cancelled": "Storniert"
+    },
+    "priorities": {
+      "low": "Niedrig",
+      "normal": "Normal",
+      "high": "Hoch"
+    }
+  },
+  "nav": {
+    "staffTasks": "Team-Aufgaben"
+  }
+}

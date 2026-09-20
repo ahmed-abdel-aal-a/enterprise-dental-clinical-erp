@@ -1,0 +1,200 @@
+{
+  "title": "التقارير والإحصائيات",
+  "subtitle": "تحليلات وأداء العيادة والمؤشرات المالية والسريرية",
+  "viewReports": "عرض التقارير",
+  "noAccess": "ليس لديك صلاحية الوصول إلى أي من التقارير",
+  "dashboard": {
+    "title": "لوحة التحليلات",
+    "subtitle": "نظرة شاملة وسريعة على أداء عيادتك",
+    "period": "الفترة الزمنية",
+    "snapshotBadge": "اليوم",
+    "snapshotTooltip": "مؤشر مباشر لا يتأثر بالفترة المحددة",
+    "vsPrev": "مقارنة بالفترة السابقة",
+    "empty": {
+      "noData": "لا توجد بيانات مسجلة في هذا النطاق الزمني"
+    },
+    "drilldown": {
+      "title": "تفاصيل إضافية",
+      "payments": "سجل الدفعات"
+    },
+    "kpi": {
+      "cashCollected": "النقد المحصل",
+      "cashCollectedHint": "{count} دفعة محصلة",
+      "patientAdvance": "رصيد المرضى الدائن",
+      "patientAdvanceHint": "دفعات مقدمة غير مخصصة",
+      "production": "الإنتاجية السريرية",
+      "productionHint": "{count} إجراء علاجي",
+      "byMethod": "حسب طريقة الدفع",
+      "methodCount": "{count} دفعة",
+      "total": "الإجمالي",
+      "newPatients": "مرضى جدد",
+      "newPatientsHint": "{rate}% من إجمالي المواعيد",
+      "appointmentFunnel": "نسبة عدم الحضور",
+      "funnelHint": "{completed}% نسبة الاكتمال",
+      "avgCollectedTicket": "متوسط التحصيل للعملية",
+      "avgTicketHint": "عبر {count} دفعة مسجلة",
+      "aging": "أعمار الديون والذمم المدينة"
+    },
+    "charts": {
+      "cashOverTime": "التحصيلات عبر الوقت",
+      "productionByDoctor": "الإنتاجية حسب الطبيب",
+      "refunded": "المبالغ المستردة"
+    },
+    "production": {
+      "unassigned": "غير محدد",
+      "others": "أطباء آخرون",
+      "treatmentCount": "{count} إجراء علاجي"
+    },
+    "aging": {
+      "bucket0_30": "0 - 30 يوماً",
+      "bucket31_60": "31 - 60 يوماً",
+      "bucket61_90": "61 - 90 يوماً",
+      "bucket90plus": "أكثر من 90 يوماً",
+      "empty": "لا توجد ذمم مدينة مستحقة",
+      "patientCount": "{count} مريض"
+    }
+  },
+  "billing": {
+    "title": "تقارير الفوترة والمحاسبة",
+    "description": "الإيرادات، المقبوضات، ضريبة القيمة المضافة والفواتير المتأخرة",
+    "summary": "ملخص الفوترة",
+    "overdue": "المتأخرات",
+    "overdueInvoices": "الفواتير المتأخرة السداد",
+    "byPaymentMethod": "حسب وسيلة الدفع",
+    "byProfessional": "حسب الطبيب المعالج",
+    "vatSummary": "إقرار ضريبة القيمة المضافة",
+    "gaps": "فجوات ترقيم الفواتير",
+    "period": "الفترة",
+    "from": "من تاريخ",
+    "to": "إلى تاريخ",
+    "refresh": "تحديث البيانات",
+    "totalInvoiced": "إجمالي المفوتر",
+    "totalCollected": "إجمالي المحصل",
+    "pending": "الرصيد المتبقي المستحق",
+    "invoices": "فاتورة",
+    "paid": "مدفوعة",
+    "payments": "دفعة",
+    "gapsDetected": "تم اكتشاف فجوات في تسلسل ترقيم الفواتير",
+    "missingNumbers": "الأرقام المفقودة في السلسلة:",
+    "noData": "لا توجد بيانات مالية للفترة المحددة",
+    "noOverdue": "لا توجد فواتير متأخرة السداد",
+    "daysOverdue": "يوم تأخير",
+    "vatType": "فئة الضريبة",
+    "base": "المبلغ الأساسي (قبل الضريبة)",
+    "tax": "مبلغ الضريبة",
+    "thisMonth": "هذا الشهر",
+    "thisQuarter": "هذا الربع",
+    "thisYear": "هذه السنة",
+    "lastMonth": "الشهر الماضي",
+    "lastQuarter": "الربع الماضي",
+    "lastYear": "السنة الماضية"
+  },
+  "budgets": {
+    "title": "تقارير التقديرات المالية",
+    "description": "معدلات القبول والتحويل، تحليل أداء الأطباء وأكثر العلاجات طلباً",
+    "comingSoonDescription": "تقارير التقديرات ستتوفر قريباً للتحليل المتقدم.",
+    "features": {
+      "acceptanceRate": "معدل القبول",
+      "acceptanceRateDesc": "نسبة التقديرات المقبولة مقابل المرفوضة",
+      "byProfessional": "حسب الطبيب",
+      "byProfessionalDesc": "التقديرات المنشأة بواسطة كل طبيب",
+      "byTreatment": "حسب العلاج",
+      "byTreatmentDesc": "أكثر العلاجات تسعيراً وإقبالاً",
+      "averageValue": "متوسط القيمة",
+      "averageValueDesc": "متوسط قيمة التقدير المالي"
+    },
+    "labels": {
+      "totalCreated": "إجمالي المنشأ",
+      "accepted": "مقبولة",
+      "rejected": "مرفوضة",
+      "pending": "معلقة",
+      "completed": "مكتملة",
+      "acceptanceRate": "معدل القبول",
+      "averageValue": "متوسط القيمة",
+      "byStatus": "حسب الحالة",
+      "topTreatments": "أعلى العلاجات تسعيراً",
+      "treatment": "العلاج",
+      "occurrences": "التكرار",
+      "quantity": "الكمية"
+    }
+  },
+  "scheduling": {
+    "title": "تقارير المواعيد والجدولة",
+    "description": "الزيارات الأولى، ساعات العمل ونسبة إشغال غرف الكشف",
+    "comingSoonDescription": "ستتوفر تقارير الجدولة المتقدمة قريباً.",
+    "features": {
+      "firstVisits": "الزيارات الأولى",
+      "firstVisitsDesc": "المرضى الجدد خلال كل فترة",
+      "hoursWorked": "ساعات العمل الفعلية",
+      "hoursWorkedDesc": "الوقت المنجز لكل طبيب",
+      "cancellations": "الإلغاءات",
+      "cancellationsDesc": "معدلات الإلغاء وعدم الحضور",
+      "cabinetUtilization": "إشغال غرف الكشف",
+      "cabinetUtilizationDesc": "نسبة استغلال كل غرفة كشف"
+    },
+    "labels": {
+      "totalAppointments": "إجمالي المواعيد",
+      "completionRate": "معدل الاكتمال",
+      "completed": "منجزة",
+      "cancellationRate": "معدل الإلغاء",
+      "cancelled": "ملغاة",
+      "noShowRate": "معدل عدم الحضور",
+      "noShows": "لم يحضروا",
+      "newPatients": "مرضى جدد",
+      "firstVisitRate": "نسبة الزيارة الأولى",
+      "ofTotalAppointments": "من إجمالي المواعيد",
+      "appointmentsInPeriod": "المواعيد خلال الفترة",
+      "excludingCancelled": "باستثناء المواعيد الملغاة",
+      "appointments": "مواعيد",
+      "byDayOfWeek": "حسب أيام الأسبوع",
+      "statusBreakdown": "توزيع الحالات",
+      "pending": "معلقة"
+    },
+    "analytics": {
+      "funnel": "مسار حالات المواعيد",
+      "funnelDesc": "توزيع المواعيد حسب حالتها النهائية خلال الفترة",
+      "waitingTimes": "أوقات الانتظار",
+      "waitingTimesDesc": "الدقائق بين وصول المريض ودخوله إلى كرسي العلاج",
+      "punctuality": "دقة مواعيد المرضى",
+      "punctualityDesc": "الفارق بين وقت الموعد المحدد ووقت وصول المريض الفعلي",
+      "durationVariance": "المدة المخططة مقابل الفعلية",
+      "durationVarianceDesc": "مقارنة الوقت المحجوز مع الوقت الفعلي المستغرق على الكرسي",
+      "samples": "العينات",
+      "average": "المتوسط",
+      "median": "الوسيط",
+      "p90": "المئين 90",
+      "avgDelta": "متوسط الفارق",
+      "medianDelta": "وسيط الفارق",
+      "onTime": "نسبة الحضور في الموعد",
+      "avgOverrun": "متوسط الوقت الزائد",
+      "overrunCount": "عدد المرات الزائدة",
+      "underCount": "عدد المرات الأقصر",
+      "completionRate": "نسبة الاكتمال",
+      "noShowRate": "نسبة عدم الحضور",
+      "cancellationRate": "نسبة الإلغاء",
+      "punctuality_early": "مبكر (أكثر من 5 دقائق)",
+      "punctuality_on_time": "في الموعد (±5 دقائق)",
+      "punctuality_late_short": "متأخر قليلاً (5 - 15 دقيقة)",
+      "punctuality_late_long": "تأخير ملحوظ (> 15 دقيقة)"
+    },
+    "tabs": {
+      "overview": "نظرة عامة",
+      "activity": "النشاط التشغيلي",
+      "quality": "معايير الجودة والالتزام"
+    },
+    "hero": {
+      "inPeriod": "خلال الفترة"
+    },
+    "filters": {
+      "cabinet": "غرفة الكشف",
+      "professional": "الطبيب",
+      "custom": "نطاق مخصص",
+      "all": "الكل",
+      "clear": "مسح الفلاتر"
+    },
+    "empty": {
+      "title": "لا توجد بيانات في هذه الفترة",
+      "desc": "جرب اختيار نطاق زمني أوسع أو إزالة الفلاتر المطبقة."
+    }
+  }
+}

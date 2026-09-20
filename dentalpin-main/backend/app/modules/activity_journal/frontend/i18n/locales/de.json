@@ -1,0 +1,20 @@
+{
+  "journal": {
+    "title": "Aktivitätsprotokoll",
+    "subtitle": "Unveränderliches Protokoll darüber, wer wann was getan hat — gespeist aus den Modulereignissen.",
+    "filterByType": "Nach Ereignistyp filtern",
+    "filterByDateFrom": "Von",
+    "filterByDateTo": "Bis",
+    "event": "Ereignis",
+    "actor": "Benutzer",
+    "patient": "Patient",
+    "when": "Datum",
+    "source": "Quelle",
+    "empty": "Noch keine Aktivität aufgezeichnet.",
+    "total": "{total} Einträge",
+    "detailTitle": "Ereignisdaten",
+    "unattributed": "—",
+    "allEvents": "Alle Ereignisse",
+    "viewPayload": "Details anzeigen"
+  }
+}

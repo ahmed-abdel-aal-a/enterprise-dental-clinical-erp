@@ -1,0 +1,3056 @@
+{
+  "app": {
+    "name": "DentApex",
+    "tagline": "Fogorvosi rendelő ügyvitele"
+  },
+  "demo": {
+    "bannerMessage": "Nyilvános demó — kérjük, ne adjon meg valódi páciensadatokat. Az adatbázist rendszeresen visszaállítjuk.",
+    "bannerDismiss": "Elrejtés",
+    "credentialsTitle": "Demó belépési adatok",
+    "credentialsNote": "Csak kipróbálásra — azért látható, mert ez egy nyilvános demópéldány.",
+    "copyEmail": "E-mail másolása",
+    "copyPassword": "Jelszó másolása",
+    "copied": "Vágólapra másolva"
+  },
+  "nav": {
+    "dashboard": "Kezdőlap",
+    "journal": "Tevékenységnapló",
+    "staffTasks": "Csapatfeladatok",
+    "patients": "Páciensek",
+    "appointments": "Időpontnaptár",
+    "recalls": "Visszahívások",
+    "expenses": "Kiadások",
+    "inventory": "Készlet",
+    "treatmentConsumables": "Kezelési fogyóeszközök",
+    "labOrdersForm": "Új laborrendelés",
+    "labOrdersStatus": "Laborrendelések",
+    "treatmentPlans": "Kezelési tervek",
+    "budgets": "Árajánlatok",
+    "invoices": "Számlák",
+    "reports": "Riportok",
+    "settings": "Beállítások",
+    "defaultClinicName": "Rendelő",
+    "catalog": "Kezeléskatalógus",
+    "contacts": "Kapcsolatok",
+    "menu": "Menü",
+    "openMenu": "Menü megnyitása",
+    "close": "Bezárás",
+    "toggleSidebar": "Oldalsáv be/ki"
+  },
+  "auth": {
+    "login": "Bejelentkezés",
+    "logout": "Kijelentkezés",
+    "email": "E-mail",
+    "password": "Jelszó",
+    "loginButton": "Belépés",
+    "loginSuccess": "Sikeres bejelentkezés",
+    "invalidCredentials": "Hibás e-mail-cím vagy jelszó",
+    "emailRequired": "Adja meg az e-mail-címét",
+    "passwordRequired": "Adja meg a jelszavát",
+    "emailInvalid": "Érvénytelen e-mail-cím",
+    "accountInactive": "A fiókja inaktív. Forduljon a rendszergazdához",
+    "tooManyAttempts": "Túl sok próbálkozás. Próbálja újra néhány perc múlva",
+    "sessionExpired": "A munkamenete lejárt",
+    "networkError": "Nem sikerült kapcsolódni a szerverhez",
+    "serverError": "A szerver nem elérhető. Próbálja újra néhány perc múlva",
+    "unknownError": "Váratlan hiba. Kérjük, próbálja újra"
+  },
+  "setup": {
+    "title": "Első beállítás",
+    "subtitle": "Hozza létre a fiókját és a rendelőjét. Két perc múlva már dolgozhat is.",
+    "stepAccount": "Rendszergazdai fiók",
+    "stepClinic": "A rendelő adatai",
+    "firstName": "Keresztnév",
+    "lastName": "Vezetéknév",
+    "email": "E-mail",
+    "password": "Jelszó",
+    "passwordConfirm": "Jelszó megerősítése",
+    "passwordHint": "Legalább 8 karakter, betűkkel és számokkal",
+    "clinicName": "Rendelő neve",
+    "taxId": "Adószám",
+    "next": "Tovább",
+    "back": "Vissza",
+    "submit": "Rendelő létrehozása",
+    "success": "Kész! Üdvözöljük a DentApexben",
+    "firstNameRequired": "Adja meg a keresztnevet",
+    "lastNameRequired": "Adja meg a vezetéknevet",
+    "emailRequired": "Adja meg az e-mail-címet",
+    "emailInvalid": "Az e-mail-cím érvénytelen",
+    "passwordRequired": "Adjon meg egy jelszót",
+    "passwordTooShort": "A jelszónak legalább 8 karakterből kell állnia",
+    "passwordWeak": "A jelszónak betűket és számokat is tartalmaznia kell",
+    "passwordMismatch": "A jelszavak nem egyeznek",
+    "clinicNameRequired": "Adja meg a rendelő nevét",
+    "taxIdRequired": "Adja meg az adószámot",
+    "alreadyInitialized": "A rendszer már be van állítva. Kérjük, jelentkezzen be.",
+    "error": "A beállítást nem sikerült befejezni. Kérjük, próbálja újra",
+    "stepOf": "{current}. lépés / {total}",
+    "country": "Ország",
+    "countryHelp": "Beállítja az adókat, a pénznemet és az időzónát",
+    "countryRequired": "Válasszon országot",
+    "taxIdGeneric": "Adószám",
+    "taxIdLooksInvalid": "Ez nem tűnik érvényes adószámnak. Számlázás előtt ellenőrizze.",
+    "taxIdFormat": "Érvénytelen formátum (példa: {example})",
+    "timezoneRequired": "Válasszon időzónát",
+    "currencyRequired": "Válasszon pénznemet",
+    "derivedSettings": "Időzóna és pénznem",
+    "willSeed": "Létrehozzuk Önnek a kezeléskatalógust, az áfakulcsokat, egy számlatömböt, egy kezelőt és egy hétfőtől péntekig tartó munkarendet. Később minden módosítható.",
+    "willSuggestVerifactu": "Ezután javasolni fogjuk a VeriFactu bekapcsolását.",
+    "invalidData": "Kérjük, ellenőrizze az adatokat: valamelyik mező érvénytelen."
+  },
+  "onboarding": {
+    "title": "Első lépések",
+    "progress": "{done} / {total} lépés kész",
+    "configure": "Beállítás",
+    "skip": "Kihagyás",
+    "unskip": "Visszavonás",
+    "dismiss": "Elrejtés",
+    "guidedMode": "Vezetett mód",
+    "optional": "Opcionális ({count})",
+    "stepOf": "{current}. lépés / {total}",
+    "next": "Tovább",
+    "finish": "Befejezés",
+    "exit": "Kilépés",
+    "completedTitle": "A rendelője készen áll!",
+    "completedDescription": "A beállítás befejeződött. Mostantól rendesen dolgozhat.",
+    "guidedDoneTitle": "A bemutató véget ért",
+    "guidedDoneDescription": "Nincs több hátralévő lépés.",
+    "items": {
+      "team": {
+        "label": "Az Ön csapata",
+        "description": "Vegye fel a pácienseket ellátó kezelőorvosokat, vagy jelölje magát kezelőnek, ha egyedül dolgozik."
+      },
+      "verifactu": {
+        "label": "VeriFactu bekapcsolása",
+        "description": "Spanyolországban kötelező az adóhatóság (AEAT) számára érvényes számlák kiállításához."
+      }
+    }
+  },
+  "actions": {
+    "edit": "Szerkesztés",
+    "cancel": "Mégse",
+    "save": "Mentés",
+    "create": "Létrehozás",
+    "delete": "Törlés",
+    "close": "Bezárás",
+    "remove": "Eltávolítás"
+  },
+  "patients": {
+    "title": "Páciensek",
+    "create": "Új páciens",
+    "edit": "Páciens szerkesztése",
+    "search": "Páciens keresése...",
+    "searchPlaceholder": "Név vagy telefonszám",
+    "noResults": "Nincs találat",
+    "empty": "Nincs rögzített páciens",
+    "emptyAction": "Első páciens felvétele",
+    "name": "Név",
+    "firstName": "Keresztnév",
+    "lastName": "Vezetéknév",
+    "phone": "Telefon",
+    "email": "E-mail",
+    "dateOfBirth": "Születési dátum",
+    "notes": "Megjegyzések",
+    "created": "Páciens létrehozva",
+    "updated": "Páciens frissítve",
+    "archived": "Páciens archiválva",
+    "notFound": "A páciens nem található",
+    "archiveConfirm": "Archiválja {name} pácienst?",
+    "archiveDescription": "A páciens el lesz rejtve a keresésekből. A meglévő időpontok nem törlődnek.",
+    "cancel": "Mégse",
+    "archive": "Archiválás",
+    "dangerZone": {
+      "title": "Veszélyzóna",
+      "archiveHelp": "Archiválja a pácienst, hogy elrejtse a keresésekből. Az időpontok és az előzmények megmaradnak."
+    },
+    "billingSection": "Számlázási adatok",
+    "billingSectionHint": "Ezeket az adatokat automatikusan felhasználjuk a páciens számláinak kiállításakor.",
+    "editingBillingForInvoice": "Számlázási adatok szerkesztése. A módosítások a számlán is megjelennek.",
+    "returnToInvoice": "Vissza a számlához",
+    "billingName": "Számlázási név",
+    "billingNamePlaceholder": "Név vagy cégnév a számlákhoz",
+    "billingTaxId": "Adószám",
+    "billingEmail": "Számlázási e-mail",
+    "billingAddress": "Számlázási cím",
+    "billingComplete": "Teljes",
+    "billingIncomplete": "Hiányos",
+    "demographics": "Személyes adatok",
+    "nationalId": "Személyazonosító okmány",
+    "nationalIdType": "Okmány típusa",
+    "passport": "Útlevél",
+    "profession": "Foglalkozás",
+    "workplace": "Munkahely",
+    "years": "év",
+    "status": {
+      "active": "Aktív",
+      "archived": "Archivált"
+    },
+    "filters": {
+      "status": "Állapot",
+      "city": "Város",
+      "withDebt": "Tartozással",
+      "doNotContact": "Nem kereshető",
+      "doNotContactOnly": "Csak a nem kereshetők",
+      "doNotContactOnlyContactable": "Csak az elérhetők"
+    },
+    "columns": {
+      "city": "Város",
+      "contact": "Elérhetőség",
+      "debt": "Tartozás"
+    },
+    "sort": {
+      "lastVisit": "Utolsó vizit",
+      "lastName": "Vezetéknév",
+      "firstName": "Keresztnév",
+      "createdAt": "Felvétel dátuma",
+      "updatedAt": "Nemrég szerkesztett"
+    },
+    "doNotContact": {
+      "label": "Nem kereshető",
+      "hint": "A páciens kimarad a hívólistából és az automatikus értesítésekből",
+      "badge": "Nem kereshető"
+    },
+    "gender": {
+      "label": "Nem",
+      "select": "Válasszon nemet",
+      "male": "Férfi",
+      "female": "Nő",
+      "other": "Egyéb",
+      "preferNotSay": "Nem kívánja megadni"
+    },
+    "emergencyContact": {
+      "title": "Vészhelyzeti kapcsolattartó",
+      "hasContact": "Van vészhelyzeti kapcsolattartója",
+      "noContact": "Nincs rögzített vészhelyzeti kapcsolattartó",
+      "name": "Teljes név",
+      "namePlaceholder": "Kapcsolattartó neve",
+      "relationship": "Kapcsolat",
+      "relationshipPlaceholder": "Válasszon kapcsolatot",
+      "phone": "Telefon",
+      "phonePlaceholder": "Kapcsolattartó telefonszáma",
+      "email": "E-mail",
+      "emailPlaceholder": "Kapcsolattartó e-mail-címe",
+      "isLegalGuardian": "Törvényes képviselő",
+      "remove": "Kapcsolattartó eltávolítása",
+      "relationships": {
+        "spouse": "Házastárs",
+        "parent": "Szülő",
+        "child": "Gyermek",
+        "sibling": "Testvér",
+        "friend": "Barát",
+        "other": "Egyéb"
+      }
+    },
+    "medicalHistory": {
+      "title": "Anamnézis",
+      "save": "Anamnézis mentése",
+      "fetchError": "Hiba az anamnézis betöltésekor",
+      "saveSuccess": "Anamnézis elmentve",
+      "saveError": "Hiba az anamnézis mentésekor",
+      "allergies": "Allergiák",
+      "allergiesCount": "{n} allergia | {n} allergia",
+      "onAnticoagulants": "Véralvadásgátló-kezelés alatt áll",
+      "allergyName": "Allergia neve",
+      "type": "Típus",
+      "allergyTypes": {
+        "drug": "Gyógyszer",
+        "food": "Étel",
+        "material": "Anyag",
+        "environmental": "Környezeti"
+      },
+      "severity": {
+        "low": "Enyhe",
+        "medium": "Közepes",
+        "high": "Súlyos",
+        "critical": "Kritikus"
+      },
+      "medications": "Gyógyszerek",
+      "medicationName": "Gyógyszer neve",
+      "dosage": "Adagolás",
+      "frequency": "Gyakoriság",
+      "systemicDiseases": "Szisztémás betegségek",
+      "diseaseName": "Betegség neve",
+      "diseaseTypes": {
+        "cardiovascular": "Szív- és érrendszeri",
+        "respiratory": "Légzőszervi",
+        "endocrine": "Endokrin",
+        "neurological": "Neurológiai",
+        "autoimmune": "Autoimmun",
+        "other": "Egyéb"
+      },
+      "critical": "Kritikus",
+      "controlled": "Beállított",
+      "notControlled": "Nem beállított",
+      "specialConditions": "Különleges állapotok",
+      "pregnant": "Várandós",
+      "pregnancyWeek": "Terhességi hét",
+      "lactating": "Szoptat",
+      "anticoagulants": "Véralvadásgátlók",
+      "anticoagulantMedication": "Véralvadásgátló gyógyszer",
+      "inrValue": "INR-érték",
+      "anesthesiaReaction": "Érzéstelenítőre adott reakció",
+      "anesthesiaReactionDetails": "A reakció részletei",
+      "bruxism": "Fogcsikorgatás (bruxizmus)",
+      "lifestyle": "Életmód",
+      "smoker": "Dohányzik",
+      "smokingFrequency": "Cigaretta/nap",
+      "alcoholConsumption": "Alkoholfogyasztás",
+      "alcohol": {
+        "none": "Nincs",
+        "occasional": "Alkalmi",
+        "moderate": "Mérsékelt",
+        "heavy": "Erős"
+      },
+      "surgicalHistory": "Műtéti előzmények",
+      "procedure": "Beavatkozás"
+    },
+    "timeline": {
+      "empty": "Még nincs rögzített aktivitás",
+      "emptyFiltered": "Nincs esemény ebben a kategóriában",
+      "clearFilter": "Teljes aktivitás megjelenítése",
+      "endOfTimeline": "Az idővonal vége",
+      "totalEntries": "{count} bejegyzés | {count} bejegyzés",
+      "groups": {
+        "today": "Ma",
+        "yesterday": "Tegnap",
+        "thisWeek": "Ezen a héten",
+        "thisMonth": "Ebben a hónapban",
+        "earlier": "Korábban"
+      },
+      "author": "– {name}",
+      "meta": {
+        "cabinet": "{name} kezelő",
+        "teeth": "Fogak: {list}",
+        "total": "Összesen: {amount}",
+        "number": "Sorszám: {value}",
+        "via": "Csatorna: {channel}",
+        "template": "Sablon: {key}",
+        "docType": "Típus: {type}"
+      },
+      "categories": {
+        "all": "Összes",
+        "visit": "Vizitek",
+        "treatment": "Kezelések",
+        "financial": "Pénzügyek",
+        "communication": "Kommunikáció",
+        "medical": "Anamnézis",
+        "document": "Dokumentumok",
+        "note": "Klinikai jegyzetek"
+      }
+    },
+    "alerts": {
+      "title": "{count} figyelmeztetés | {count} figyelmeztetés",
+      "label": "Klinikai figyelmeztetések"
+    },
+    "editDemographics": "Személyes adatok szerkesztése",
+    "editEmergencyContact": "Vészhelyzeti kapcsolattartó szerkesztése",
+    "editBilling": "Számlázási adatok szerkesztése",
+    "editMedicalHistory": "Anamnézis szerkesztése",
+    "medicalSnapshot": {
+      "title": "Egészségügyi adatok",
+      "allergiesLabel": "Allergiák",
+      "allergiesEmpty": "Nincs ismert allergia",
+      "allergiesNotReviewed": "Az anamnézis nincs rögzítve",
+      "completeHistory": "Anamnézis kitöltése",
+      "reviewedOn": "Ellenőrizve: {date}",
+      "conditions": {
+        "pregnantWeek": "Várandós · {week}. hét",
+        "anticoagulantInr": "Véralvadásgátló · INR {inr}",
+        "smokerFreq": "Dohányzik · {freq}/nap"
+      }
+    },
+    "personalInfo": {
+      "title": "Személyes adatok",
+      "ageLabel": "{age} éves",
+      "birthWithAge": "{date} ({age} éves)"
+    },
+    "contactInfo": {
+      "title": "Elérhetőség",
+      "copyPhone": "Telefonszám másolása",
+      "copyEmail": "E-mail másolása",
+      "address": "Cím",
+      "addEmergency": "Vészhelyzeti kapcsolattartó hozzáadása",
+      "addGuardian": "Törvényes képviselő hozzáadása",
+      "guardianRequired": "Törvényes képviselő szükséges"
+    },
+    "administrative": {
+      "title": "Adminisztráció"
+    },
+    "header": {
+      "ariaLabel": "Páciens fejléce"
+    },
+    "quickActions": {
+      "ariaLabel": "Gyorsműveletek a pácienshez"
+    },
+    "onboarding": {
+      "label": "Vegye fel az első páciensét",
+      "description": "A leggyorsabb út, hogy működés közben lássa a kartont, a naptárat és az árajánlatokat."
+    }
+  },
+  "patientDetail": {
+    "tabs": {
+      "summary": "Összefoglaló",
+      "info": "Adatok",
+      "clinical": "Klinikai",
+      "odontogram": "Fogtérkép",
+      "administration": "Adminisztráció",
+      "history": "Előzmények",
+      "timeline": "Aktivitás",
+      "appointments": "Időpontok",
+      "budgets": "Árajánlatok",
+      "billing": "Számlázás",
+      "payments": "Befizetések",
+      "documents": "Dokumentumok",
+      "gallery": "Galéria"
+    },
+    "historyPlaceholder": "A klinikai jegyzetek egy későbbi verzióban lesznek elérhetők",
+    "noAppointments": "A páciensnek nincs időpontja",
+    "scheduleAppointment": "Időpont foglalása",
+    "noBudgets": "A páciensnek nincs árajánlata",
+    "createBudget": "Árajánlat készítése",
+    "viewAllBudgets": "Összes árajánlat megtekintése",
+    "activePlan": "Aktív terv",
+    "noActivePlan": "Nincs aktív terv",
+    "viewPlan": "Terv megnyitása",
+    "createPlan": "Terv létrehozása",
+    "nextAppointment": "Következő időpont",
+    "noUpcomingAppointments": "Nincs közelgő időpont",
+    "openAppointment": "Időpont megnyitása",
+    "lastVisit": "Utolsó vizit",
+    "neverVisited": "Még nem járt itt",
+    "reschedule": "Átütemezés",
+    "balance": "Egyenleg",
+    "collect": "Beszedés",
+    "viewLedger": "Folyószámla megnyitása",
+    "noPayments": "Nincs mozgás",
+    "diagnoses": "Diagnózisok",
+    "pending": "kezeletlen",
+    "noDiagnoses": "Nincs függő lelet",
+    "openOdontogram": "Fogtérkép megnyitása",
+    "medicalHistory": "Anamnézis",
+    "completeMedicalHistory": "Nincs anamnézis. Töltse ki az allergiák, betegségek és gyógyszerek rögzítéséhez.",
+    "editMedicalHistory": "Anamnézis szerkesztése",
+    "quickActions": "Gyorsműveletek",
+    "edit": "Szerkesztés",
+    "editPatient": "Páciens szerkesztése",
+    "noSummaryCards": "Nincs modul regisztrálva az összefoglalóban.",
+    "actions": {
+      "label": "Műveletek",
+      "newAppointment": "Időpont",
+      "collect": "Beszedés",
+      "newNote": "Jegyzet",
+      "newBudget": "Árajánlat",
+      "uploadDocument": "Dokumentum"
+    }
+  },
+  "patientBilling": {
+    "totalBudgeted": "Összes ajánlat",
+    "workInProgress": "Folyamatban lévő munka",
+    "workCompleted": "Elkészült munka",
+    "totalInvoiced": "Összesen számlázva",
+    "totalPaid": "Összesen befizetve",
+    "balancePending": "Fennálló egyenleg",
+    "invoices": "Számlák",
+    "createInvoice": "Számla kiállítása",
+    "noInvoices": "A páciensnek nincs számlája",
+    "pending": "Függőben",
+    "totalDiscount": "kedvezmény"
+  },
+  "odontogram": {
+    "title": "Fogtérkép",
+    "tooth": "Fog",
+    "globals": {
+      "category": "Teljes szájüreg",
+      "applied": "{name} hozzáadva a tervhez",
+      "archPickerTitle": "Melyik fogívre kerüljön: \"{name}\"?",
+      "upperArch": "Felső fogív",
+      "lowerArch": "Alsó fogív",
+      "searchPlaceholder": "Kezelés keresése…"
+    },
+    "selectCondition": "Válasszon állapotot",
+    "readOnly": "Csak megtekintés",
+    "legend": "Jelmagyarázat",
+    "statusLegend": "Kezelés állapota",
+    "toothPosition": "Fog helyzete",
+    "displaced": "Elmozdult",
+    "rotated": "Elfordult",
+    "dentition": {
+      "permanent": "Maradó",
+      "deciduous": "Tejfogazat",
+      "toggle": "Fogazat váltása"
+    },
+    "quadrants": {
+      "upper": "Felső fogív",
+      "lower": "Alsó fogív",
+      "upperRight": "Jobb felső",
+      "upperLeft": "Bal felső",
+      "lowerRight": "Jobb alsó",
+      "lowerLeft": "Bal alsó"
+    },
+    "surfaces": {
+      "M": "Meziális",
+      "D": "Disztális",
+      "O": "Okkluzális",
+      "V": "Vesztibuláris",
+      "L": "Linguális"
+    },
+    "conditions": {
+      "healthy": "Egészséges",
+      "caries": "Szuvasodás",
+      "filling": "Tömés",
+      "crown": "Korona",
+      "missing": "Hiányzik",
+      "root_canal": "Gyökérkezelés",
+      "implant": "Implantátum",
+      "bridge_pontic": "Hídtag",
+      "bridge_abutment": "Hídpillér",
+      "extraction_indicated": "Húzás javasolt",
+      "sealant": "Barázdazárás",
+      "fracture": "Törés"
+    },
+    "history": {
+      "title": "Változási napló",
+      "noChanges": "Nincs rögzített változás",
+      "changedBy": "Módosította",
+      "changeTypes": {
+        "created": "Létrehozva",
+        "general_condition": "Általános állapot",
+        "surface_update": "Felszín módosítása",
+        "note": "Jegyzet"
+      }
+    },
+    "messages": {
+      "updated": "Fogtérkép frissítve",
+      "error": "Hiba a fogtérkép frissítésekor",
+      "loadError": "Nem sikerült betölteni a fogtérképet"
+    },
+    "actions": {
+      "save": "Mentés",
+      "reset": "Visszaállítás",
+      "print": "Nyomtatás"
+    },
+    "status": {
+      "existing": "Meglévő",
+      "planned": "Tervezett"
+    },
+    "treatments": {
+      "title": "Kezelések",
+      "addTreatment": "Kezelés hozzáadása",
+      "selectStatus": "Válasszon állapotot",
+      "noTreatments": "Nincs rögzített kezelés",
+      "markPerformed": "Megjelölés elvégzettként",
+      "categories": {
+        "common": "Gyakori",
+        "restorative": "Konzerváló",
+        "diagnostic": "Diagnosztika",
+        "orthodontic": "Fogszabályozás",
+        "periodontic": "Parodontológia",
+        "position": "Helyzet",
+        "other": "Egyéb",
+        "diagnostico": "Diagnosztika",
+        "restauradora": "Konzerváló",
+        "cirugia": "Szájsebészet",
+        "endodoncia": "Endodoncia",
+        "ortodoncia": "Fogszabályozás"
+      },
+      "types": {
+        "pulpitis": "Pulpitis",
+        "caries": "Szuvasodás",
+        "incipient_caries": "Kezdődő szuvasodás",
+        "pigmentation": "Pigmentáció",
+        "fracture": "Törés",
+        "missing": "Hiányzik",
+        "periapical_small": "Periapikális <2mm",
+        "periapical_medium": "Periapikális 2-4mm",
+        "periapical_large": "Periapikális >4mm",
+        "rotated": "Elfordult",
+        "displaced": "Elmozdult",
+        "unerupted": "Elő nem tört",
+        "filling": "Tömés",
+        "filling_composite": "Kompozit tömés",
+        "filling_amalgam": "Amalgám tömés",
+        "filling_temporary": "Ideiglenes tömés",
+        "sealant": "Barázdazárás",
+        "veneer": "Héj (veneer)",
+        "inlay": "Inlay",
+        "overlay": "Overlay",
+        "crown": "Korona",
+        "crown_on_implant": "Korona implantátumon",
+        "provisional_crown_on_implant": "Ideiglenes korona implantátumon",
+        "pontic": "Hídtag",
+        "bridge_pontic": "Hídtag",
+        "bridge_abutment": "Hídpillér",
+        "extraction": "Foghúzás",
+        "implant": "Implantátum",
+        "apicoectomy": "Gyökércsúcs-rezekció",
+        "root_canal": "Gyökérkezelés",
+        "root_canal_full": "Teljes gyökértömés",
+        "root_canal_two_thirds": "Gyökértömés 2/3",
+        "root_canal_half": "Gyökértömés 1/2",
+        "root_canal_overfill": "Túltömött gyökértömés",
+        "post": "Csap",
+        "bracket": "Bracket",
+        "tube": "Tube",
+        "band": "Gyűrű",
+        "attachment": "Attachment",
+        "retainer": "Retainer",
+        "rotate": "Elfordult",
+        "displace": "Elmozdult",
+        "splint": "Sín",
+        "migrated": "Általános kezelés",
+        "other": "Egyéb kezelés"
+      },
+      "treatmentAdded": "Kezelés hozzáadva",
+      "treatmentPerformed": "Kezelés elvégzettként megjelölve",
+      "treatmentDeleted": "Kezelés törölve",
+      "status": {
+        "existing": "Meglévő",
+        "planned": "Tervezett"
+      }
+    },
+    "position": {
+      "displaced": "Elmozdult",
+      "rotated": "Elfordult",
+      "normal": "Normál"
+    },
+    "views": {
+      "occlusal": "Okkluzális nézet",
+      "lateral": "Oldalnézet",
+      "dual": "Kettős nézet"
+    },
+    "selectSurfaces": "Felszínek kiválasztása",
+    "selectedSurfaces": "Kiválasztott felszínek",
+    "surfacesSelected": "felszín kiválasztva",
+    "instructions": {
+      "selectTreatment": "Válassza ki az alkalmazandó kezelést",
+      "clickTooth": "Kattintson a fogra az alkalmazáshoz"
+    },
+    "addToPlan": "Hozzáadás a tervhez",
+    "noPlan": "Nincs terv",
+    "createNewPlan": "Új terv létrehozása...",
+    "applyTo": "Alkalmazás erre",
+    "oneTooth": "1 fog",
+    "multipleTeeth": "Több fog",
+    "surfacePricingHint": "Felszínenkénti ár: {range}",
+    "toothNames": {
+      "centralIncisor": "Nagymetsző",
+      "lateralIncisor": "Kismetsző",
+      "canine": "Szemfog",
+      "firstPremolar": "Első kisőrlő",
+      "secondPremolar": "Második kisőrlő",
+      "firstMolar": "Első nagyőrlő",
+      "secondMolar": "Második nagyőrlő",
+      "thirdMolar": "Bölcsességfog"
+    },
+    "positions": {
+      "upper": "felső",
+      "lower": "alsó",
+      "left": "bal",
+      "right": "jobb"
+    },
+    "tooltip": {
+      "clickToEdit": "Kattintson a szerkesztéshez"
+    },
+    "planning": "Tervezés",
+    "diagnosisMode": "Diagnózis",
+    "treatmentList": {
+      "title": "Kezeléslista",
+      "noTreatments": "Nincs rögzített kezelés"
+    },
+    "changeHistory": {
+      "title": "Változási napló",
+      "noChanges": "Nincs rögzített változás",
+      "treatmentAdded": "Kezelés"
+    },
+    "timeline": {
+      "title": "Idővonal",
+      "viewingDate": "Megtekintés: {date}",
+      "viewingHistory": "A fogtérkép korábbi állapotát nézi",
+      "returnToNow": "Vissza a jelenlegi állapothoz",
+      "noHistory": "Nincs korábbi előzmény"
+    },
+    "multiTooth": {
+      "bridge": {
+        "label": "Rögzített híd"
+      },
+      "splint": {
+        "label": "Sín"
+      },
+      "veneers": {
+        "label": "Több héj"
+      },
+      "crowns": {
+        "label": "Több korona"
+      },
+      "pillar": "pillér",
+      "pontic": "hídtag",
+      "roleHint": "Kattintson egy fogra a pillér / hídtag váltásához.",
+      "needPillar": "A hídhoz legalább egy pillérfog szükséges.",
+      "confirmHint": "{n} fogból álló kezeléscsoportot készül létrehozni.",
+      "willBePlanned": "A csoport tervezettként lesz megjelölve.",
+      "willBeExisting": "A csoport meglévőként lesz rögzítve.",
+      "hints": {
+        "range": "Kattintson az első, majd az utolsó fogra",
+        "free": "Kattintással adhat hozzá vagy vehet el fogakat"
+      },
+      "errors": {
+        "tooFew": "Legalább {n} fog szükséges",
+        "tooMany": "Legfeljebb {n} fog engedélyezett",
+        "sameArchRequired": "A fogaknak ugyanazon a fogíven kell lenniük"
+      },
+      "sectionLabel": "Több fogat érintő kezelések"
+    }
+  },
+  "clinical": {
+    "modes": {
+      "history": "Előzmények",
+      "diagnosis": "Diagnózis",
+      "plans": "Kezelési tervek",
+      "appointments": "Időpontok"
+    },
+    "history": {
+      "stateAt": "Állapot ekkor:",
+      "changesOnDate": "Változások ezen a napon",
+      "noChanges": "Nincs rögzített változás"
+    },
+    "diagnosis": {
+      "registeredConditions": "Diagnosztizált elváltozások",
+      "registerConditions": "Elváltozások rögzítése",
+      "noConditions": "Nincs rögzített elváltozás",
+      "startDiagnosis": "Válasszon egy fogat, és rögzítse a meglévő elváltozásokat",
+      "generalConditions": "Általános elváltozások",
+      "readyToCreatePlan": "Kész a diagnózis?",
+      "createPlan": "Kezelési terv létrehozása",
+      "continuePlan": "\"{name}\" terv folytatása",
+      "selectPlan": "Terv kiválasztása",
+      "continue": "Folytatás",
+      "odontogramTab": "Fogtérkép"
+    },
+    "plans": {
+      "title": "Kezelési tervek",
+      "create": "Új terv",
+      "backToList": "Vissza a tervekhez",
+      "treatments": "A terv kezelései",
+      "addTreatment": "Kezelés hozzáadása",
+      "total": "Összesen",
+      "activate": "Terv aktiválása",
+      "generateBudget": "Árajánlat készítése",
+      "empty": "Nincs kezelési terv",
+      "emptyDescription": "Hozzon létre egy tervet a páciens kezeléseinek megszervezéséhez",
+      "createFirst": "Első terv létrehozása",
+      "active": "Aktív tervek",
+      "drafts": "Piszkozatok",
+      "completed": "Befejezett",
+      "closed": "Lezárt",
+      "other": "Egyéb",
+      "noItems": "Nincs kezelés a tervben",
+      "markComplete": "Megjelölés befejezettként",
+      "removeItem": "Eltávolítás a tervből",
+      "sessions": {
+        "progress": "{done}/{total} ülés",
+        "markDone": "Ülés elvégzettként jelölése",
+        "cancel": "Ülés lemondása",
+        "markedDone": "Ülés elvégzettként megjelölve",
+        "cancelled": "Ülés lemondva",
+        "untitled": "{n}. ülés"
+      },
+      "unknownTreatment": "Kezelés",
+      "odontogram": "Fogtérkép",
+      "pending": "függőben",
+      "dragToReorder": "Húzza az átrendezéshez",
+      "reorderHint": "Mozgatás: Alt + nyílbillentyűk",
+      "emptyDraft": {
+        "title": "Tervezze meg a kezeléseket",
+        "step1": "Válasszon kezelést az alábbi sávból",
+        "step2": "Kattintson egy fogra a fogtérképen",
+        "step3": "Erősítse meg a tervet az árajánlat és az időpontok elkészítéséhez"
+      },
+      "steps": {
+        "plan": "Tervezés",
+        "confirm": "Megerősítés",
+        "inProgress": "Folyamatban"
+      },
+      "confirmCta": {
+        "titleWithItems": "Terv megerősítése",
+        "subtitleWithItems": "A megerősítés után elérhető az árajánlat-készítés és az időpontfoglalás.",
+        "empty": "A terv megerősítéséhez adjon hozzá legalább egy kezelést"
+      },
+      "ghostHint": "A terv megerősítése után lesz elérhető",
+      "addedToPlan": "Hozzáadva a tervhez",
+      "addingToPlan": "Hozzáadás ehhez a tervhez",
+      "cancelPlan": "Terv megszakítása",
+      "locked": {
+        "title": "A terv zárolva",
+        "subtitle": "A(z) {number} árajánlat ki lett állítva. A kezelések szerkesztéséhez nyissa újra (ha függőben van), vagy tárgyalja újra az árajánlatot.",
+        "viewBudget": "Árajánlat megtekintése"
+      }
+    },
+    "tooth": "Fog"
+  },
+  "appointments": {
+    "title": "Időpontnaptár",
+    "create": "Új időpont",
+    "edit": "Időpont szerkesztése",
+    "today": "Ma",
+    "tomorrow": "Holnap",
+    "yesterday": "Tegnap",
+    "week": "Hét",
+    "prevWeek": "Előző hét",
+    "nextWeek": "Következő hét",
+    "selectPatient": "Válasszon pácienst",
+    "selectProfessional": "Válasszon kezelőorvost",
+    "openPatientFile": "Páciens kartonjának megnyitása",
+    "patient": "Páciens",
+    "professional": "Kezelőorvos",
+    "cabinet": "Kezelő",
+    "date": "Dátum",
+    "time": "Időpont",
+    "startTime": "Kezdés",
+    "duration": "Időtartam",
+    "treatmentType": "Kezelés típusa",
+    "treatments": "Kezelések",
+    "addTreatment": "Kezelés hozzáadása",
+    "selectTreatment": "Válasszon kezelést",
+    "estimatedDuration": "Becsült időtartam",
+    "notes": "Megjegyzések",
+    "hasNotes": "Van megjegyzés",
+    "status": {
+      "label": "Állapot",
+      "scheduled": "Beütemezve",
+      "confirmed": "Megerősítve",
+      "checked_in": "A váróban",
+      "in_treatment": "A székben",
+      "completed": "Befejezve",
+      "cancelled": "Lemondva",
+      "no_show": "Nem jelent meg"
+    },
+    "scheduled": "Beütemezve",
+    "confirmed": "Megerősítve",
+    "inProgress": "Folyamatban",
+    "in_progress": "Folyamatban",
+    "completed": "Befejezve",
+    "cancelled": "Lemondva",
+    "noShow": "Nem jelent meg",
+    "no_show": "Nem jelent meg",
+    "actionsMenu": "Időpont műveletei",
+    "transitions": {
+      "confirmed": "Megjelölés megerősítettként",
+      "checked_in": "Érkezés rögzítése",
+      "in_treatment": "Székbe ültetés",
+      "completed": "Időpont lezárása",
+      "cancelled": "Időpont lemondása",
+      "no_show": "Megjelölés meg nem jelentként"
+    },
+    "timer": {
+      "startsIn": "{minutes} perc múlva kezdődik",
+      "startsInOverdue": "{minutes} perc késés",
+      "waiting": "{minutes} perce várakozik",
+      "inTreatment": "{elapsed}/{planned} perc",
+      "completedAt": "befejezve: {time}",
+      "cancelledAt": "lemondva",
+      "noShowAt": "nem jelent meg"
+    },
+    "confirmTransitionTitle": "Állapotváltás megerősítése",
+    "confirmCancelMessage": "Lemondja ezt az időpontot? A módosítás naplózásra kerül.",
+    "confirmNoShowMessage": "Megjelöli a pácienst meg nem jelentként? A módosítás naplózásra kerül.",
+    "noteLabel": "Megjegyzés (opcionális)",
+    "transitionFailed": "Nem sikerült módosítani az időpont állapotát",
+    "when": "Mikor",
+    "whereWho": "Kezelő és kezelőorvos",
+    "followup": {
+      "title": "Időpont utáni teendők"
+    },
+    "created": "Időpont létrehozva",
+    "saved": "Időpont elmentve",
+    "updated": "Időpont frissítve",
+    "conflict": "Ez az idősáv már foglalt",
+    "cancel": "Időpont lemondása",
+    "markCompleted": "Megjelölés befejezettként",
+    "markNoShow": "Nem jelent meg",
+    "dailyView": "Nap",
+    "weeklyView": "Hét",
+    "kanbanView": "Kanban",
+    "kanban": {
+      "upcoming": "Közelgő",
+      "waiting": "Váró",
+      "inChair": "A székben",
+      "done": "Befejezve",
+      "missed": "Nem jelent meg / Lemondva",
+      "free": "Szabad",
+      "inactive": "Inaktív",
+      "empty": "Nincs időpont",
+      "nextIn": "Következő: {time}",
+      "subtitleCount": "{count} időpont",
+      "subtitleEmpty": "Nincs időpont",
+      "subtitleWaiting": "{count} várakozó · átl. {avg} perc",
+      "subtitleInChair": "{busy} foglalt · {free} szabad"
+    },
+    "cabinetAssignment": {
+      "assignLater": "Kiosztás később",
+      "unassigned": "Nincs kiosztva",
+      "assign": "Kezelő kiosztása",
+      "reassign": "Kezelő módosítása",
+      "unassign": "Kiosztás visszavonása",
+      "requiredForTreatment": "A kezelés megkezdése előtt osszon ki egy kezelőt"
+    },
+    "professionals": {
+      "strip": "Kezelőorvosok",
+      "state": {
+        "free": "Szabad",
+        "in_treatment": "A székben",
+        "on_break": "Szünetel",
+        "off": "Nem dolgozik"
+      }
+    },
+    "noProfessionals": "Nincs beállított kezelőorvos",
+    "overlapWarning": "Átfedések észlelve",
+    "overlapProfessional": "A kezelőorvosnak {count} időpontja van ekkor",
+    "overlapCabinet": "A kezelőben {count} időpont van ekkor",
+    "selectDuration": "Válasszon időtartamot...",
+    "sendEmail": "E-mail küldése",
+    "sendConfirmationEmail": "Visszaigazolás küldése",
+    "resendConfirmation": "Visszaigazolás újraküldése",
+    "sendReminderEmail": "Emlékeztető küldése",
+    "emailSent": "E-mail sikeresen elküldve",
+    "automatic": "automatikus",
+    "selectPatientFirst": "Válasszon pácienst a függő kezelések megtekintéséhez",
+    "noPendingTreatments": "Nincs függő kezelés",
+    "createPlanFirst": "Készítsen kezelési tervet ehhez a pácienshez",
+    "addTreatmentFromPlan": "Kezelés hozzáadása a tervből",
+    "selectPendingTreatment": "Válasszon függő kezelést",
+    "emptyDay": "Nincs időpont ezen a napon",
+    "noPatient": "Nincs páciens",
+    "freeSlots": {
+      "byProfessional": "Kezelőorvos",
+      "byCabinet": "Kezelő",
+      "freeSuffix": "szabad",
+      "freeShort": "szabad",
+      "noFreeTime": "Nincs szabad idő",
+      "tapToBook": "Koppintson a foglaláshoz",
+      "tapToBookAria": "{duration} hosszú szabad idősáv ekkor: {time}",
+      "nextFreeAt": "Következő: {time}",
+      "gapsAtLeast": "{count} rés ≥ {min} perc",
+      "minDuration": "Minimum",
+      "noFreeSlots": "Ma nincs szabad idősáv",
+      "clinicClosed": "A rendelő zárva",
+      "professionalOff": "Nem dolgozik",
+      "onBreak": "Szünetel"
+    }
+  },
+  "dashboard": {
+    "greetings": {
+      "morning": "Jó reggelt",
+      "afternoon": "Jó napot",
+      "evening": "Jó estét"
+    },
+    "welcome": "Üdvözöljük a DentApexben",
+    "welcomeMessage": "Kezdje az első páciense felvételével.",
+    "quickActions": {
+      "newAppointment": "Új időpont",
+      "newPatient": "Új páciens",
+      "search": "Páciens keresése",
+      "searchPlaceholder": "Keresés név, telefonszám vagy e-mail alapján"
+    },
+    "timeline": {
+      "title": "Ma",
+      "empty": "Mára nincs beütemezett időpont",
+      "now": "Most",
+      "openSchedule": "Naptár megnyitása"
+    },
+    "todayKpi": {
+      "title": "Mai időpontok",
+      "completed": "befejezve",
+      "inProgress": "folyamatban",
+      "upcoming": "közelgő",
+      "cancelled": "lemondva",
+      "noShow": "nem jelent meg",
+      "empty": "Ma nincs időpont"
+    },
+    "inClinic": {
+      "title": "Most a rendelőben",
+      "inTreatment": "{n} a székben",
+      "waiting": "{n} várakozik",
+      "empty": "Senki sincs a rendelőben"
+    },
+    "unconfirmed": {
+      "title": "Holnapra meg nem erősített",
+      "empty": "Minden holnapi időpont megerősítve",
+      "confirm": "Megerősítés",
+      "confirmError": "Nem sikerült megerősíteni"
+    },
+    "overdue": {
+      "title": "Lejárt fizetések",
+      "daysOverdue": "{n} napja lejárt | {n} napja lejárt",
+      "viewAll": "Összes megtekintése",
+      "empty": "Nincs lejárt számla"
+    },
+    "recent": {
+      "title": "Legutóbbi páciensek",
+      "empty": "Még nincs páciens"
+    },
+    "weekGlance": {
+      "title": "A hét egy pillantásra",
+      "subtitle": "Elmúlt 7 nap az előző 7-hez képest",
+      "appointments": "Időpontok",
+      "completed": "Befejezve",
+      "invoiced": "Számlázva",
+      "empty": "Nincs adat ezen a héten"
+    }
+  },
+  "settings": {
+    "title": "Beállítások",
+    "subtitle": "Kezelje a rendelőjét, a csapatát és a modulokat.",
+    "allCategories": "Minden kategória",
+    "navLabel": "Beállítási kategóriák",
+    "attentionRequired": "Figyelmet igényel",
+    "categories": {
+      "general": {
+        "label": "Általános",
+        "description": "Rendelőprofil, arculat és időzóna."
+      },
+      "workspace": {
+        "label": "Munkaterület",
+        "description": "Kezelők, nyitvatartás és elérhetőség."
+      },
+      "people": {
+        "label": "Emberek",
+        "description": "Felhasználók, szerepkörök és meghívók."
+      },
+      "clinical": {
+        "label": "Klinikai",
+        "description": "Katalógus, kezelési alapértékek és sablonok."
+      },
+      "billing": {
+        "label": "Számlázás és adók",
+        "description": "Számlatömbök, áfa és adómegfelelés."
+      },
+      "communications": {
+        "label": "Kommunikáció",
+        "description": "Értesítések, SMTP és sablonok."
+      },
+      "integrations": {
+        "label": "Integrációk",
+        "description": "Külső szolgáltatások és szolgáltatók."
+      },
+      "modules": {
+        "label": "Modulok",
+        "description": "Modulok telepítése, frissítése és eltávolítása."
+      },
+      "account": {
+        "label": "Fiók",
+        "description": "Profilja, jelszava és nyelve."
+      }
+    },
+    "search": {
+      "placeholder": "Keresés a beállításokban…",
+      "empty": "Nincs találat erre a keresésre.",
+      "navigate": "navigálás",
+      "open": "megnyitás"
+    },
+    "locked": {
+      "title": "Nincs hozzáférése ehhez a szakaszhoz",
+      "description": "Kérje meg a rendelő adminisztrátorát, hogy adja meg a szükséges jogosultságokat."
+    },
+    "emptyCategory": {
+      "title": "Nincs elérhető beállítás",
+      "description": "Ha kompatibilis modulok kerülnek bekapcsolásra, a beállításaik itt jelennek meg."
+    },
+    "loadError": {
+      "description": "Nem sikerült betölteni a szerkesztőt. Próbálja újra néhány másodperc múlva."
+    },
+    "comingSoon": {
+      "title": "Hamarosan",
+      "subtitle": "Dolgozunk ezen a szakaszon. Addig az API-n keresztül kezelheti."
+    },
+    "onboarding": {
+      "title": "Fejezze be a rendelő beállítását",
+      "subtitle": "Még {count} lépés van hátra az alapbeállítások befejezéséhez.",
+      "dismiss": "Elrejtés",
+      "items": {
+        "clinicInfo": {
+          "label": "Töltse ki a rendelő profilját",
+          "description": "A név, az adószám és a cím megjelenik az árajánlatokon és a számlákon."
+        },
+        "cabinets": {
+          "label": "Hozzon létre legalább egy kezelőt",
+          "description": "Kezelők nélkül nem lehet időpontot foglalni."
+        }
+      }
+    },
+    "cabinetsDescription": "Helyiségek vagy kezelőegységek, ahol a páciensek ellátása zajlik.",
+    "usersDescription": "A rendelőhöz hozzáféréssel rendelkező fiókok és szerepköreik.",
+    "profileDescription": "Az Ön személyes adatai ebben a rendelőben.",
+    "clinic": "Rendelő",
+    "profile": "Profil",
+    "clinicName": "Rendelő neve",
+    "clinicInfo": "A rendelő adatai",
+    "clinicInfoDescription": "Ezek az adatok megjelennek az árajánlatokon és a dokumentumokon",
+    "taxId": "Adószám",
+    "legalName": "Hivatalos név",
+    "legalNameHelp": "A számlázáshoz használt jogi entitás neve. Hagyja üresen a rendelő nevének használatához.",
+    "street": "Cím",
+    "city": "Város",
+    "postalCode": "Irányítószám",
+    "country": "Ország",
+    "countryPlaceholder": "Válasszon országot",
+    "countrySearchPlaceholder": "Ország keresése…",
+    "phone": "Telefon",
+    "timezone": "Időzóna",
+    "timezoneHelp": "Minden munkarend és időpont ebben az időzónában értelmeződik.",
+    "currency": "Pénznem",
+    "currencyHelp": "A rendelőben használt pénznem az árajánlatokhoz, számlákhoz és a katalógushoz.",
+    "editClinicInfo": "Adatok szerkesztése",
+    "clinicUpdated": "A rendelő adatai frissítve",
+    "clinicUpdateError": "Hiba az adatok frissítésekor",
+    "cabinets": "Kezelők",
+    "language": "Nyelv",
+    "languageDescription": "Válassza ki a kívánt nyelvet",
+    "users": "A rendelő felhasználói",
+    "newUser": "Új felhasználó",
+    "createUser": "Felhasználó létrehozása",
+    "editUser": "Felhasználó szerkesztése",
+    "deleteUser": "Felhasználó eltávolítása",
+    "deleteUserConfirm": "Biztosan eltávolítja:",
+    "deleteUserNote": "A felhasználó elveszíti a hozzáférését ehhez a rendelőhöz, de a fiókja nem törlődik.",
+    "noUsers": "Nincs rögzített felhasználó",
+    "youTag": "(Ön)",
+    "userActive": "Aktív felhasználó",
+    "isProfessional": "Kezelőorvosként dolgozik",
+    "isProfessionalHelp": "Megjelenik a naptárban, van munkarendje, és kezelések rendelhetők hozzá. Az adminisztrátor is dolgozhat kezelőként.",
+    "userInactiveNote": "(Nem tud bejelentkezni)",
+    "saveChanges": "Módosítások mentése",
+    "noCabinets": "Nincs beállított kezelő",
+    "addCabinet": "Hozzáadás",
+    "newCabinet": "Új kezelő",
+    "editCabinet": "Kezelő szerkesztése",
+    "deleteCabinet": "Kezelő törlése",
+    "deleteCabinetConfirm": "Biztosan törli ezt a kezelőt:",
+    "deleteCabinetNote": "A kezelőben lévő meglévő időpontokat ez nem érinti.",
+    "createCabinet": "Kezelő létrehozása",
+    "roles": {
+      "admin": "Adminisztrátor",
+      "dentist": "Fogorvos",
+      "hygienist": "Dentálhigiénikus",
+      "assistant": "Asszisztens",
+      "receptionist": "Recepciós"
+    },
+    "errors": {
+      "loadUsers": "Hiba a felhasználók betöltésekor",
+      "createUser": "Hiba a felhasználó létrehozásakor",
+      "updateUser": "Hiba a felhasználó frissítésekor",
+      "deleteUser": "Hiba a felhasználó eltávolításakor",
+      "emailExists": "Ez az e-mail-cím már létezik",
+      "userNotFound": "A felhasználó nem található",
+      "operationNotAllowed": "A művelet nem engedélyezett",
+      "invalidData": "Érvénytelen adatok",
+      "inviteLink": "Nem sikerült létrehozni a hozzáférési linket"
+    },
+    "messages": {
+      "userCreated": "Felhasználó sikeresen létrehozva",
+      "userUpdated": "Felhasználó sikeresen frissítve",
+      "userDeleted": "Felhasználó eltávolítva a rendelőből"
+    },
+    "modules": {
+      "title": "Modulok",
+      "subtitle": "A rendelő moduljainak telepítése, eltávolítása és frissítése.",
+      "description": "Kezelje, mely modulok aktívak a rendelőjében.",
+      "deps": "Függőségek",
+      "noDeps": "Nincs függőség",
+      "state": {
+        "installed": "Telepítve",
+        "uninstalled": "Nincs telepítve",
+        "toInstall": "Telepítésre vár",
+        "toUpgrade": "Frissítésre vár",
+        "toRemove": "Eltávolításra vár",
+        "disabled": "Letiltva",
+        "error": "Hiba"
+      },
+      "category": {
+        "official": "Hivatalos",
+        "community": "Közösségi"
+      },
+      "actions": {
+        "install": "Telepítés",
+        "uninstall": "Eltávolítás",
+        "upgrade": "Frissítés",
+        "apply": "Módosítások alkalmazása",
+        "viewDetails": "Részletek",
+        "force": "Eltávolítás kényszerítése"
+      },
+      "confirmInstall": {
+        "title": "Telepíti: {name}?",
+        "message": "A modul telepítésre lesz ütemezve, és a módosítások alkalmazása után válik aktívvá.",
+        "scheduled": "Ezek a függőségek is telepítésre kerülnek:"
+      },
+      "confirmUninstall": {
+        "title": "Eltávolítja: {name}?",
+        "warning": "A modul táblái törlődnek. Előtte pg_dump biztonsági mentés készül, így az adatok visszaállíthatók.",
+        "forceHint": "Figyelmen kívül hagyja a függő modulokat. Csak akkor használja, ha pontosan tudja, mit csinál."
+      },
+      "confirmUpgrade": {
+        "title": "Frissíti: {name}?",
+        "message": "A modul a módosítások alkalmazásakor a lemezen lévő manifest-verzióra frissül."
+      },
+      "confirmApply": {
+        "title": "Módosítások alkalmazása",
+        "message": "A backend újraindul. A munkamenet rövid időre megszakadhat, amíg a függő műveletek lefutnak."
+      },
+      "pending": {
+        "banner": "Függőben lévő módosítások:",
+        "apply": "Módosítások alkalmazása"
+      },
+      "doctor": {
+        "banner": "Problémák észlelhetők a modulrendszerben.",
+        "orphans": "árva modul",
+        "missingDeps": "hiányzó függőség",
+        "manifestErrors": "manifest-hiba",
+        "errored": "hibás modul"
+      },
+      "detail": {
+        "state": "Állapot",
+        "category": "Kategória",
+        "installedAt": "Telepítve ekkor",
+        "lastChange": "Utolsó módosítás",
+        "baseRevision": "Alaprevízió",
+        "appliedRevision": "Alkalmazott revízió",
+        "manifest": "Teljes manifest",
+        "errorMessage": "Hibaüzenet",
+        "operationLog": "Műveleti napló",
+        "noOperations": "Nincs rögzített művelet."
+      },
+      "restart": {
+        "inProgress": "A backend újraindul…",
+        "done": "Módosítások alkalmazva",
+        "failed": "A módosítások alkalmazása nem sikerült",
+        "timeout": "Időtúllépés a backendre várva"
+      },
+      "toasts": {
+        "scheduled": "Művelet beütemezve. A befejezéshez alkalmazza a módosításokat.",
+        "applied": "Módosítások sikeresen alkalmazva."
+      }
+    },
+    "invite": {
+      "linkTitle": "Hozzáférési link",
+      "linkHelp": "Küldje el ezt a linket {name} részére, hogy jelszót választhasson. Lejár: {date}, és csak egyszer használható.",
+      "copy": "Link másolása",
+      "copied": "Link vágólapra másolva",
+      "whatsapp": "Küldés WhatsAppon",
+      "shareText": "Szia {name}, itt a DentApex-hozzáférésed. Nyisd meg és válassz jelszót: {url}",
+      "secretNote": "Kezelje jelszóként: bárki, akinél a link van, be tud jelentkezni ebbe a fiókba.",
+      "passwordOptionalHelp": "Hagyja üresen, ha WhatsAppon vagy e-mailben küldhető hozzáférési linket szeretne.",
+      "passwordOptionalPlaceholder": "Opcionális",
+      "createAndLink": "Létrehozás és link generálása",
+      "rowAction": "Hozzáférési link",
+      "setPasswordTitle": "Válasszon jelszót",
+      "setPasswordSubtitle": "Meghívást kapott a DentApexbe. A bejelentkezéshez hozza létre a jelszavát.",
+      "setPasswordSubmit": "Mentés és bejelentkezés",
+      "invalidToken": "Ez a link érvénytelen vagy már felhasználták. Kérjen újat a rendelő adminisztrátorától."
+    }
+  },
+  "selector": {
+    "recentPatients": "Legutóbbi páciensek",
+    "commonTreatments": "Gyakori kezelések",
+    "noRecentPatients": "Nincs friss páciens",
+    "noCommonTreatments": "Nincs gyakori kezelés",
+    "noMatches": "Nincs találat",
+    "typeToSearch": "Gépeljen a kereséshez..."
+  },
+  "density": {
+    "switchToCompact": "Kompakt nézet",
+    "switchToComfortable": "Kényelmes nézet"
+  },
+  "patientSelector": {
+    "createOption": "\"{query}\" páciens létrehozása",
+    "createOptionEmpty": "Új páciens létrehozása",
+    "newBadge": "Új",
+    "duplicateWarning": "{name} már létezik ezzel a telefonszámmal",
+    "useExisting": "Ennek a páciensnek a használata",
+    "createForm": {
+      "title": "Új páciens",
+      "back": "Vissza a kereséshez",
+      "firstName": "Keresztnév",
+      "lastName": "Vezetéknév",
+      "phone": "Telefon",
+      "phoneHint": "Később is megadhatja a páciens kartonján.",
+      "submit": "Létrehozás és kiválasztás",
+      "cancel": "Mégse",
+      "errorGeneric": "Nem sikerült létrehozni a pácienst. Próbálja újra."
+    }
+  },
+  "common": {
+    "save": "Mentés",
+    "add": "Hozzáadás",
+    "cancel": "Mégse",
+    "clear": "Törlés",
+    "close": "Bezárás",
+    "delete": "Törlés",
+    "comingSoon": "Hamarosan",
+    "edit": "Szerkesztés",
+    "change": "módosítás | módosítás",
+    "back": "Vissza",
+    "loading": "Betöltés...",
+    "error": "Hiba",
+    "success": "Sikeres",
+    "completed": "Befejezve",
+    "retry": "Újra",
+    "refresh": "Frissítés",
+    "hide": "Elrejtés",
+    "forbidden": "Hozzáférés megtagadva",
+    "confirm": "Megerősítés",
+    "yes": "Igen",
+    "no": "Nem",
+    "actions": "Műveletek",
+    "viewDetails": "Részletek megtekintése",
+    "previous": "Előző",
+    "next": "Következő",
+    "previousYear": "Előző év",
+    "nextYear": "Következő év",
+    "undo": "Visszavonás",
+    "undone": "Visszavonva",
+    "added": "Hozzáadva",
+    "removed": "Eltávolítva",
+    "page": "{current}. oldal / {total}",
+    "noData": "Nincs adat",
+    "noValue": "nincs érték",
+    "noResults": "Nincs találat",
+    "search": "Keresés...",
+    "selectAll": "Összes",
+    "deselectAll": "Egyik sem",
+    "all": "Összes",
+    "required": "Ez a mező kötelező",
+    "invalidEmail": "Érvénytelen e-mail",
+    "networkError": "Kapcsolódási hiba",
+    "serverError": "Szerverhiba",
+    "notFound": "Nem található",
+    "offline": "Offline — előfordulhat, hogy az adatok nem naprakészek",
+    "inactive": "Inaktív",
+    "name": "Név",
+    "color": "Szín",
+    "firstName": "Keresztnév",
+    "lastName": "Vezetéknév",
+    "email": "E-mail",
+    "password": "Jelszó",
+    "passwordPlaceholder": "Legalább 8 karakter",
+    "role": "Szerepkör",
+    "readOnly": "Csak olvasható",
+    "createdBy": "Létrehozta",
+    "date": "Dátum",
+    "upload": "Feltöltés",
+    "uploading": "Feltöltés folyamatban…",
+    "maxFileSize": "legfeljebb 10 MB",
+    "durationMinutes": "{value} perc",
+    "days": {
+      "sunday": "Vasárnap",
+      "monday": "Hétfő",
+      "tuesday": "Kedd",
+      "wednesday": "Szerda",
+      "thursday": "Csütörtök",
+      "friday": "Péntek",
+      "saturday": "Szombat"
+    },
+    "now": "Most",
+    "today": "Ma",
+    "tomorrow": "Holnap",
+    "yesterday": "Tegnap",
+    "copied": "Vágólapra másolva",
+    "copy": "Másolás",
+    "copyFailed": "Nem sikerült másolni"
+  },
+  "cabinet": {
+    "toast": {
+      "created": "Kezelő létrehozva",
+      "updated": "Kezelő frissítve",
+      "deleted": "Kezelő törölve",
+      "duplicateName": "Már létezik kezelő ezzel a névvel",
+      "notFound": "A kezelő nem található",
+      "createFailed": "Nem sikerült létrehozni a kezelőt",
+      "updateFailed": "Nem sikerült frissíteni a kezelőt",
+      "deleteFailed": "Nem sikerült törölni a kezelőt"
+    }
+  },
+  "professionals": {
+    "toast": {
+      "loadFailed": "Nem sikerült betölteni a kezelőorvosokat"
+    }
+  },
+  "lists": {
+    "empty": {
+      "title": "Nincs találat",
+      "description": "Módosítsa vagy törölje a szűrőket az összes elem megtekintéséhez."
+    },
+    "resultCount": "{shown} / {total}",
+    "filter": {
+      "title": "Szűrők",
+      "more": "Szűrők",
+      "moreCount": "Szűrők ({count})",
+      "clear": "Törlés",
+      "apply": "Alkalmazás",
+      "date": "Dátumok",
+      "dateFrom": "Ettől",
+      "dateTo": "Eddig",
+      "searchPlaceholder": "Keresés...",
+      "noResults": "Nincs találat",
+      "all": "Összes"
+    },
+    "sort": {
+      "label": "Rendezés",
+      "asc": "Növekvő",
+      "desc": "Csökkenő"
+    },
+    "datePreset": {
+      "today": "Ma",
+      "last7": "Elmúlt 7 nap",
+      "last30": "Elmúlt 30 nap",
+      "thisMonth": "Ez a hónap",
+      "thisQuarter": "Negyedév",
+      "thisYear": "Év",
+      "custom": "Egyéni"
+    },
+    "truncatedWarning": "A találatok csonkolva (>1000). Pontosítsa a szűrőket."
+  },
+  "shared": {
+    "totals": "Összesítések",
+    "info": "Részletek",
+    "moreActions": "További műveletek",
+    "criticalBanner": {
+      "dismiss": "Figyelmeztetés elrejtése"
+    },
+    "collect": {
+      "amountLabel": "Beszedendő összeg",
+      "methodLabel": "Fizetési mód",
+      "dateLabel": "Fizetés dátuma",
+      "today": "Ma",
+      "quickFull": "Teljes",
+      "optionalDetails": "Hivatkozás vagy megjegyzés hozzáadása (opcionális)",
+      "referenceLabel": "Hivatkozás",
+      "referencePlaceholder": "pl. POS-tranzakció száma",
+      "notesLabel": "Belső megjegyzések",
+      "submit": "Beszedés",
+      "cancel": "Mégse"
+    }
+  },
+  "validation": {
+    "required": "Ez a mező kötelező",
+    "email": "Adjon meg érvényes e-mail-címet",
+    "minLength": "Legalább {min} karakter",
+    "maxLength": "Legfeljebb {max} karakter",
+    "phone": "Adjon meg érvényes telefonszámot"
+  },
+  "time": {
+    "minutes": "{n} perc",
+    "hours": "{n} óra | {n} óra"
+  },
+  "calendar": {
+    "today": "Ma",
+    "prevWeek": "Előző hét",
+    "nextWeek": "Következő hét",
+    "monday": "Hétfő",
+    "tuesday": "Kedd",
+    "wednesday": "Szerda",
+    "thursday": "Csütörtök",
+    "friday": "Péntek",
+    "saturday": "Szombat",
+    "sunday": "Vasárnap"
+  },
+  "catalog": {
+    "title": "Kezeléskatalógus",
+    "description": "Kezelések, árak és adóbeállítások kezelése",
+    "items": "Kezelések",
+    "categories": "Kategóriák",
+    "noItems": "Nincs kezelés a katalógusban",
+    "searchPlaceholder": "Keresés kód vagy név alapján...",
+    "code": "Kód",
+    "name": "Név",
+    "category": "Kategória",
+    "price": "Ár",
+    "defaultPrice": "Alapár",
+    "costPrice": "Önköltség",
+    "currency": "Pénznem",
+    "vatType": "Áfakulcs",
+    "vatRate": "Áfa %",
+    "duration": "Időtartam",
+    "system": "Rendszer",
+    "newItem": "Új kezelés",
+    "editItem": "Kezelés szerkesztése",
+    "deleteItem": "Kezelés törlése",
+    "deleteItemConfirm": "Biztosan törli a(z) \"{name}\" kezelést?",
+    "deleteItemNote": "Ez a művelet nem vonható vissza.",
+    "pricing": "Árazás",
+    "scheduling": "Időbeosztás",
+    "characteristics": "Jellemzők",
+    "scope": "Hatókör",
+    "requiresAppointment": "Időpontot igényel",
+    "isDiagnostic": "Diagnosztikai",
+    "requiresSurfaces": "Felszíneket igényel",
+    "materialNotes": "Anyagjegyzet",
+    "materialNotesPlaceholder": "Szükséges anyagok vagy eszközök...",
+    "active": "Aktív",
+    "vatTypes": {
+      "exempt": "Mentes",
+      "reduced": "Kedvezményes",
+      "standard": "Normál"
+    },
+    "scopeTypes": {
+      "tooth": "Fog",
+      "multi_tooth": "Több fog",
+      "global_mouth": "Teljes szájüreg",
+      "global_arch": "Fogívenként"
+    },
+    "pricingStrategy": {
+      "label": "Árazási stratégia",
+      "help": "Hogyan számítódik a kezelés ára az alkalmazáskor",
+      "flat": "Fix (egy ár)",
+      "per_tooth": "Foganként (× fogak száma)",
+      "per_surface": "Felszínenként (sávos)",
+      "per_role": "Szerep szerint (híd: pillér/hídtag)"
+    },
+    "surfacePrices": {
+      "title": "Árak felszínszám szerint",
+      "help": "Adja meg az árat 1–5 felszínre. A fogon kiválasztott felszínek alapján a megfelelő sáv érvényesül. Hiányzó sáv esetén a legközelebbi alacsonyabb kitöltött sáv él.",
+      "tier": "{n} felsz."
+    },
+    "sessions": {
+      "title": "Ülések (részletekben számlázás)",
+      "help": "Adja meg a lépéseket, amelyekben a kezelés megvalósul és számlázódik (pl. korona: 'Lenyomat' + 'Beragasztás'). Az összegnek meg kell egyeznie az alapárral.",
+      "label": "Megnevezés",
+      "labelPlaceholder": "pl. Lenyomat",
+      "price": "Összeg",
+      "add": "Ülés hozzáadása",
+      "sumStatus": "Összeg {sum} € · Teljes {total} €"
+    },
+    "categoryCreated": "Kategória létrehozva",
+    "categoryUpdated": "Kategória frissítve",
+    "categoryDeleted": "Kategória törölve",
+    "categoryKeyExists": "Már létezik kategória ezzel a kulccsal",
+    "categoryCreateFailed": "Hiba a kategória létrehozásakor",
+    "categoryUpdateFailed": "Hiba a kategória frissítésekor",
+    "categoryDeleteFailed": "Hiba a kategória törlésekor",
+    "cannotModifySystemCategory": "Rendszerkategória nem módosítható",
+    "cannotDeleteSystemCategory": "Rendszerkategória nem törölhető",
+    "itemCreated": "Kezelés létrehozva",
+    "itemUpdated": "Kezelés frissítve",
+    "itemDeleted": "Kezelés törölve",
+    "itemCodeExists": "Már létezik kezelés ezzel a kóddal",
+    "categoryNotFound": "A kategória nem található",
+    "itemCreateFailed": "Hiba a kezelés létrehozásakor",
+    "itemUpdateFailed": "Hiba a kezelés frissítésekor",
+    "itemDeleteFailed": "Hiba a kezelés törlésekor",
+    "cannotModifySystemItem": "Rendszerkezelés nem módosítható",
+    "systemItemHint": "Rendszerkezelés: a kód, a kategória, az árazási stratégia és a hatókör zárolt; az ár, az önköltség, az áfa, a nevek, az időtartam, az ülések és az állapot szerkeszthető.",
+    "cannotDeleteSystemItem": "Rendszerkezelés nem törölhető",
+    "odontogramMapping": "Fogtérkép-megjelenítés",
+    "odontogramMappingDescription": "Rendelje a kezelést egy fogtérkép-megjelenítési típushoz, hogy megjelenjen a páciens fogtérképén.",
+    "odontogramType": "Kezeléstípus",
+    "clinicalCategory": "Klinikai kategória",
+    "noOdontogramMapping": "Nincs hozzárendelés",
+    "odontogramMappingHint": "A kezelés jellemzői automatikusan igazodnak a kiválasztott típushoz.",
+    "selectCategory": "Válasszon kategóriát...",
+    "selectVatType": "Válasszon áfakulcsot...",
+    "selectScope": "Válasszon hatókört...",
+    "selectOdontogramType": "Válasszon típust...",
+    "selectClinicalCategory": "Válasszon kategóriát...",
+    "expandAll": "Összes kibontása",
+    "collapseAll": "Összes összecsukása",
+    "unnamed": "Névtelen",
+    "activeHint": "Elérhető árajánlatokhoz és tervekhez",
+    "tabs": {
+      "general": "Általános",
+      "pricing": "Árazás",
+      "scheduling": "Időbeosztás",
+      "clinical": "Klinikai"
+    },
+    "onboarding": {
+      "label": "Kezeléskatalógus",
+      "description": "Kezelések nélkül nincs árajánlat és terv. Töltse be az alapkatalógust, vagy hozza létre a sajátját.",
+      "createOwn": "Saját katalógust készítek"
+    },
+    "manageCategories": "Kategóriák kezelése",
+    "newCategory": "Új kategória",
+    "categoryName": "Név",
+    "categoryNamePlaceholder": "pl. Fogszabályozás",
+    "categoryOrder": "Sorrend",
+    "noCategories": "Nincs kategória. Hozzon létre egyet, vagy töltse be az alapkatalógust.",
+    "inactiveCategories": "Inaktív kategóriák",
+    "reactivate": "Újraaktiválás",
+    "deleteCategoryConfirm": "A kategória inaktiválódik; a kezelései megmaradnak. Folytatja?",
+    "systemCategoryNote": "Rendszerkategóriák nem szerkeszthetők és nem törölhetők.",
+    "loadDefaults": "Alapkatalógus betöltése",
+    "loadDefaultsHint": "Áfakulcsok, kategóriák és referenciakezelések a rendelő országához. Csak a hiányzó sorok kerülnek hozzáadásra.",
+    "defaultsLoaded": "Katalógus betöltve: {categories} kategória, {items} kezelés, {vat_types} áfakulcs",
+    "defaultsFailed": "Nem sikerült betölteni az alapkatalógust"
+  },
+  "placeholders": {
+    "selectRole": "Válasszon szerepkört..."
+  },
+  "vatTypes": {
+    "title": "Áfakulcsok",
+    "description": "A kezelésekhez elérhető áfakulcsok kezelése",
+    "name": "Név",
+    "rate": "Kulcs",
+    "default": "Alapértelmezett",
+    "system": "Rendszer",
+    "active": "Aktív",
+    "new": "Új áfakulcs",
+    "edit": "Áfakulcs szerkesztése",
+    "delete": "Áfakulcs törlése",
+    "setAsDefault": "Beállítás alapértelmezettként",
+    "showInactive": "Inaktívak megjelenítése",
+    "noItems": "Nincs beállított áfakulcs",
+    "namePlaceholder": "Pl.: Kedvezményes (10%)",
+    "systemNote": "Rendszer-áfakulcsoknál csak az alapértelmezett állapot módosítható.",
+    "deleteConfirm": "Biztosan törli ezt az áfakulcsot:",
+    "deleteNote": "Az ezt az áfakulcsot használó kezeléseket ez nem érinti.",
+    "created": "Áfakulcs létrehozva",
+    "updated": "Áfakulcs frissítve",
+    "deleted": "Áfakulcs törölve",
+    "loadError": "Hiba az áfakulcsok betöltésekor",
+    "createError": "Hiba az áfakulcs létrehozásakor",
+    "updateError": "Hiba az áfakulcs frissítésekor",
+    "deleteError": "Hiba az áfakulcs törlésekor"
+  },
+  "treatmentPlans": {
+    "title": "Kezelési tervek",
+    "description": "Páciensek kezelési terveinek kezelése",
+    "new": "Új terv",
+    "create": "Kezelési terv létrehozása",
+    "edit": "Terv szerkesztése",
+    "view": "Terv megtekintése",
+    "delete": "Terv törlése",
+    "noItems": "Ebben a tervben nincs kezelés",
+    "noPlans": "A páciensnek nincs kezelési terve",
+    "noPlansHint": "Jelöljön kezeléseket a fogtérképen, és készítsen tervet a rendszerezésükhöz",
+    "createFirst": "Első terv létrehozása",
+    "empty": "Nincs rögzített kezelési terv",
+    "emptyAction": "Első terv létrehozása",
+    "searchPlaceholder": "Keresés szám, páciens vagy cím alapján...",
+    "planNumber": "Szám",
+    "patient": "Páciens",
+    "untitled": "Névtelen",
+    "untitledPlan": "Névtelen terv",
+    "itemCount": "{count} kezelés | {count} kezelés",
+    "treatments": "kezelés",
+    "progress": "Haladás",
+    "pendingTreatments": "Függő kezelések",
+    "completedTreatments": "Befejezett kezelések",
+    "linkedBudget": "Kapcsolt árajánlat",
+    "unknownTreatment": "Ismeretlen kezelés",
+    "globalTreatment": "Általános kezelés",
+    "activePlan": "Aktív terv",
+    "otherPlans": "Egyéb tervek",
+    "viewAllPlans": "Tervelőzmények megtekintése",
+    "activate": "Aktiválás",
+    "generateBudget": "Árajánlat készítése",
+    "scheduleAppointment": "Időpont foglalása",
+    "status": {
+      "draft": "Piszkozat",
+      "pending": "Függőben",
+      "active": "Aktív",
+      "completed": "Befejezett",
+      "closed": "Lezárt",
+      "archived": "Archivált"
+    },
+    "fields": {
+      "title": "Cím",
+      "titlePlaceholder": "Pl.: Teljes szájrehabilitáció",
+      "assignedProfessional": "Kijelölt kezelőorvos",
+      "selectProfessional": "Válasszon kezelőorvost",
+      "diagnosisNotes": "Diagnózis jegyzetek",
+      "diagnosisNotesPlaceholder": "Diagnózis és klinikai megfigyelések...",
+      "internalNotes": "Belső jegyzetek",
+      "internalNotesPlaceholder": "Csak a személyzet számára látható jegyzetek..."
+    },
+    "modal": {
+      "subtitle": "A páciens kezeléseinek rendszerezése",
+      "titleHint": "Opcionális - segít azonosítani a tervet",
+      "additionalNotes": "További jegyzetek",
+      "quickTip": "A terv létrehozása után a fogtérképről vagy a katalógusból adhat hozzá kezeléseket.",
+      "createButton": "Terv létrehozása"
+    },
+    "actions": {
+      "activate": "Terv aktiválása",
+      "confirm": "Terv megerősítése",
+      "complete": "Megjelölés befejezettként",
+      "generateBudget": "Árajánlat készítése",
+      "linkBudget": "Árajánlat csatolása",
+      "syncBudget": "Árajánlat szinkronizálása",
+      "cancelPlan": "Terv megszakítása",
+      "reopen": "Újranyitás",
+      "close": "Terv lezárása",
+      "reactivate": "Terv újraaktiválása",
+      "logContact": "Kapcsolatfelvétel rögzítése"
+    },
+    "items": {
+      "title": "Kezelések",
+      "add": "Kezelés hozzáadása",
+      "addSelected": "{count} kezelés hozzáadása | {count} kezelés hozzáadása",
+      "remove": "Kezelés eltávolítása",
+      "empty": "Nincs kezelés ebben a tervben",
+      "assignedProfessional": "Kijelölt fogorvos",
+      "assignedProfessionalAriaLabel": "A kezeléshez kijelölt fogorvos módosítása",
+      "useUsersPlanDoctor": "A terv fogorvosának használata",
+      "noProfessional": "Nincs kijelölt fogorvos",
+      "inactiveProfessional": "Inaktív kezelőorvos",
+      "cascadeReassign": {
+        "title": "Átirányítja a függő kezeléseket?",
+        "body": "Módosította a terv fogorvosát. {count} függő kezelés {previousName} nevéhez volt rendelve. Átrendeli ezeket is az új fogorvoshoz?",
+        "confirm": "Igen, függők átrendelése",
+        "cancel": "Nem, maradjanak"
+      }
+    },
+    "filters": {
+      "allStatuses": "Minden állapot"
+    },
+    "confirmations": {
+      "delete": "Törli ezt a kezelési tervet?",
+      "completeItem": "Megjelöli a kezelést befejezettként?",
+      "completeItemDescription": "Ez a művelet nem vonható vissza.",
+      "activateTitle": "Megerősíti a kezelési tervet?",
+      "activateDescription": "A megerősítés után elérhető az árajánlat-készítés és az időpontfoglalás. Utána is hozzáadhat vagy befejezhet kezeléseket.",
+      "unlockTitle": "Módosítja a tervet?",
+      "unlockIntro": "Ehhez a tervhez már ki lett állítva a(z) {number} árajánlat. A módosításhoz a jelenlegi árajánlatot törölni kell.",
+      "unlockConsequence1": "A(z) {number} árajánlat törlődik, és többé nem érvényes a páciens számára.",
+      "unlockConsequence2": "Hozzáadhat, szerkeszthet vagy eltávolíthat kezeléseket a tervből.",
+      "unlockConsequence3": "A módosítások után új árajánlatot kell készítenie.",
+      "unlockConsequence4": "A törölt árajánlat a nyomon követhetőség érdekében megmarad az előzményekben.",
+      "cancelTitle": "Megszakítja a kezelési tervet?",
+      "cancelDescription": "A terv megszakított állapotba kerül, és az el nem végzett tervezett kezelések lekerülnek a fogtérképről. A terv előzményei megmaradnak."
+    },
+    "messages": {
+      "created": "Kezelési terv létrehozva",
+      "updated": "Kezelési terv frissítve",
+      "deleted": "Kezelési terv törölve",
+      "itemsAdded": "Kezelések hozzáadva a tervhez"
+    },
+    "itemCompleted": "Kezelés befejezve",
+    "budgetGenerated": "Árajánlat elkészült",
+    "created": "Kezelési terv létrehozva",
+    "updated": "Kezelési terv frissítve",
+    "statusUpdated": "A terv állapota frissítve",
+    "deleted": "Kezelési terv törölve",
+    "budgetLinked": "Árajánlat a tervhez csatolva",
+    "budgetSynced": "Árajánlat szinkronizálva",
+    "errors": {
+      "load": "Hiba a kezelési tervek betöltésekor",
+      "create": "Hiba a kezelési terv létrehozásakor",
+      "update": "Hiba a kezelési terv frissítésekor",
+      "delete": "Hiba a kezelési terv törlésekor"
+    },
+    "notes": {
+      "title": "Klinikai jegyzetek",
+      "empty": "Még nincs klinikai jegyzet",
+      "addNote": "Jegyzet hozzáadása",
+      "edit": "Jegyzet szerkesztése",
+      "delete": "Jegyzet törlése",
+      "attachments": "Mellékletek",
+      "author": "Szerző",
+      "createdAt": "Létrehozva",
+      "templatePicker": "Sablonok",
+      "bodyPlaceholder": "Írja meg a klinikai jegyzetet…",
+      "saved": "Jegyzet elmentve",
+      "deleted": "Jegyzet törölve"
+    },
+    "completionNudge": {
+      "title": "Kezelés befejezése",
+      "description": "A befejezettként jelölés előtt rögzítsen klinikai jegyzetet a viziten történtekről.",
+      "completeWithNote": "Befejezés jegyzettel",
+      "skip": "Jegyzet kihagyása",
+      "skipConfirm": "Befejezi klinikai jegyzet nélkül?"
+    },
+    "visitNote": {
+      "title": "Vizit klinikai jegyzete",
+      "save": "Jegyzet mentése",
+      "empty": "Még nincs vizitjegyzet",
+      "saved": "Jegyzet elmentve"
+    },
+    "clinicalNotesTab": "Klinikai jegyzetek",
+    "filterBy": {
+      "plan": "Terv",
+      "item": "Kezelés",
+      "visit": "Vizit",
+      "all": "Összes"
+    },
+    "byPlan": {
+      "empty": "A páciensnek egyetlen kezelési tervben sincs klinikai jegyzete",
+      "planNotesLabel": "Tervjegyzetek",
+      "noNotesForTreatment": "Nincs jegyzet ehhez a kezeléshez",
+      "noNotesForPlan": "Nincs jegyzet ebben a tervben"
+    },
+    "noteTemplates": {
+      "endo": {
+        "singleVisit": "Endodoncia — egy ülés",
+        "multiVisit": "Endodoncia — több ülés"
+      },
+      "perio": {
+        "scaling": "Fogkő-eltávolítás / gyökérsimítás"
+      },
+      "implant": {
+        "placement": "Implantátum behelyezése"
+      },
+      "general": {
+        "followUp": "Általános kontroll"
+      }
+    },
+    "closureReason": {
+      "rejected_by_patient": "A páciens elutasította",
+      "expired": "Lejárt",
+      "cancelled_by_clinic": "A rendelő lemondta",
+      "patient_abandoned": "A páciens felhagyott vele",
+      "other": "Egyéb ok"
+    },
+    "confirmed": "Terv megerősítve",
+    "reopened": "Terv újranyitva",
+    "closed": "Terv lezárva",
+    "reactivated": "Terv újraaktiválva",
+    "contactLogged": "Kapcsolatfelvétel rögzítve",
+    "modals": {
+      "confirm": {
+        "title": "Terv megerősítése",
+        "description": "A terv Függőben állapotba kerül, és automatikusan létrejön egy árajánlat-piszkozat. A kezelések a megerősítés után csak olvashatók.",
+        "submit": "Terv megerősítése"
+      },
+      "reopen": {
+        "title": "Terv újranyitása szerkesztésre",
+        "description": "Ez törli a jelenlegi árajánlatot. A terv visszakerül Piszkozatba, így szerkesztheti a kezeléseket.",
+        "submit": "Újranyitás"
+      },
+      "close": {
+        "title": "Terv lezárása",
+        "description": "Válassza ki a lezárás okát. A függő kezelések archiválódnak.",
+        "reasonLabel": "Ok",
+        "noteLabel": "Megjegyzés (opcionális)",
+        "submit": "Terv lezárása"
+      },
+      "reactivate": {
+        "title": "Lezárt terv újraaktiválása",
+        "description": "Ez újraaktivál egy {date} napon «{reason}» okkal lezárt tervet. Folytatja?",
+        "submit": "Újraaktiválás"
+      },
+      "contactLog": {
+        "title": "Kapcsolatfelvétel rögzítése",
+        "description": "Rögzíti a kapcsolatfelvételt a terv állapotának módosítása nélkül.",
+        "channelLabel": "Csatorna",
+        "noteLabel": "Megjegyzés (opcionális)",
+        "submit": "Rögzítés"
+      }
+    },
+    "newBudgetHint": {
+      "text": "A páciensnek van egy árajánlat nélküli terve ({plan}). Készítse az árajánlatot a tervből, hogy összekapcsolva maradjanak.",
+      "cta": "Terv megnyitása"
+    }
+  },
+  "pipeline": {
+    "title": "Terv-pipeline",
+    "description": "A kezelési pipeline kezelése.",
+    "tabs": {
+      "por_presupuestar": "Árajánlatra vár",
+      "esperando_paciente": "Páciensre vár",
+      "sin_cita": "Nincs időpont",
+      "sin_proxima_cita": "Nincs következő időpont",
+      "cerrados": "Lezárt",
+      "listado": "Lista"
+    },
+    "row": {
+      "patient": "Páciens",
+      "plan": "Terv",
+      "budget": "Árajánlat",
+      "items": "Kezelések",
+      "daysIn": "{n} napja ebben az állapotban",
+      "nextAppt": "Köv. időpont",
+      "noNextAppt": "Nincs időpont",
+      "noBudget": "Nincs árajánlat"
+    },
+    "actions": {
+      "open": "Megnyitás",
+      "send": "Küldés",
+      "remind": "Újraküldés",
+      "schedule": "Időpontfoglalás",
+      "scheduleNext": "Következő időpont foglalása",
+      "reactivate": "Újraaktiválás",
+      "call": "Hívás",
+      "whatsapp": "WhatsApp",
+      "markContacted": "Megjelölés felvett kapcsolatként",
+      "acceptInClinic": "Elfogadás a rendelőben"
+    },
+    "search": "Keresés név vagy szám alapján…",
+    "empty": "Nincs elem ezen a lapon.",
+    "loading": "Betöltés…"
+  },
+  "budget": {
+    "title": "Árajánlatok",
+    "description": "A páciensek kezelési árajánlatainak kezelése",
+    "new": "Új árajánlat",
+    "edit": "Árajánlat szerkesztése",
+    "view": "Árajánlat megtekintése",
+    "delete": "Árajánlat törlése",
+    "duplicate": "Új verzió készítése",
+    "noItems": "Nincs árajánlat",
+    "empty": "Nincs rögzített árajánlat",
+    "emptyAction": "Első árajánlat készítése",
+    "linkedToPlan": "Tervhez kapcsolva",
+    "searchPlaceholder": "Keresés szám vagy páciens alapján...",
+    "budgetNumber": "Szám",
+    "version": "Verzió",
+    "treatmentPlan": "Kezelési terv",
+    "patient": "Páciens",
+    "selectPatient": "Válasszon pácienst",
+    "selectPatientHint": "Keresse meg és válassza ki az árajánlat páciensét",
+    "professional": "Kezelőorvos",
+    "validFrom": "Érvényes ettől",
+    "validUntil": "Érvényes eddig",
+    "validUntilHint": "Hagyja üresen lejárat nélküli árajánlathoz",
+    "noExpiry": "Nincs lejárati dátum",
+    "createAndAddItems": "Létrehozás és kezelések hozzáadása",
+    "subtotal": "Részösszeg",
+    "totalDiscount": "Összes kedvezmény",
+    "totalTax": "Összes áfa",
+    "total": "Összesen",
+    "globalDiscount": "Teljes kedvezmény",
+    "discountType": "Kedvezmény típusa",
+    "discountValue": "Kedvezmény értéke",
+    "percentage": "Százalékos",
+    "absolute": "Fix összegű",
+    "internalNotes": "Belső jegyzetek",
+    "internalNotesPlaceholder": "Csak a személyzet számára látható jegyzetek...",
+    "patientNotes": "Páciensnek szóló megjegyzések",
+    "patientNotesPlaceholder": "Az árajánlaton látható megjegyzések...",
+    "status": {
+      "title": "Állapot",
+      "draft": "Piszkozat",
+      "sent": "Elküldve",
+      "partially_accepted": "Részben elfogadva",
+      "accepted": "Elfogadva",
+      "in_progress": "Folyamatban",
+      "completed": "Befejezve",
+      "invoiced": "Számlázva",
+      "rejected": "Elutasítva",
+      "expired": "Lejárt",
+      "cancelled": "Törölve"
+    },
+    "itemStatus": {
+      "pending": "Függőben",
+      "accepted": "Elfogadva",
+      "rejected": "Elutasítva",
+      "in_progress": "Folyamatban",
+      "completed": "Befejezve"
+    },
+    "actions": {
+      "send": "Küldés a páciensnek",
+      "accept": "Árajánlat elfogadása",
+      "acceptPartial": "Kijelöltek elfogadása",
+      "reject": "Elutasítás",
+      "cancel": "Árajánlat törlése",
+      "duplicate": "Új verzió készítése",
+      "downloadPdf": "PDF letöltése",
+      "previewPdf": "PDF előnézet",
+      "startTreatment": "Kezelés megkezdése",
+      "completeTreatment": "Kezelés befejezése",
+      "renegotiate": "Újratárgyalás",
+      "acceptInClinic": "Elfogadás a rendelőben",
+      "resend": "Újraküldés",
+      "sendReminder": "Emlékeztető küldése",
+      "setPublicCode": "Hozzáférési kód beállítása",
+      "unlockPublic": "Hozzáférés feloldása"
+    },
+    "items": {
+      "title": "Kezelések",
+      "add": "Kezelés hozzáadása",
+      "remove": "Kezelés eltávolítása",
+      "edit": "Kezelés szerkesztése",
+      "empty": "Nincs kezelés ebben az árajánlatban",
+      "singular": "kezelés",
+      "plural": "kezelés",
+      "addFromCatalog": "Hozzáadás a katalógusból",
+      "addFromOdontogram": "Hozzáadás a fogtérképről",
+      "treatment": "Kezelés",
+      "searchCatalog": "Keresés a kezeléskatalógusban...",
+      "unitPrice": "Egységár",
+      "quantity": "Mennyiség",
+      "discount": "Kedvezmény",
+      "lineTotal": "Sor összege",
+      "tooth": "Fog",
+      "toothNumber": "Fog száma",
+      "toothNumberPlaceholder": "Pl.: 11, 21, 36...",
+      "surfaces": "Felszínek",
+      "notes": "Megjegyzések",
+      "notesPlaceholder": "Megjegyzések ehhez a kezeléshez...",
+      "managedByPlan": "Ennek az árajánlatnak a tételeit a(z) {plan} kezelési terv kezeli."
+    },
+    "signature": {
+      "title": "Digitális aláírás",
+      "viewAction": "Aláírás megtekintése",
+      "signedBy": "Aláírta",
+      "signedAt": "Aláírás dátuma",
+      "methodLabel": "Mód",
+      "relationshipLabel": "Kapcsolat",
+      "documentHash": "Dokumentum-hash (SHA-256)",
+      "hashHint": "Hash {short} — az aláírást ehhez a konkrét PDF-hez köti. Bármilyen módosítás érvénytelenítené.",
+      "downloadSignedPdf": "Aláírt PDF letöltése",
+      "downloadError": "Nem sikerült letölteni az aláírt PDF-et.",
+      "notSigned": "Ehhez az árajánlathoz még nem rögzítettek aláírást.",
+      "method": {
+        "drawn": "Kézzel rajzolt aláírás",
+        "clickAccept": "Elfogadás kattintással",
+        "external": "Külső szolgáltató"
+      },
+      "email": "E-mail",
+      "relationship": "Kapcsolat a pácienssel",
+      "patient": "Páciens",
+      "guardian": "Törvényes képviselő",
+      "representative": "Meghatalmazott",
+      "accept": "Elfogadom az árajánlat feltételeit",
+      "signHere": "Írjon alá itt",
+      "clear": "Aláírás törlése"
+    },
+    "history": {
+      "title": "Változási napló",
+      "noChanges": "Nincs rögzített változás",
+      "actions": {
+        "created": "Árajánlat létrehozva",
+        "updated": "Árajánlat frissítve",
+        "status_changed": "Állapot módosítva",
+        "item_added": "Kezelés hozzáadva",
+        "item_removed": "Kezelés eltávolítva",
+        "signed": "Árajánlat aláírva",
+        "sent": "Árajánlat elküldve",
+        "duplicated": "Új verzió létrehozva",
+        "deleted": "Árajánlat törölve",
+        "item_treatment_started": "Kezelés megkezdve",
+        "item_treatment_completed": "Kezelés befejezve"
+      }
+    },
+    "versions": {
+      "title": "Verziók",
+      "current": "Aktuális",
+      "viewVersion": "Verzió megtekintése"
+    },
+    "confirmations": {
+      "send": "Elküldi az árajánlatot a páciensnek?",
+      "sendDescription": "Az árajánlat elküldöttként lesz megjelölve.",
+      "reject": "Elutasítja az árajánlatot?",
+      "rejectDescription": "Ez a művelet nem vonható vissza.",
+      "cancel": "Törli az árajánlatot?",
+      "cancelDescription": "Ez a művelet nem vonható vissza.",
+      "resend": "Új verziót készít ebből az árajánlatból? A kapcsolt kezelési terv az új verziót fogja követni.",
+      "delete": "Törli az árajánlatot?",
+      "deleteDescription": "Ez a művelet nem vonható vissza."
+    },
+    "send": {
+      "description": "Az árajánlatot elküldheti e-mailben, vagy megjelölheti kézzel átadottként (nyomtatva vagy személyesen).",
+      "sendByEmail": "Küldés e-mailben",
+      "willSendTo": "Címzett",
+      "noPatientEmail": "A páciensnek nincs rögzített e-mail-címe",
+      "customMessage": "Egyéni üzenet (opcionális)",
+      "customMessagePlaceholder": "Üzenet a páciensnek...",
+      "manualNote": "Az árajánlat elküldöttként lesz megjelölve e-mail küldése nélkül.",
+      "sendEmail": "E-mail küldése",
+      "markAsSent": "Megjelölés elküldöttként"
+    },
+    "messages": {
+      "created": "Árajánlat létrehozva",
+      "updated": "Árajánlat frissítve",
+      "deleted": "Árajánlat törölve",
+      "sent": "Árajánlat elküldve",
+      "sentByEmail": "Árajánlat e-mailben elküldve",
+      "sentManually": "Árajánlat elküldöttként megjelölve",
+      "accepted": "Árajánlat elfogadva",
+      "rejected": "Árajánlat elutasítva",
+      "cancelled": "Árajánlat törölve",
+      "duplicated": "Új verzió létrehozva",
+      "resent": "Új verzió készült az előző árajánlatból",
+      "itemAdded": "Kezelés hozzáadva",
+      "itemUpdated": "Kezelés frissítve",
+      "itemRemoved": "Kezelés eltávolítva",
+      "treatmentStarted": "Kezelés megkezdve",
+      "treatmentCompleted": "Kezelés befejezve"
+    },
+    "errors": {
+      "load": "Hiba az árajánlatok betöltésekor",
+      "create": "Hiba az árajánlat létrehozásakor",
+      "update": "Hiba az árajánlat frissítésekor",
+      "delete": "Hiba az árajánlat törlésekor",
+      "send": "Hiba az árajánlat küldésekor",
+      "accept": "Hiba az árajánlat elfogadásakor",
+      "reject": "Hiba az árajánlat elutasításakor",
+      "notFound": "Az árajánlat nem található",
+      "onlyDraft": "Csak piszkozat állapotú árajánlat szerkeszthető"
+    },
+    "filters": {
+      "allStatuses": "Minden állapot",
+      "status": "Állapot",
+      "paymentStatus": "Állapot",
+      "professional": "Kezelőorvos",
+      "validity": "Érvényesség",
+      "validityValid": "Érvényes",
+      "validityExpiringSoon": "7 napon belül lejár",
+      "validityExpired": "Lejárt",
+      "dateFrom": "Ettől",
+      "dateTo": "Eddig",
+      "showExpired": "Lejártak megjelenítése",
+      "advanced": "Speciális szűrők",
+      "clear": "Szűrők törlése"
+    },
+    "sortFields": {
+      "createdAt": "Létrehozva",
+      "validUntil": "Érvényes eddig",
+      "total": "Összesen",
+      "status": "Állapot",
+      "budgetNumber": "Szám"
+    },
+    "validity": {
+      "expired": "Lejárt",
+      "expiresIn": "{days} nap múlva lejár"
+    },
+    "pdf": {
+      "generating": "PDF készítése...",
+      "downloadError": "Hiba a PDF letöltésekor"
+    },
+    "modals": {
+      "renegotiate": {
+        "title": "Árajánlat újratárgyalása",
+        "description": "Ez törli a jelenlegi árajánlatot, és a tervet visszanyitja Piszkozatba, hogy módosíthassa a kezeléseket.",
+        "submit": "Újratárgyalás"
+      },
+      "acceptInClinic": {
+        "title": "Árajánlat elfogadása a rendelőben",
+        "description": "Rögzítse a páciens elfogadását. Tableten aláírást is felvehet (opcionális).",
+        "signerLabel": "Aláíró teljes neve",
+        "captureSignature": "Aláírás felvétele",
+        "submit": "Megjelölés elfogadottként"
+      },
+      "setPublicCode": {
+        "title": "Hozzáférési kód beállítása",
+        "description": "Ennek a páciensnek nincs rögzített telefonszáma és születési dátuma sem. Állítson be egy 4-6 számjegyű kódot, és szóban közölje a pácienssel. NE írja a kódot az e-mailbe.",
+        "codeLabel": "Kód (4-6 számjegy)",
+        "submit": "Kód mentése"
+      }
+    },
+    "publicLink": {
+      "action": "Link megosztása",
+      "title": "Páciens link",
+      "help": "Másolja ki és ossza meg a linket a pácienssel WhatsAppon, SMS-ben vagy e-mailben. Az árajánlat megtekintése előtt egy azonosító adatot fogunk kérni tőle.",
+      "copy": "Link másolása",
+      "copied": "Másolva!",
+      "whatsapp": "Küldés WhatsAppon",
+      "whatsappNoPhone": "A páciensnek nincs rögzített telefonszáma",
+      "whatsappGreeting": "Szia {name}, itt az árajánlatod:",
+      "whatsappGreetingFallback": "Üdvözöljük, itt az árajánlata:",
+      "preview": "Előnézet",
+      "statusSent": "Elküldve",
+      "statusAccepted": "Elfogadva",
+      "statusRejected": "Elutasítva",
+      "statusExpired": "Lejárt"
+    },
+    "public": {
+      "title": "Az Ön árajánlata",
+      "intro": "{clinic} elküldte Önnek ezt az árajánlatot. Tekintse át a kezeléseket, és válasszon.",
+      "greeting": "Üdvözöljük, {name}",
+      "subtitle": "Az Ön személyre szabott kezelési terve",
+      "budgetNumber": "Árajánlat",
+      "issuedOn": "Kiállítva: {date}",
+      "items": "A csomagban szereplő kezelések",
+      "tooth": "{number}. fog",
+      "subtotal": "Részösszeg",
+      "discount": "Kedvezmény",
+      "tax": "Áfa",
+      "total": "Összesen",
+      "validUntil": "Érvényes eddig: {date}",
+      "trustSecure": "Biztonságos kapcsolat",
+      "trustEncrypted": "Titkosított adatok",
+      "trustSignature": "Jogilag kötelező érvényű aláírás",
+      "needHelp": "Segítségre van szüksége? Hívja a rendelőt",
+      "noteFromClinic": "A rendelő üzenete",
+      "callClinic": "Rendelő hívása",
+      "emailClinic": "E-mail küldése",
+      "cta_accept": "Elfogadás és aláírás",
+      "cta_reject": "Nem érdekel",
+      "expired": "Ez az árajánlat lejárt. Kérjük, vegye fel a kapcsolatot a rendelővel.",
+      "locked": "Túl sok próbálkozás után a hozzáférés zárolva. Kérjük, hívja a rendelőt.",
+      "already_accepted": "Ezt az árajánlatot már elfogadta. A rendelő hamarosan felveszi Önnel a kapcsolatot az első időpont egyeztetéséhez.",
+      "already_rejected": "Ezt az árajánlatot elutasította. Ha meggondolná magát, kérjük, hívja a rendelőt.",
+      "download": {
+        "signedPdf": "Aláírt PDF letöltése",
+        "notSigned": "Ehhez az árajánlathoz még nincs csatolt aláírás.",
+        "error": "Nem sikerült letölteni a PDF-et. Kérjük, próbálja újra.",
+        "reauthIntro": "Biztonsági okokból kérjük, igazolja újra a személyazonosságát az aláírt PDF letöltéséhez."
+      },
+      "verify": {
+        "title": "Személyazonosság megerősítése",
+        "intro": "Adatai védelme érdekében erősítsen meg egy adatot az árajánlat megtekintése előtt.",
+        "phone_last4_label": "Telefonszáma utolsó 4 számjegye",
+        "dob_label": "Születési dátuma",
+        "manual_code_label": "A rendelőtől kapott kód",
+        "submit": "Folytatás",
+        "invalid": "Hibás adat. Kérjük, próbálja újra.",
+        "locked": "Túl sok próbálkozás után a hozzáférés zárolva. Kérjük, hívja a rendelőt.",
+        "rate_limited": "Túl sok próbálkozás. Várjon 15 percet."
+      },
+      "accept": {
+        "title": "Elfogadás és aláírás",
+        "signerLabel": "Az Ön teljes neve",
+        "signatureLabel": "Írjon alá itt (opcionális)",
+        "signatureClear": "Törlés",
+        "consent": "Elfogadom ezt az árajánlatot, és hozzájárulok a leírt kezeléshez.",
+        "submit": "Elfogadás megerősítése",
+        "success": "Kész! A rendelő hamarosan felveszi Önnel a kapcsolatot az első időpont egyeztetéséhez."
+      },
+      "reject": {
+        "title": "Nem érdekel",
+        "intro": "Miért nem Önnek való ez az árajánlat?",
+        "reasonLabel": "Ok",
+        "noteLabel": "Megjegyzés (opcionális)",
+        "submit": "Elutasítás megerősítése",
+        "success": "Értesítettük a rendelőt.",
+        "reasons": {
+          "price": "Ár",
+          "time": "Időhiány",
+          "second_opinion": "Második vélemény",
+          "other": "Egyéb ok"
+        }
+      }
+    },
+    "settings": {
+      "title": "Árajánlat-beállítások",
+      "description": "Lejárat, emlékeztetők és a nyilvános link ellenőrzésének beállítása.",
+      "cards": {
+        "expiry": {
+          "title": "Lejárat és automatikus lezárás",
+          "description": "Meddig érvényes egy árajánlat, és mikor záruljanak le automatikusan a függő tervek."
+        },
+        "reminders": {
+          "title": "Automatikus emlékeztetők",
+          "description": "7 / 14 napos e-mail-emlékeztetők ki-be kapcsolása a nem válaszoló pácienseknek."
+        },
+        "publicLink": {
+          "title": "Nyilvános link és ellenőrzés",
+          "description": "A páciensnek szóló árajánlat-link védelmének beállítása."
+        }
+      },
+      "expiry": {
+        "validityDays": "Árajánlat érvényessége (nap)",
+        "validityHelp": "Ennyi nap válasz nélkül az árajánlat Lejárt állapotba kerül (7-180 között).",
+        "autoCloseDays": "Napok a terv automatikus lezárásáig",
+        "autoCloseHelp": "A lejárt árajánlatú, ennyi napja inaktív tervek Lezárt állapotba kerülnek (7-180 között).",
+        "save": "Mentés"
+      },
+      "reminders": {
+        "enabled": "Automatikus emlékeztetők küldése 7 és 14 nap után",
+        "enabledHelp": "Bekapcsolva a rendszer e-mailt küld a páciensnek a függő árajánlatokról. Kikapcsolva a recepció kézzel követi.",
+        "save": "Mentés"
+      },
+      "publicLink": {
+        "authDisabled": "Nyilvános link ellenőrzésének kikapcsolása",
+        "authDisabledHelp": "Bekapcsolva a páciens pusztán a linkkel látja az árajánlatot — telefonszám- vagy születésidátum-ellenőrzés nélkül. Vállalja a kockázatot, ha a link továbbadásra kerül.",
+        "save": "Mentés"
+      },
+      "saved": "Beállítások elmentve"
+    }
+  },
+  "notifications": {
+    "communications": {
+      "language": {
+        "cardTitle": "Kommunikáció nyelve",
+        "cardDescription": "A páciensnek szóló árajánlat-nézet, az e-mailek és az SMS-ek nyelve.",
+        "title": "Pácienskommunikáció nyelve",
+        "label": "Nyelv",
+        "help": "A páciensnek szóló árajánlat-nézetre és az automatikus e-mail-/SMS-sablonokra vonatkozik. A személyzet felülete minden felhasználó saját nyelvi beállítását követi.",
+        "save": "Mentés",
+        "saved": "Nyelv elmentve"
+      }
+    },
+    "title": "Értesítések",
+    "description": "A rendelő e-mail-értesítéseinek beállítása",
+    "pageDescription": "Állítsa be, mely értesítések menjenek ki automatikusan, és melyekhez kelljen kézi küldés.",
+    "autoVsManual": "Automatikus és kézi értesítések",
+    "autoVsManualDescription": "Határozza meg, mely értesítések induljanak automatikusan egy esemény bekövetkeztekor, és melyeket kelljen a felhasználónak kézzel elküldenie.",
+    "notificationType": "Értesítés típusa",
+    "enabled": "Engedélyezve",
+    "autoSend": "Automatikus küldés",
+    "options": "Beállítások",
+    "hoursBefore": "órával előtte",
+    "testConnection": "Kapcsolat tesztelése",
+    "testEmailTitle": "Teszt e-mail küldése",
+    "testEmailDescription": "Teszt e-mailt küldünk, hogy ellenőrizzük a beállítások helyes működését.",
+    "sendTestEmail": "Teszt küldése",
+    "test_email_sent": "Teszt e-mail sikeresen elküldve",
+    "settings_saved": "Beállítások elmentve",
+    "emailProvider": "E-mail-szolgáltató",
+    "providerConfigured": "E-mail-szolgáltató beállítva",
+    "providerNote": "Az e-mail-szerver beállítása a szerver környezeti változóiban történik.",
+    "infoTitle": "Információ",
+    "infoAutoSend": "Automatikus küldés: az értesítés az esemény bekövetkeztekor megy ki (pl. időpont létrehozásakor).",
+    "infoManualSend": "Kézi küldés: megjelenik egy gomb, amellyel tetszőleges időpontban elküldheti az értesítést.",
+    "infoDisabled": "Letiltva: az értesítés nem kerül elküldésre, és a küldés lehetősége sem jelenik meg.",
+    "types": {
+      "appointment_confirmation": "Időpont-visszaigazolás",
+      "appointment_confirmation_desc": "Visszaigazoló e-mail időpont foglalásakor",
+      "appointment_cancelled": "Időpont lemondása",
+      "appointment_cancelled_desc": "Értesítő e-mail időpont lemondásakor",
+      "appointment_reminder": "Időpont-emlékeztető",
+      "appointment_reminder_desc": "Emlékeztető e-mail az időpont előtt",
+      "budget_sent": "Árajánlat küldése",
+      "budget_sent_desc": "E-mail az árajánlat részleteivel",
+      "budget_accepted": "Árajánlat elfogadva",
+      "budget_accepted_desc": "Visszaigazoló e-mail árajánlat elfogadásakor",
+      "welcome": "Üdvözlés",
+      "welcome_desc": "Üdvözlő e-mail új pácienseknek"
+    },
+    "sendConfirmation": "Visszaigazolás küldése",
+    "sendReminder": "Emlékeztető küldése",
+    "sendCancellation": "Lemondás küldése",
+    "sendBudget": "Küldés e-mailben",
+    "sendAcceptance": "Visszaigazolás küldése",
+    "sendWelcome": "Üdvözlő küldése",
+    "sendEmail": "E-mail küldése",
+    "errors": {
+      "fetch_failed": "Hiba a beállítások betöltésekor",
+      "save_failed": "Hiba a beállítások mentésekor",
+      "test_failed": "Hiba a teszt e-mail küldésekor",
+      "send_failed": "Hiba az értesítés küldésekor"
+    },
+    "smtp": {
+      "title": "E-mail-szerver beállítása",
+      "description": "Állítsa be az SMTP-szervert a rendelő e-mailjeinek küldéséhez. Minden rendelőnek lehet saját beállítása.",
+      "configure": "Beállítás",
+      "provider": "Szolgáltató",
+      "host": "Szerver",
+      "port": "Port",
+      "username": "Felhasználónév",
+      "password": "Jelszó",
+      "passwordHint": "Hagyja üresen a jelenlegi jelszó megtartásához",
+      "useTls": "TLS használata",
+      "useSsl": "SSL használata",
+      "fromEmail": "Feladó e-mail-címe",
+      "fromName": "Feladó neve",
+      "security": "Biztonság",
+      "testConnection": "Kapcsolat tesztelése",
+      "testConnectionTitle": "Beállítások tesztelése mentés előtt",
+      "testEmailPlaceholder": "Teszt e-mail-cím",
+      "test_success": "SMTP-kapcsolat sikeres. Teszt e-mail elküldve.",
+      "test_failed": "SMTP-kapcsolati hiba",
+      "settings_saved": "SMTP-beállítások elmentve",
+      "consoleNote": "Konzol módban az e-mailek a szerver konzolján jelennek meg küldés helyett. Fejlesztéshez hasznos.",
+      "disabledNote": "Kikapcsolt e-mail mellett ebből a rendelőből nem megy ki e-mail-értesítés.",
+      "status": {
+        "not_configured": "Nincs beállítva",
+        "verified": "Ellenőrizve és működik",
+        "not_verified": "Beállítva, de nem ellenőrzött",
+        "disabled": "E-mail letiltva",
+        "console": "Konzol mód (fejlesztés)"
+      },
+      "errors": {
+        "fetch_failed": "Hiba az SMTP-beállítások betöltésekor",
+        "save_failed": "Hiba az SMTP-beállítások mentésekor",
+        "test_failed": "Hiba az SMTP-kapcsolat tesztelésekor"
+      }
+    },
+    "onboarding": {
+      "label": "E-mail-küldés",
+      "description": "Állítsa be a feladót, hogy időpont-visszaigazolásokat és árajánlatokat e-mailezhessen."
+    }
+  },
+  "invoice": {
+    "title": "Számlák",
+    "description": "Számlák és számlázás kezelése",
+    "new": "Új számla",
+    "edit": "Számla szerkesztése",
+    "view": "Számla megtekintése",
+    "delete": "Számla törlése",
+    "noItems": "Nincs számla",
+    "empty": "Nincs rögzített számla",
+    "emptyAction": "Első számla kiállítása",
+    "searchPlaceholder": "Keresés szám vagy páciens alapján...",
+    "notFound": "A számla nem található",
+    "draftNoNumber": "Piszkozat",
+    "details": "Részletek",
+    "invoiceNumber": "Számlaszám",
+    "patient": "Páciens",
+    "searchPatient": "Páciens keresése",
+    "searchPatientPlaceholder": "Keresés név alapján...",
+    "professional": "Kezelőorvos",
+    "billingData": "Számlázási adatok",
+    "billingName": "Számlázási név",
+    "taxId": "Adószám",
+    "billingEmail": "Számlázási e-mail",
+    "billingAddress": "Számlázási cím",
+    "billingDataComplete": "Teljes",
+    "billingDataIncomplete": "Hiányos",
+    "billingDataIncompleteHint": "A páciens néhány számlázási adata hiányzik.",
+    "editPatientBilling": "Páciens adatainak szerkesztése",
+    "fromPatient": "A pácienstől",
+    "editInPatient": "Szerkesztés a profilban",
+    "billingFromPatientHint": "Ezek az adatok a páciens kartonjából származnak. Módosításukhoz szerkessze a páciens számlázási adatait.",
+    "paymentTerms": "Fizetési feltételek",
+    "linkedToBudget": "Árajánlathoz kapcsolva",
+    "selectPatient": "Válasszon pácienst",
+    "noBillingData": "Nincs számlázási adat",
+    "street": "Utca",
+    "city": "Város",
+    "postalCode": "Irányítószám",
+    "province": "Megye",
+    "country": "Ország",
+    "linkedBudget": "Kapcsolt árajánlat",
+    "creditNoteFor": "Jóváíró számla ehhez",
+    "paymentTermDays": "Fizetési határidő (nap)",
+    "dueDate": "Fizetési határidő",
+    "issueDate": "Kiállítás dátuma",
+    "subtotal": "Részösszeg",
+    "discount": "Kedvezmény",
+    "totalDiscount": "Összes kedvezmény",
+    "tax": "Adó",
+    "total": "Összesen",
+    "paid": "Fizetve",
+    "totalPaid": "Összesen befizetve",
+    "balance": "Egyenleg",
+    "balanceDue": "Fizetendő egyenleg",
+    "overdue": "Lejárt",
+    "overdueDays": "{n} napja lejárt",
+    "info": {
+      "issueDate": "Kiállítás dátuma",
+      "dueDate": "Fizetési határidő",
+      "issuedBy": "Kiállította",
+      "createdBy": "Létrehozta",
+      "createdAt": "Létrehozva",
+      "budget": "Árajánlat",
+      "creditNoteFor": "Jóváíró számla ehhez"
+    },
+    "criticalBanner": {
+      "aeatRejected": {
+        "title": "Az AEAT elutasította ezt a számlát",
+        "cta": "Javítás és újraküldés"
+      },
+      "billingIncomplete": {
+        "title": "Hiányos számlázási adatok",
+        "cta": "Adatok kitöltése"
+      }
+    },
+    "collect": {
+      "title": "Számla beszedése",
+      "submit": "Beszedés",
+      "noteAppliedToInvoice": "erre a számlára könyvelve.",
+      "notePendingAfter": "Fennmaradó egyenleg",
+      "noteFullySettled": "Ez a befizetés teljesen rendezi a számlát.",
+      "noteToInvoice": "erre a számlára könyvelve, és",
+      "noteExcessToOnAccount": "a páciens előlegszámlájára írva.",
+      "noteInvoiceSettled": "Ez a számla már ki van fizetve.",
+      "noteToOnAccount": "a páciens előlegszámlájára kerül."
+    },
+    "tooth": "Fog",
+    "vat": "Áfa",
+    "currency": "Pénznem",
+    "internalNotes": "Belső jegyzetek",
+    "internalNotesPlaceholder": "Csak a személyzet számára látható jegyzetek...",
+    "publicNotes": "Nyilvános megjegyzések",
+    "publicNotesPlaceholder": "A számlán látható megjegyzések...",
+    "items": "Tételek",
+    "addItem": "Tétel hozzáadása",
+    "editItem": "Tétel szerkesztése",
+    "selectTreatment": "Kezelés",
+    "searchCatalog": "Kezelés keresése a katalógusban...",
+    "itemDescription": "Megnevezés",
+    "itemPrice": "Egységár",
+    "itemQuantity": "Mennyiség",
+    "selectVatType": "Válasszon áfakulcsot",
+    "summary": "Összegzés",
+    "createDraft": "Piszkozat létrehozása",
+    "createFromBudget": "Számla készítése árajánlatból",
+    "notes": "Megjegyzések",
+    "status": {
+      "draft": "Piszkozat",
+      "issued": "Kiállítva",
+      "partial": "Részben fizetve",
+      "paid": "Fizetve",
+      "cancelled": "Törölve",
+      "voided": "Érvénytelenítve"
+    },
+    "actions": {
+      "issue": "Számla kiállítása",
+      "void": "Érvénytelenítés",
+      "recordPayment": "Befizetés rögzítése",
+      "createCreditNote": "Jóváíró számla készítése",
+      "downloadPdf": "PDF letöltése",
+      "previewPdf": "PDF előnézet",
+      "sendEmail": "Küldés e-mailben"
+    },
+    "recordPayment": "Befizetés rögzítése",
+    "paymentAmount": "Összeg",
+    "paymentMethod": "Fizetési mód",
+    "paymentDate": "Fizetés dátuma",
+    "paymentReference": "Hivatkozás",
+    "paymentReferencePlaceholder": "Tranzakciószám, bizonylat...",
+    "paymentNotes": "Fizetési megjegyzések",
+    "paymentVoided": "Befizetés érvénytelenítve",
+    "createCreditNote": "Jóváíró számla készítése",
+    "creditNoteReason": "Jóváírás oka",
+    "creditNoteReasonPlaceholder": "Írja le a jóváíró számla okát...",
+    "creditNoteInfo": "A jóváíró számla a számla teljes összegéről készül.",
+    "prompts": {
+      "voidPaymentReason": "Adja meg a befizetés érvénytelenítésének okát"
+    },
+    "payments": {
+      "title": "Befizetések",
+      "record": "Befizetés rögzítése",
+      "void": "Befizetés érvénytelenítése",
+      "amount": "Összeg",
+      "method": "Fizetési mód",
+      "date": "Dátum",
+      "reference": "Hivatkozás",
+      "notes": "Megjegyzések",
+      "noPayments": "Nincs rögzített befizetés",
+      "recorded": "Befizetés rögzítve",
+      "voided": "Befizetés érvénytelenítve",
+      "voidReason": "Érvénytelenítés oka",
+      "voidReasonPlaceholder": "A befizetés érvénytelenítésének oka...",
+      "methods": {
+        "cash": "Készpénz",
+        "card": "Bankkártya",
+        "bank_transfer": "Átutalás",
+        "direct_debit": "Csoportos beszedés",
+        "insurance": "Biztosító",
+        "other": "Egyéb"
+      }
+    },
+    "creditNote": {
+      "title": "Jóváíró számla",
+      "create": "Jóváíró számla készítése",
+      "reason": "Ok",
+      "reasonPlaceholder": "A jóváíró számla oka...",
+      "selectItems": "Válassza ki a helyesbítendő tételeket",
+      "fullCreditNote": "Teljes jóváíró számla (minden tétel)",
+      "partialCreditNote": "Részleges jóváíró számla (kijelölt tételek)",
+      "originalInvoice": "Eredeti számla",
+      "created": "Jóváíró számla létrehozva"
+    },
+    "history": {
+      "title": "Előzmények",
+      "noChanges": "Nincs rögzített változás",
+      "actions": {
+        "created": "Számla létrehozva",
+        "updated": "Számla frissítve",
+        "issued": "Számla kiállítva",
+        "voided": "Számla érvénytelenítve",
+        "payment_recorded": "Befizetés rögzítve",
+        "payment_voided": "Befizetés érvénytelenítve",
+        "credit_note_created": "Jóváíró számla létrehozva"
+      }
+    },
+    "fromBudget": "Számla készítése árajánlatból",
+    "selectItems": "Válassza ki a számlázandó tételeket",
+    "selectItemsHint": "Válassza ki az árajánlat számlázni kívánt tételeit",
+    "availableQuantity": "Elérhető",
+    "quantityToInvoice": "Számlázandó menny.",
+    "alreadyInvoiced": "Már számlázva",
+    "remaining": "Hátralévő",
+    "noItemsAvailable": "Nincs számlázható tétel",
+    "allItemsInvoiced": "Minden tétel számlázásra került",
+    "series": {
+      "title": "Számlatömb",
+      "prefix": "Előtag",
+      "type": "Típus",
+      "currentNumber": "Aktuális sorszám",
+      "resetYearly": "Évente újrakezdődik",
+      "default": "Alapértelmezett",
+      "active": "Aktív",
+      "invoice": "Számla",
+      "credit_note": "Jóváíró számla"
+    },
+    "filters": {
+      "allStatuses": "Állapot",
+      "overdueOnly": "Lejárt",
+      "dateFrom": "Ettől",
+      "dateTo": "Eddig"
+    },
+    "sortFields": {
+      "created": "Létrehozva",
+      "issueDate": "Kiállítás dátuma",
+      "dueDate": "Fizetési határidő",
+      "total": "Összesen"
+    },
+    "overdueByDays": "{days} napja lejárt",
+    "pdf": {
+      "generating": "PDF készítése...",
+      "downloadError": "Hiba a PDF letöltésekor"
+    },
+    "reports": {
+      "title": "Számlázási riportok",
+      "summary": "Összegzés",
+      "overdue": "Lejárt",
+      "overdueInvoices": "Lejárt számlák",
+      "byPaymentMethod": "Fizetési mód szerint",
+      "byProfessional": "Kezelőorvos szerint",
+      "vatSummary": "Áfa-összesítő",
+      "gaps": "Sorszámhiányok",
+      "period": "Időszak",
+      "from": "Ettől",
+      "to": "Eddig",
+      "refresh": "Frissítés",
+      "totalInvoiced": "Összesen számlázva",
+      "totalCollected": "Összesen beszedve",
+      "totalPaid": "Összesen befizetve",
+      "totalPending": "Összesen kintlévő",
+      "pending": "Fennálló egyenleg",
+      "invoices": "számla",
+      "paid": "fizetve",
+      "payments": "befizetés",
+      "noGaps": "Nincs hiány a sorszámozásban",
+      "gapsFound": "{count} hiány található a sorszámozásban",
+      "gapsDetected": "Hiányok a sorszámozásban",
+      "missingNumbers": "Hiányzó sorszámok:",
+      "noData": "Nincs adat a kiválasztott időszakra",
+      "noOverdue": "Nincs lejárt számla",
+      "daysOverdue": "napja lejárt",
+      "vatType": "Áfakulcs",
+      "base": "Adóalap",
+      "tax": "Adó",
+      "thisMonth": "Ez a hónap",
+      "thisQuarter": "Ez a negyedév",
+      "thisYear": "Ez az év",
+      "lastMonth": "Előző hónap",
+      "lastQuarter": "Előző negyedév",
+      "lastYear": "Előző év"
+    },
+    "confirmations": {
+      "issue": "Kiállítja a számlát?",
+      "issueDescription": "A kiállítás után a számla nem szerkeszthető. Csak befizetés rögzíthető vagy jóváíró számla készíthető.",
+      "void": "Érvényteleníti a számlát?",
+      "voidDescription": "Ez a művelet nem vonható vissza.",
+      "delete": "Törli a számlát?",
+      "deleteDescription": "Ez a művelet nem vonható vissza."
+    },
+    "messages": {
+      "created": "Számla létrehozva",
+      "updated": "Számla frissítve",
+      "deleted": "Számla törölve",
+      "issued": "Számla kiállítva",
+      "voided": "Számla érvénytelenítve",
+      "itemAdded": "Tétel hozzáadva",
+      "itemUpdated": "Tétel frissítve",
+      "sentByEmail": "Számla e-mailben elküldve",
+      "sentManually": "Számla elküldöttként megjelölve"
+    },
+    "send": {
+      "title": "Számla küldése",
+      "description": "A számlát elküldheti e-mailben, vagy megjelölheti kézzel átadottként (nyomtatva vagy személyesen).",
+      "sendByEmail": "Küldés e-mailben",
+      "willSendTo": "Címzett",
+      "noPatientEmail": "A páciensnek nincs e-mail-címe",
+      "customMessage": "Egyéni üzenet (opcionális)",
+      "customMessagePlaceholder": "Üzenet a páciensnek...",
+      "manualNote": "A számla elküldöttként lesz megjelölve e-mail küldése nélkül.",
+      "sendEmail": "E-mail küldése",
+      "markAsSent": "Megjelölés elküldöttként"
+    },
+    "errors": {
+      "load": "Hiba a számlák betöltésekor",
+      "create": "Hiba a számla létrehozásakor",
+      "update": "Hiba a számla frissítésekor",
+      "delete": "Hiba a számla törlésekor",
+      "issue": "Hiba a számla kiállításakor",
+      "void": "Hiba a számla érvénytelenítésekor",
+      "recordPayment": "Hiba a befizetés rögzítésekor",
+      "voidPayment": "Hiba a befizetés érvénytelenítésekor",
+      "createCreditNote": "Hiba a jóváíró számla létrehozásakor",
+      "send": "Hiba a számla küldésekor",
+      "creditNoteReasonRequired": "A jóváírás okának megadása kötelező",
+      "notFound": "A számla nem található",
+      "onlyDraft": "Csak piszkozat állapotú számla szerkeszthető",
+      "canOnlyDeleteDraft": "Csak piszkozat állapotú számla törölhető",
+      "patientRequired": "A páciens megadása kötelező",
+      "itemsRequired": "Legalább egy tétel szükséges",
+      "itemRequired": "A megnevezés és az ár kötelező",
+      "selectCatalogItem": "Kérjük, válasszon kezelést a katalógusból",
+      "cannotEdit": "Csak piszkozat állapotú számla szerkeszthető"
+    },
+    "newItemsPending": "Új tételek mentésre várnak",
+    "linkedPlan": "Kezelési terv"
+  },
+  "reports": {
+    "title": "Riportok",
+    "subtitle": "A rendelő elemzései és statisztikái",
+    "viewReports": "Riportok megtekintése",
+    "noAccess": "Egyik riporthoz sincs hozzáférése",
+    "dashboard": {
+      "title": "Vezérlőpult",
+      "subtitle": "A rendelője egy pillantásra",
+      "period": "Időszak",
+      "snapshotBadge": "Ma",
+      "snapshotTooltip": "A dátumtartomány nem befolyásolja",
+      "vsPrev": "az előző időszakhoz képest",
+      "empty": {
+        "noData": "Nincs adat ebben a tartományban"
+      },
+      "drilldown": {
+        "title": "Részletezés",
+        "payments": "Befizetések"
+      },
+      "kpi": {
+        "cashCollected": "Beszedett összeg",
+        "cashCollectedHint": "{count} befizetés",
+        "patientAdvance": "Páciens-előleg",
+        "patientAdvanceHint": "Fel nem használt előlegek",
+        "production": "Termelés",
+        "productionHint": "{count} kezelés",
+        "byMethod": "Fizetési mód szerint",
+        "methodCount": "{count} befizetés",
+        "total": "Összesen",
+        "newPatients": "Új páciensek",
+        "newPatientsHint": "Az összes időpont {rate}%-a",
+        "appointmentFunnel": "Meg nem jelenési arány",
+        "funnelHint": "{completed}% befejezve",
+        "avgCollectedTicket": "Átlagos beszedett összeg",
+        "avgTicketHint": "{count} befizetés alapján",
+        "aging": "Kintlévőségek korosítása"
+      },
+      "charts": {
+        "cashOverTime": "Beszedések időben",
+        "productionByDoctor": "Termelés orvosonként",
+        "refunded": "Visszatérítések"
+      },
+      "production": {
+        "unassigned": "Nincs hozzárendelve",
+        "others": "Egyéb",
+        "treatmentCount": "{count} kezelés"
+      },
+      "aging": {
+        "bucket0_30": "0-30 nap",
+        "bucket31_60": "31-60 nap",
+        "bucket61_90": "61-90 nap",
+        "bucket90plus": "90+ nap",
+        "empty": "Nincs fennálló kintlévőség",
+        "patientCount": "{count} páciens"
+      }
+    },
+    "billing": {
+      "title": "Számlázás",
+      "description": "Bevétel, befizetések, áfa és lejárt számlák",
+      "summary": "Összegzés",
+      "overdue": "Lejárt",
+      "overdueInvoices": "Lejárt számlák",
+      "byPaymentMethod": "Fizetési mód szerint",
+      "byProfessional": "Kezelőorvos szerint",
+      "vatSummary": "Áfa-összesítő",
+      "gaps": "Sorszámhiányok",
+      "period": "Időszak",
+      "from": "Ettől",
+      "to": "Eddig",
+      "refresh": "Frissítés",
+      "totalInvoiced": "Összesen számlázva",
+      "totalCollected": "Összesen beszedve",
+      "pending": "Fennálló egyenleg",
+      "invoices": "számla",
+      "paid": "fizetve",
+      "payments": "befizetés",
+      "gapsDetected": "Hiányok a sorszámozásban",
+      "missingNumbers": "Hiányzó sorszámok:",
+      "noData": "Nincs adat a kiválasztott időszakra",
+      "noOverdue": "Nincs lejárt számla",
+      "daysOverdue": "napja lejárt",
+      "vatType": "Áfakulcs",
+      "base": "Adóalap",
+      "tax": "Adó",
+      "thisMonth": "Ez a hónap",
+      "thisQuarter": "Ez a negyedév",
+      "thisYear": "Ez az év",
+      "lastMonth": "Előző hónap",
+      "lastQuarter": "Előző negyedév",
+      "lastYear": "Előző év"
+    },
+    "budgets": {
+      "title": "Árajánlatok",
+      "description": "Elfogadási arányok, kezelőorvosi elemzés és kezelések",
+      "comingSoonDescription": "Az árajánlat-riportok hamarosan elérhetők. Elemezheti majd az elfogadási arányokat, a kezelőorvosonkénti árajánlatokat és a legkeresettebb kezeléseket.",
+      "features": {
+        "acceptanceRate": "Elfogadási arány",
+        "acceptanceRateDesc": "Az elfogadott és elutasított árajánlatok aránya",
+        "byProfessional": "Kezelőorvos szerint",
+        "byProfessionalDesc": "Az egyes kezelőorvosok által készített árajánlatok",
+        "byTreatment": "Kezelés szerint",
+        "byTreatmentDesc": "A leggyakrabban ajánlott kezelések",
+        "averageValue": "Átlagos érték",
+        "averageValueDesc": "Átlagos árajánlat-összeg"
+      },
+      "labels": {
+        "totalCreated": "Összesen készült",
+        "accepted": "Elfogadva",
+        "rejected": "elutasítva",
+        "pending": "függőben",
+        "completed": "Befejezve",
+        "acceptanceRate": "Elfogadási arány",
+        "averageValue": "Átlagos érték",
+        "byStatus": "Állapot szerint",
+        "topTreatments": "A leggyakrabban ajánlott kezelések",
+        "treatment": "Kezelés",
+        "occurrences": "Előfordulás",
+        "quantity": "Mennyiség"
+      }
+    },
+    "scheduling": {
+      "title": "Időpontnaptár",
+      "description": "Első vizitek, ledolgozott órák és kihasználtság",
+      "comingSoonDescription": "A naptár-riportok hamarosan elérhetők. Elemezheti majd az első viziteket, a kezelőorvosonkénti órákat és a lemondási arányokat.",
+      "features": {
+        "firstVisits": "Első vizitek",
+        "firstVisitsDesc": "Új páciensek időszakonként",
+        "hoursWorked": "Ledolgozott órák",
+        "hoursWorkedDesc": "Idő kezelőorvosonként",
+        "cancellations": "Lemondások",
+        "cancellationsDesc": "Lemondási és meg nem jelenési arányok",
+        "cabinetUtilization": "Kezelők kihasználtsága",
+        "cabinetUtilizationDesc": "Az egyes kezelők használata"
+      },
+      "labels": {
+        "totalAppointments": "Összes időpont",
+        "completionRate": "Befejezési arány",
+        "completed": "befejezve",
+        "cancellationRate": "Lemondási arány",
+        "cancelled": "lemondva",
+        "noShowRate": "Meg nem jelenési arány",
+        "noShows": "nem jelent meg",
+        "newPatients": "új páciens",
+        "firstVisitRate": "Első vizitek aránya",
+        "ofTotalAppointments": "az összes időpontból",
+        "appointmentsInPeriod": "Időpontok az időszakban",
+        "excludingCancelled": "lemondottak nélkül",
+        "appointments": "időpont",
+        "byDayOfWeek": "A hét napjai szerint",
+        "statusBreakdown": "Állapot szerinti bontás",
+        "pending": "függőben"
+      },
+      "analytics": {
+        "funnel": "Állapot-tölcsér",
+        "funnelDesc": "Az időpontok állapot szerinti megoszlása az időszakban",
+        "waitingTimes": "Várakozási idők",
+        "waitingTimesDesc": "Percek a páciens érkezése és a székbe ülés között",
+        "punctuality": "Páciensek pontossága",
+        "punctualityDesc": "Eltérés a tervezett időpont és a tényleges érkezés között",
+        "durationVariance": "Tervezett és tényleges időtartam",
+        "durationVarianceDesc": "A tervezett időtartam és a tényleges székidő összevetése",
+        "samples": "Minták",
+        "average": "Átlag",
+        "median": "Medián",
+        "p90": "P90",
+        "avgDelta": "Átl. eltérés",
+        "medianDelta": "Medián eltérés",
+        "onTime": "% pontos",
+        "avgOverrun": "Átl. túlfutás",
+        "overrunCount": "Túlfutások száma",
+        "underCount": "Rövidebb kezelések száma",
+        "completionRate": "Befejezés",
+        "noShowRate": "Nem jelent meg",
+        "cancellationRate": "Lemondás",
+        "punctuality_early": "Korán (<-5)",
+        "punctuality_on_time": "Pontos (±5)",
+        "punctuality_late_short": "Késés (5-15)",
+        "punctuality_late_long": "Késés (>15)"
+      },
+      "tabs": {
+        "overview": "Áttekintés",
+        "activity": "Aktivitás",
+        "quality": "Minőség"
+      },
+      "hero": {
+        "inPeriod": "az időszakban"
+      },
+      "filters": {
+        "cabinet": "Kezelő",
+        "professional": "Kezelőorvos",
+        "custom": "Egyéni tartomány",
+        "all": "Összes",
+        "clear": "Szűrők törlése"
+      },
+      "empty": {
+        "title": "Nincs adat ebben az időszakban",
+        "desc": "Próbáljon tágabb dátumtartományt, vagy távolítsa el a szűrőket."
+      }
+    }
+  },
+  "invoiceSeries": {
+    "title": "Számlatömbök",
+    "description": "Számla-előtagok és sorszámozás beállítása",
+    "regularInvoices": "Számlák",
+    "creditNotes": "Jóváíró számlák",
+    "new": "Új számlatömb",
+    "newTitle": "Új {type} számlatömb",
+    "editTitle": "Számlatömb szerkesztése",
+    "prefix": "Előtag",
+    "prefixHint": "pl. INV, CR. Az évszám automatikusan hozzáadódik.",
+    "descriptionLabel": "Leírás",
+    "descriptionPlaceholder": "A számlatömb opcionális leírása...",
+    "nextNumber": "Következő sorszám",
+    "preview": "Előnézet",
+    "resetYearly": "Évenkénti újrakezdés",
+    "resetYearlyLabel": "A sorszámozás minden évben újrakezdődik",
+    "setAsDefault": "Beállítás alapértelmezettként",
+    "activeLabel": "Aktív számlatömb",
+    "showInactive": "Inaktívak megjelenítése",
+    "noItems": "Nincs beállított számlatömb",
+    "resetCounter": "Számláló visszaállítása",
+    "currentNumber": "Aktuális sorszám",
+    "seriesPrefix": "Számlatömb előtagja",
+    "newNumber": "Új sorszám",
+    "newNumberHint": "A sorszámnak nagyobbnak kell lennie a tömb legmagasabb meglévő sorszámánál.",
+    "resetWarningTitle": "Figyelmeztetés",
+    "resetWarning": "Ez a művelet bekerül az auditnaplóba, és nem vonható vissza.",
+    "confirmReset": "Számláló visszaállítása",
+    "created": "Számlatömb sikeresen létrehozva",
+    "saved": "Számlatömb sikeresen frissítve",
+    "resetSuccess": "Számláló sikeresen visszaállítva",
+    "onboarding": {
+      "label": "Számlatömb",
+      "description": "Az első számla kiállításához szükséges (pl. FAC-2026-0001)."
+    }
+  },
+  "documents": {
+    "title": "Dokumentumok",
+    "add": "Hozzáadás",
+    "edit": "Dokumentum szerkesztése",
+    "upload": "Dokumentum feltöltése",
+    "uploading": "Feltöltés...",
+    "empty": "Még nincs dokumentum",
+    "uploadFirst": "Első dokumentum feltöltése",
+    "types": {
+      "consent": "Beleegyező nyilatkozat",
+      "id_scan": "Személyazonosító okmány",
+      "insurance": "Biztosítás",
+      "report": "Lelet",
+      "referral": "Beutaló",
+      "other": "Egyéb"
+    },
+    "fields": {
+      "type": "Típus",
+      "title": "Cím",
+      "titlePlaceholder": "Dokumentum címe",
+      "description": "Leírás",
+      "descriptionPlaceholder": "Opcionális megjegyzések"
+    },
+    "dropzone": {
+      "hint": "Húzza ide a fájlt, vagy kattintson a kiválasztáshoz"
+    },
+    "filter": {
+      "allTypes": "Minden típus"
+    },
+    "deleteConfirm": {
+      "title": "Dokumentum törlése",
+      "message": "Biztosan törli ezt a dokumentumot? Ez a művelet nem vonható vissza."
+    },
+    "fetchError": "Hiba a dokumentumok betöltésekor",
+    "uploadSuccess": "Dokumentum sikeresen feltöltve",
+    "uploadError": "Hiba a dokumentum feltöltésekor",
+    "downloadError": "Hiba a dokumentum letöltésekor",
+    "deleteSuccess": "Dokumentum törölve",
+    "deleteError": "Hiba a dokumentum törlésekor",
+    "updateSuccess": "Dokumentum frissítve",
+    "updateError": "Hiba a dokumentum frissítésekor",
+    "viewer": {
+      "loading": "Dokumentum betöltése...",
+      "error": "Nem sikerült betölteni a dokumentumot",
+      "downloadInstead": "Letöltés helyette",
+      "unsupported": "Ehhez a fájltípushoz nincs előnézet",
+      "zoomOut": "Kicsinyítés",
+      "zoomIn": "Nagyítás",
+      "resetZoom": "Vissza 100%-ra",
+      "zoomHint": "Ctrl + görgetés a nagyításhoz"
+    },
+    "typeDesc": {
+      "consent": "Aláírt dokumentum",
+      "id_scan": "Személyi igazolvány / útlevél",
+      "insurance": "Kötvény vagy kártya",
+      "report": "Klinikai lelet",
+      "referral": "Beutaló levél",
+      "other": "Besorolatlan"
+    },
+    "errors": {
+      "mime": "Nem engedélyezett fájltípus. Csak PDF, JPG vagy PNG.",
+      "size": "A fájl meghaladja a 10 MB-ot."
+    },
+    "pdfPreviewHint": "Az előnézet a feltöltés után érhető el",
+    "uploadHelp": "Sorolja be a fájlt, hogy a megfelelő kategóriában jelenjen meg."
+  },
+  "photoGallery": {
+    "title": "Páciensgaléria",
+    "add": "Fotó hozzáadása",
+    "empty": "Még nincs fotó",
+    "uploadFirst": "Töltse fel az elsőt",
+    "showingOf": "{count} / {total} megjelenítve",
+    "upload": "Fotó feltöltése",
+    "uploadHelp": "Sorolja be, hogy a megfelelő kategóriában jelenjen meg",
+    "dropHere": "Húzzon ide egy fotót, vagy kattintson",
+    "category": "Típus",
+    "subtype": "Nézet",
+    "titlePlaceholder": "Frontális intraorális — 02/05",
+    "capturedAt": "Dátum",
+    "exifHint": "Automatikusan az EXIF-ből",
+    "cat": {
+      "all": "Összes",
+      "intraoral": "Intraorális",
+      "extraoral": "Extraorális",
+      "xray": "Röntgen",
+      "clinical": "Előtte/Utána",
+      "other": "Egyéb"
+    },
+    "catDesc": {
+      "intraoral": "Szájon belül",
+      "extraoral": "Arc és profil",
+      "xray": "Radiológiai felvétel",
+      "clinical": "Kezelés összehasonlítása",
+      "other": "Besorolatlan"
+    },
+    "sub": {
+      "frontal": "Frontális",
+      "lateral_left": "Bal oldalsó",
+      "lateral_right": "Jobb oldalsó",
+      "occlusal_upper": "Felső okkluzális",
+      "occlusal_lower": "Alsó okkluzális",
+      "palatal": "Palatinális",
+      "lingual": "Linguális",
+      "smile": "Mosoly",
+      "rest": "Nyugalmi",
+      "frontal_face": "Frontális",
+      "profile_left": "Bal profil",
+      "profile_right": "Jobb profil",
+      "three_quarter_left": "3/4 bal",
+      "three_quarter_right": "3/4 jobb",
+      "panoramic": "Panoráma",
+      "periapical": "Periapikális",
+      "bitewing": "Szárnyas (bitewing)",
+      "ceph_lat": "Teleröntgen oldalirányú",
+      "ceph_pa": "Teleröntgen PA",
+      "cbct": "CBCT",
+      "occlusal_xray": "Okkluzális röntgen",
+      "before": "Előtte",
+      "after": "Utána",
+      "progress": "Folyamat",
+      "reference": "Referencia",
+      "portrait": "Portré",
+      "document_scan": "Dokumentum",
+      "model_photo": "Minta"
+    },
+    "compare": {
+      "before": "Előtte",
+      "after": "Utána"
+    },
+    "pair": {
+      "pickHint": "Válassza ki a párosítandó fotót:",
+      "noCandidates": "Nincs elérhető fotó. Először töltsön fel egy másikat.",
+      "paired": "Párosítva",
+      "exitCompare": "Kilépés az összehasonlításból",
+      "compare": "Összehasonlítás",
+      "unpair": "Eltávolítás",
+      "pair": "Előtte/utána párosítás"
+    }
+  },
+  "help": {
+    "label": "Súgó",
+    "openHelp": "Súgó megnyitása",
+    "drawerTitle": "Súgó ehhez az oldalhoz",
+    "unavailable": "Ehhez az oldalhoz még nincs kontextusfüggő súgó.",
+    "openFullManual": "Teljes kézikönyv megnyitása"
+  },
+  "charts": {
+    "trend": {
+      "ariaLabel": "Trend {count} ponton át"
+    },
+    "donut": {
+      "ariaLabel": "Fánkdiagram, {count} szegmens"
+    }
+  }
+}

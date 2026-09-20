@@ -1,0 +1,192 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+import { readFileSync } from 'node:fs'
+import { isAbsolute, join, resolve } from 'node:path'
+
+/**
+ * Load Nuxt Layer paths from `modules.json`.
+ *
+ * The backend writes this file whenever a module with a declared
+ * `manifest.frontend.layer_path` is installed. When absent (fresh
+ * checkout, no community modules yet), returns an empty array.
+ */
+function loadModuleLayers(): { layers: string[], names: string[] } {
+  const path = resolve(__dirname, 'modules.json')
+  try {
+    const raw = readFileSync(path, 'utf-8')
+    const payload = JSON.parse(raw) as { layers?: string[], modules?: { name: string }[] }
+    return {
+      layers: Array.isArray(payload.layers) ? payload.layers : [],
+      names: Array.isArray(payload.modules) ? payload.modules.map(m => m.name) : []
+    }
+  } catch (err: unknown) {
+    const code = (err as { code?: string }).code
+    if (code !== 'ENOENT') {
+      console.warn('[nuxt.config] modules.json is malformed, using empty layers:', err)
+    }
+    return { layers: [], names: [] }
+  }
+}
+
+const { layers: moduleLayers, names: moduleLayerNames } = loadModuleLayers()
+const modulesJsonPath = resolve(__dirname, 'modules.json')
+// Layers referenced by a path inside this directory (`./module_layers/...`,
+// the symlink CI and ESLint use). Nuxt only auto-includes layers that live
+// outside rootDir or under `layers/*/app` in the generated tsconfig, so
+// without an explicit include `nuxt typecheck` silently skips every layer
+// page. Absolute paths (the Docker mount) are outside rootDir and already
+// included by Nuxt itself.
+const localLayers = moduleLayers.filter(layer => !isAbsolute(layer))
+
+export default defineNuxtConfig({
+
+  // Disable SSR in standalone production build to generate a pure static SPA
+  // served by ultra-lightweight Caddy (0MB Node.js runtime memory overhead).
+  ssr: process.env.NUXT_SSR === 'true',
+
+  extends: moduleLayers,
+
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/ui',
+    '@nuxtjs/i18n',
+    '@pinia/nuxt'
+  ],
+
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false
+    }
+  ],
+
+  devtools: {
+    // Vite devtools full-page reloads (optimizeDeps discovery and the
+    // devtools client itself) abort Playwright `goto` mid-navigation
+    // (#260). Pre-bundling @vue/devtools-* below is not enough on its
+    // own, so e2e contexts disable devtools with NUXT_DEVTOOLS=false
+    // (CI does; locally: NUXT_DEVTOOLS=false docker compose up -d
+    // frontend). Daily DX stays on by default.
+    enabled: process.env.NUXT_DEVTOOLS !== 'false'
+  },
+  app: {
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
+    head: {
+      title: 'DentApex Enterprise',
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'manifest', href: '/manifest.webmanifest' },
+        { rel: 'apple-touch-icon', href: '/logo-icon.svg' }
+      ],
+      meta: [
+        { name: 'theme-color', content: '#0EA5E9' },
+        { name: 'mobile-web-app-capable', content: 'yes' },
+        { name: 'apple-mobile-web-app-capable', content: 'yes' },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
+        { name: 'apple-mobile-web-app-title', content: 'DentApex' }
+      ]
+    }
+  },
+
+  css: ['~/assets/css/main.css'],
+
+  // Default to light mode; users can opt into dark via the toggle. Both
+  // ``preference`` and ``fallback`` are set so SSR + first-paint render
+  // light without a flash even before client hydration reads OS prefs.
+  colorMode: {
+    preference: 'light',
+    fallback: 'light'
+  },
+
+  runtimeConfig: {
+    // Server-side only (for SSR inside Docker)
+    apiBaseUrlServer: process.env.API_BASE_URL_SERVER || 'http://backend:8000',
+    public: {
+      // Client-side (browser): Default to local backend port 8000 for Enterprise Full-Stack
+      apiBaseUrl: process.env.API_BASE_URL || 'http://127.0.0.1:8000',
+      demoMode: process.env.NUXT_PUBLIC_DEMO_MODE === 'true',
+      // Documentation portal origin used by the in-app help drawer
+      // (Fase 5 of issue #75). Empty disables the help button.
+      docsUrl: process.env.NUXT_PUBLIC_DOCS_URL || 'https://docs.dentapex.com',
+      // Cloudflare Edge Worker gateway for Night Copilot & Private R2 Vault (Defaults to local PHP proxy)
+      edgeWorkerUrl: process.env.NUXT_PUBLIC_EDGE_WORKER_URL || '',
+      // Module layers baked into this build. `usePermissions().can()`
+      // hides their permissions while the backend reports the module as
+      // not installed (prod bakes every layer — see Dockerfile.prod).
+      moduleLayers: moduleLayerNames
+    }
+  },
+  srcDir: 'app',
+
+  // Restart dev server when the backend rewrites `modules.json` on
+  // module install/uninstall. `extends` is evaluated once at config
+  // boot, so a layer added after Nuxt started is invisible until
+  // restart. Watching the file makes the round-trip automatic.
+  watch: [modulesJsonPath],
+
+  compatibilityDate: '2025-01-15',
+
+  vite: {
+    optimizeDeps: {
+      // Pre-bundle deps that Vite otherwise discovers at runtime. Runtime
+      // discovery triggers a full page reload, which in CI races Playwright's
+      // `goto` and causes net::ERR_ABORTED on the very first visit to any
+      // route that uses these packages.
+      include: [
+        'nprogress',
+        '@vueuse/core',
+        '@vue/devtools-core',
+        '@vue/devtools-kit'
+      ]
+    }
+  },
+
+  typescript: {
+    tsConfig: {
+      include: localLayers.map(layer => join('..', layer, '**/*')),
+      // Layer nuxt.config files belong to the node tsconfig, not the app one.
+      exclude: localLayers.map(layer => join('..', layer, 'nuxt.config.*'))
+    }
+  },
+
+  eslint: {
+    config: {
+      stylistic: {
+        commaDangle: 'never',
+        braceStyle: '1tbs'
+      }
+    }
+  },
+
+  i18n: {
+    locales: [
+      { code: 'ar', name: 'العربية', file: 'ar.json', dir: 'rtl' },
+      { code: 'en', name: 'English', file: 'en.json', dir: 'ltr' },
+      { code: 'es', name: 'Español', file: 'es.json', dir: 'ltr' },
+      { code: 'fr', name: 'Français', file: 'fr.json', dir: 'ltr' },
+      { code: 'pt', name: 'Português', file: 'pt.json', dir: 'ltr' },
+      { code: 'ta', name: 'தமிழ்', file: 'ta.json', dir: 'ltr' },
+      { code: 'de', name: 'Deutsch', file: 'de.json', dir: 'ltr' },
+      { code: 'hu', name: 'Magyar', file: 'hu.json', dir: 'ltr' },
+      { code: 'pl', name: 'Polski', file: 'pl.json', dir: 'ltr' },
+      { code: 'it', name: 'Italiano', file: 'it.json', dir: 'ltr' }
+    ],
+    defaultLocale: 'ar',
+    defaultDirection: 'rtl',
+    lazy: true,
+    langDir: 'locales',
+    strategy: 'no_prefix',
+    detectBrowserLanguage: false
+  },
+
+  // Pre-bundle every `i-lucide-*` icon referenced in source into the client
+  // bundle. Without this, @nuxt/icon fetches icons lazily per-name on client
+  // navigation, which causes the sidebar to briefly render a stale / wrong
+  // icon (e.g. the settings cog showing up next to "Pacientes") until the
+  // real icon resolves.
+  icon: {
+    clientBundle: {
+      scan: true,
+      sizeLimitKb: 512
+    }
+  }
+})

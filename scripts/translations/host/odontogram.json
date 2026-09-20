@@ -1,0 +1,245 @@
+{
+  "title": "مخطط الأسنان السريري (Odontogram)",
+  "tooth": "السن",
+  "globals": {
+    "category": "كامل الفم",
+    "applied": "تمت إضافة {name} إلى خطة العلاج",
+    "archPickerTitle": "أي فك ترغب في تطبيق \"{name}\" عليه؟",
+    "upperArch": "الفك العلوي",
+    "lowerArch": "الفك السفلي",
+    "searchPlaceholder": "البحث عن إجراء علاجي…"
+  },
+  "selectCondition": "اختر الحالة السريرية أو الإجراء السني",
+  "readOnly": "مخطط الأسنان للقراءة فقط",
+  "legend": "دليل الرموز والمصطلحات",
+  "statusLegend": "حالة الإجراء العلاجي",
+  "toothPosition": "موقع وتموضع السن",
+  "displaced": "سن منحرف عن القوس",
+  "rotated": "سن مدور / مفتول",
+  "dentition": {
+    "permanent": "أسنان دائمة (للبالغين)",
+    "deciduous": "أسنان لبنية (للأطفال)",
+    "toggle": "تبديل نوع الأسنان (دائمة / لبنية)"
+  },
+  "quadrants": {
+    "upper": "الفك العلوي",
+    "lower": "الفك السفلي",
+    "upperRight": "الربع العلوي الأيمن (Q1)",
+    "upperLeft": "الربع العلوي الأيسر (Q2)",
+    "lowerRight": "الربع السفلي الأيمن (Q4)",
+    "lowerLeft": "الربع السفلي الأيسر (Q3)"
+  },
+  "surfaces": {
+    "M": "إنسي (Mesial - M)",
+    "D": "وحشي (Distal - D)",
+    "O": "إطباقي (Occlusal - O)",
+    "V": "دهليزي / شفوي (Vestibular - V)",
+    "L": "لساني / حنكي (Lingual - L)"
+  },
+  "conditions": {
+    "healthy": "سليم وصحي",
+    "caries": "تسوس نخر",
+    "filling": "حشوة سنية",
+    "crown": "تاج / تلبيسة",
+    "missing": "سن مفقود / مخلوع",
+    "root_canal": "علاج عصب وجذور",
+    "implant": "زرعة سنية",
+    "bridge_pontic": "سن وسيط بجسر (Pontic)",
+    "bridge_abutment": "دعامة جسر (Abutment)",
+    "extraction_indicated": "مؤشر للخلع",
+    "sealant": "ساد شقوق وقائي (Sealant)",
+    "fracture": "كسر سني"
+  },
+  "history": {
+    "title": "سجل التغييرات التاريخي",
+    "noChanges": "لا توجد تغييرات مسجلة",
+    "changedBy": "تم التعديل بواسطة",
+    "changeTypes": {
+      "created": "إنشاء مخطط",
+      "general_condition": "حالة سن عامة",
+      "surface_update": "تحديث أسطح السن",
+      "note": "ملاحظة سريرية"
+    }
+  },
+  "messages": {
+    "updated": "تم تحديث مخطط الأسنان بنجاح",
+    "error": "خطأ أثناء تحديث مخطط الأسنان",
+    "loadError": "تعذر تحميل مخطط الأسنان"
+  },
+  "actions": {
+    "save": "حفظ المخطط",
+    "reset": "إعادة ضبط",
+    "print": "طباعة المخطط"
+  },
+  "status": {
+    "existing": "موجود مسبقاً",
+    "planned": "مخطط علاجه"
+  },
+  "treatments": {
+    "title": "الإجراءات العلاجية",
+    "addTreatment": "إضافة علاج",
+    "selectStatus": "اختيار الحالة",
+    "noTreatments": "لا توجد علاجات مسجلة على هذا السن",
+    "markPerformed": "تحديد كمنجز ومنفذ",
+    "categories": {
+      "common": "شائع",
+      "restorative": "ترميمي ومحافظ",
+      "diagnostic": "تشخيصي",
+      "orthodontic": "تقويم الأسنان",
+      "periodontic": "أمراض اللثة والأنسجة",
+      "position": "تموضع السن",
+      "other": "أخرى",
+      "diagnostico": "تشخيصي",
+      "restauradora": "ترميمي ومحافظ",
+      "cirugia": "جراحة الفم والأسنان",
+      "endodoncia": "علاج العصب والجذور",
+      "ortodoncia": "تقويم الأسنان"
+    },
+    "types": {
+      "pulpitis": "التهاب لب السن (Pulpitis)",
+      "caries": "تسوس نخر",
+      "incipient_caries": "تسوس بدئي مبكر",
+      "pigmentation": "تصبغات سنية",
+      "fracture": "كسر سني",
+      "missing": "سن مفقود",
+      "periapical_small": "آفة ذروية صغيرة (< 2 مم)",
+      "periapical_medium": "آفة ذروية متوسطة (2-4 مم)",
+      "periapical_large": "آفة ذروية كبيرة (> 4 مم)",
+      "rotated": "سن ملتف / مدوّر",
+      "displaced": "سن منحرف عن مكانه",
+      "unerupted": "سن منطمر / غير بازغ",
+      "filling": "حشوة سنية",
+      "filling_composite": "حشوة ضوئية كومبوزيت",
+      "filling_amalgam": "حشوة أملغم معدنية",
+      "filling_temporary": "حشوة مؤقتة",
+      "sealant": "ساد الشقوق الوقائي (Sealant)",
+      "veneer": "عدسة سنية (فينير)",
+      "inlay": "حشوة مصبوبة داخلية (Inlay)",
+      "overlay": "حشوة مصبوبة خارجية (Overlay)",
+      "crown": "تاج سني (تلبيسة)",
+      "crown_on_implant": "تاج مثبت على زرعة",
+      "provisional_crown_on_implant": "تاج مؤقت على زرعة",
+      "pontic": "سن دمية (Pontic)",
+      "bridge_pontic": "دمية جسر سني (Bridge Pontic)",
+      "bridge_abutment": "دعامة جسر سني (Bridge Abutment)",
+      "extraction": "خلع سن",
+      "implant": "غرس زرعة سنية",
+      "apicoectomy": "استئصال ذروة الجذر (Apicoectomy)",
+      "root_canal": "علاج عصب وجذور (Endodontics)",
+      "root_canal_full": "علاج جذور مكتمل للطول الذروي",
+      "root_canal_two_thirds": "علاج جذور لثلثي القناة (2/3)",
+      "root_canal_half": "علاج جذور لنصف القناة (1/2)",
+      "root_canal_overfill": "حشو جذور متجاوز للذروة (Overfilled)",
+      "post": "وتد داخل القناة الجذرية (Post)",
+      "bracket": "حاصرة تقويمية (Bracket)",
+      "tube": "أنبوب تقويمي (Tube)",
+      "band": "طوق تقويمي مولي (Band)",
+      "attachment": "وصلة تقويمية شفافة (Attachment)",
+      "retainer": "مثبت تقويمي (Retainer)",
+      "rotate": "سن ملتف",
+      "displace": "سن منحرف",
+      "splint": "جبيرة تثبيت أسنان (Splint)",
+      "migrated": "إجراء علاجي عام",
+      "other": "علاج سني آخر"
+    },
+    "treatmentAdded": "تمت إضافة الإجراء العلاجي",
+    "treatmentPerformed": "تم تحديد الإجراء كمنجز",
+    "treatmentDeleted": "تم حذف الإجراء العلاجي",
+    "status": {
+      "existing": "موجود مسبقاً",
+      "planned": "مخطط علاجه"
+    }
+  },
+  "position": {
+    "displaced": "منحرف عن القوس السني",
+    "rotated": "ملتف حول محوره",
+    "normal": "تموضع طبيعي"
+  },
+  "views": {
+    "occlusal": "المسقط الإطباقي (Occlusal)",
+    "lateral": "المسقط الجانبي (Lateral)",
+    "dual": "العرض المزدوج (إطباقي + جانبي)"
+  },
+  "selectSurfaces": "تحديد أسطح السن",
+  "selectedSurfaces": "الأسطح المحددة",
+  "surfacesSelected": "أسطح تم تحديدها",
+  "instructions": {
+    "selectTreatment": "اختر علاجاً من القائمة لتطبيقه",
+    "clickTooth": "انقر على السن المستهدف للتطبيق"
+  },
+  "addToPlan": "إضافة إلى خطة العلاج",
+  "noPlan": "بدون خطة علاج",
+  "createNewPlan": "إنشاء خطة علاج جديدة...",
+  "applyTo": "تطبيق الإجراء على",
+  "oneTooth": "سن واحد",
+  "multipleTeeth": "أسنان متعددة",
+  "surfacePricingHint": "التسعير حسب الأسطح: {range}",
+  "toothNames": {
+    "centralIncisor": "ثنية (قاطع مركزي)",
+    "lateralIncisor": "رباعية (قاطع جانبي)",
+    "canine": "ناب",
+    "firstPremolar": "ضاحك أول",
+    "secondPremolar": "ضاحك ثانٍ",
+    "firstMolar": "طاحن أول (ضرس أول)",
+    "secondMolar": "طاحن ثانٍ (ضرس ثانٍ)",
+    "thirdMolar": "طاحن ثالث (ضرس العقل)"
+  },
+  "positions": {
+    "upper": "علوي",
+    "lower": "سفلي",
+    "left": "أيسر",
+    "right": "أيمن"
+  },
+  "tooltip": {
+    "clickToEdit": "انقر للتعديل"
+  },
+  "planning": "التخطيط السريري",
+  "diagnosisMode": "وضع التشخيص",
+  "treatmentList": {
+    "title": "قائمة الإجراءات العلاجية",
+    "noTreatments": "لا توجد علاجات مسجلة"
+  },
+  "changeHistory": {
+    "title": "سجل التغييرات",
+    "noChanges": "لا توجد تغييرات مسجلة",
+    "treatmentAdded": "إجراء علاجي"
+  },
+  "timeline": {
+    "title": "الخط الزمني للمخطط السني",
+    "viewingDate": "المعاينة بتاريخ: {date}",
+    "viewingHistory": "أنت تعاين الآن الحالة التاريخية السابقة لمخطط الأسنان",
+    "returnToNow": "العودة إلى الحالة الحالية المباشرة",
+    "noHistory": "لا يوجد سجل تاريخي سابق"
+  },
+  "multiTooth": {
+    "bridge": {
+      "label": "جسر سني ثابت (Fixed Bridge)"
+    },
+    "splint": {
+      "label": "جبيرة تثبيت أسنان (Splint)"
+    },
+    "veneers": {
+      "label": "عدسات سنية متعددة (Veneers)"
+    },
+    "crowns": {
+      "label": "تيجان سنية متعددة (Crowns)"
+    },
+    "pillar": "دعامة (Pillar)",
+    "pontic": "سن وسيط دمية (Pontic)",
+    "roleHint": "انقر على السن للتبديل بين دعامة / دمية.",
+    "needPillar": "يتطلب الجسر السني دعامة واحدة على الأقل.",
+    "confirmHint": "أنت على وشك إنشاء مجموعة علاجية تشمل {n} أسنان.",
+    "willBePlanned": "سيتم تحديد المجموعة كمخططة في خطة العلاج.",
+    "willBeExisting": "سيتم تسجيل المجموعة كموجودة مسبقاً في الفم.",
+    "hints": {
+      "range": "انقر على السن الأول ثم السن الأخير لتحديد النطاق",
+      "free": "انقر لإضافة أو إزالة الأسنان بحرية"
+    },
+    "errors": {
+      "tooFew": "يتطلب الإجراء {n} أسنان على الأقل",
+      "tooMany": "الحد الأقصى المسموح به هو {n} أسنان",
+      "sameArchRequired": "يجب أن تكون كافة الأسنان المحددة في نفس القوس السني (نفس الفك)"
+    },
+    "sectionLabel": "معالجات متعددة الأسنان"
+  }
+}

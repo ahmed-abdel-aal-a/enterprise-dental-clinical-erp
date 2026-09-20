@@ -1,0 +1,252 @@
+{
+  "title": "سجل المرضى",
+  "create": "مريض جديد",
+  "edit": "تعديل بيانات المريض",
+  "search": "بحث عن مريض...",
+  "searchPlaceholder": "الاسم أو رقم الهاتف",
+  "noResults": "لم يتم العثور على أي مريض",
+  "empty": "لا يوجد مرضى مسجلون",
+  "emptyAction": "تسجيل أول مريض",
+  "name": "الاسم الكامل",
+  "firstName": "الاسم الأول",
+  "lastName": "اسم العائلة",
+  "phone": "رقم الهاتف",
+  "email": "البريد الإلكتروني",
+  "dateOfBirth": "تاريخ الميلاد",
+  "notes": "ملاحظات",
+  "created": "تم إنشاء ملف المريض بنجاح",
+  "updated": "تم تحديث بيانات المريض بنجاح",
+  "archived": "تمت أرشفة ملف المريض",
+  "notFound": "المريض غير موجود",
+  "archiveConfirm": "أرشفة ملف المريض {name}؟",
+  "archiveDescription": "سيؤدي هذا الإجراء لإخفاء المريض من نتائج البحث المعتادة، مع الاحتفاظ بكافة المواعيد والسجلات التاريخية.",
+  "cancel": "إلغاء",
+  "archive": "أرشفة",
+  "dangerZone": {
+    "title": "منطقة الإجراءات الحساسة",
+    "archiveHelp": "أرشفة المريض لإخفائه من القوائم النشطة مع الحفاظ الكامل على مواعيده وسجلاته."
+  },
+  "billingSection": "بيانات الفوترة والضريبة",
+  "billingSectionHint": "تُستخدم هذه البيانات تلقائياً عند إصدار الفواتير الرسمية لهذا المريض.",
+  "editingBillingForInvoice": "تعديل بيانات الفوترة الضريبية. ستنعكس التعديلات فوراً على الفاتورة.",
+  "returnToInvoice": "العودة إلى الفاتورة",
+  "billingName": "الاسم في الفاتورة",
+  "billingNamePlaceholder": "الاسم الشخصي أو اسم الشركة لأغراض الفوترة",
+  "billingTaxId": "الرقم الضريبي / الهوية الوطنية (DNI/NIE/CIF)",
+  "billingEmail": "بريد استلام الفواتير",
+  "billingAddress": "العنوان الضريبي للفاتورة",
+  "billingComplete": "مكتملة",
+  "billingIncomplete": "غير مكتملة",
+  "demographics": "البيانات الديموغرافية والشخصية",
+  "nationalId": "وثيقة إثبات الشخصية",
+  "nationalIdType": "نوع الوثيقة",
+  "passport": "جواز السفر",
+  "profession": "المهنة",
+  "workplace": "جهة العمل",
+  "years": "سنة",
+  "status": {
+    "active": "نشط",
+    "archived": "مؤرشف"
+  },
+  "filters": {
+    "status": "الحالة",
+    "city": "المدينة",
+    "withDebt": "مرضى عليهم مبالغ مستحقة",
+    "doNotContact": "عدم الاتصال",
+    "doNotContactOnly": "المدرجون بقائمة عدم الاتصال فقط",
+    "doNotContactOnlyContactable": "القابلون للتواصل فقط"
+  },
+  "columns": {
+    "city": "المدينة",
+    "contact": "بيانات الاتصال",
+    "debt": "الرصيد المستحق"
+  },
+  "sort": {
+    "lastVisit": "آخر زيارة",
+    "lastName": "اسم العائلة",
+    "firstName": "الاسم الأول",
+    "createdAt": "تاريخ التسجيل",
+    "updatedAt": "آخر تحديث"
+  },
+  "doNotContact": {
+    "label": "عدم الاتصال (حظر التواصل)",
+    "hint": "سيتم استبعاد المريض تلقائياً من قوائم الاتصال والمراسلات الترويجية الآلية",
+    "badge": "عدم الاتصال"
+  },
+  "gender": {
+    "label": "الجنس",
+    "select": "اختر الجنس",
+    "male": "ذكر",
+    "female": "أنثى",
+    "other": "آخر",
+    "preferNotSay": "أفضل عدم الإفصاح"
+  },
+  "emergencyContact": {
+    "title": "جهة الاتصال في حالات الطوارئ",
+    "hasContact": "يوجد رقم طوارئ مسجل",
+    "noContact": "لا يوجد رقم طوارئ مسجل",
+    "name": "الاسم الكامل",
+    "namePlaceholder": "اسم الشخص المعني بالطوارئ",
+    "relationship": "صلة القرابة",
+    "relationshipPlaceholder": "اختر صلة القرابة",
+    "phone": "رقم هاتف الطوارئ",
+    "phonePlaceholder": "أدخل رقم هاتف الطوارئ",
+    "email": "البريد الإلكتروني للطوارئ",
+    "emailPlaceholder": "أدخل البريد الإلكتروني",
+    "isLegalGuardian": "هو الولي أو الوصي القانوني",
+    "remove": "إزالة جهة اتصال الطوارئ",
+    "relationships": {
+      "spouse": "الزوج / الزوجة",
+      "parent": "الأب / الأم",
+      "child": "الابن / الابنة",
+      "sibling": "الأخ / الأخت",
+      "friend": "صديق / قريب",
+      "other": "أخرى"
+    }
+  },
+  "medicalHistory": {
+    "title": "السجل والتاريخ الطبي",
+    "save": "حفظ السجل الطبي",
+    "fetchError": "خطأ أثناء تحميل التاريخ الطبي",
+    "saveSuccess": "تم حفظ السجل الطبي بنجاح",
+    "saveError": "خطأ أثناء حفظ السجل الطبي",
+    "allergies": "التحسس والحساسية الدوائية",
+    "allergiesCount": "تحسس واحد | {n} حالات تحسس",
+    "onAnticoagulants": "يتناول أدوية مميعة للدم (مضادات التخثر)",
+    "allergyName": "اسم المادة المسببة للحساسية",
+    "type": "النوع",
+    "allergyTypes": {
+      "drug": "حساسية دوائية (مضادات، بنسلين...)",
+      "food": "حساسية غذائية",
+      "material": "مواد سنية وطبية (لاتكس، معادن...)",
+      "environmental": "بيئية وموسمية"
+    },
+    "severity": {
+      "low": "خفيفة",
+      "medium": "متوسطة",
+      "high": "شديدة",
+      "critical": "حرجة (صدمة تأقية / خطر على الحياة)"
+    },
+    "medications": "الأدوية المداوم عليها",
+    "medicationName": "اسم الدواء",
+    "dosage": "الجرعة",
+    "frequency": "معدل التناول",
+    "systemicDiseases": "الأمراض المزمنة والجهازية",
+    "diseaseName": "اسم المرض / الحالة",
+    "diseaseTypes": {
+      "cardiovascular": "أمراض القلب والأوعية الدموية",
+      "respiratory": "أمراض الجهاز التنفسي والربو",
+      "endocrine": "أمراض الغدد والسكري",
+      "neurological": "أمراض الجهاز العصبي والصرع",
+      "autoimmune": "أمراض المناعة الذاتية",
+      "other": "أمراض أخرى"
+    },
+    "critical": "حالة حرجة",
+    "controlled": "مضبوط ومنتظم",
+    "notControlled": "غير منضبط",
+    "specialConditions": "حالات سريرية خاصة",
+    "pregnant": "حامل",
+    "pregnancyWeek": "أسبوع الحمل",
+    "lactating": "مرضعة",
+    "anticoagulants": "مضادات التخثر (مميعات الدم)",
+    "anticoagulantMedication": "اسم دواء السيولة",
+    "inrValue": "قيمة التحليل (INR)",
+    "anesthesiaReaction": "تحسس أو مضاعفات سابقة للتخدير الموضعي",
+    "anesthesiaReactionDetails": "تفاصيل رد الفعل التحسسي",
+    "bruxism": "صرير الأسنان (الكزاز الليلي - Bruxism)",
+    "lifestyle": "العادات ونمط الحياة",
+    "smoker": "مدخن",
+    "smokingFrequency": "عدد السجائر يومياً",
+    "alcoholConsumption": "تناول المشروبات الكحولية",
+    "alcohol": {
+      "none": "لا يتناول نهائياً",
+      "occasional": "بشكل نادر / مناسبات",
+      "moderate": "بشكل معتدل",
+      "heavy": "بشكل مكثف"
+    },
+    "surgicalHistory": "العمليات الجراحية السابقة",
+    "procedure": "اسم العملية / الإجراء الجراحي"
+  },
+  "timeline": {
+    "empty": "لا يوجد نشاط مسجل في السجل حتى الآن",
+    "emptyFiltered": "لا توجد أحداث مسجلة في هذا القسم",
+    "clearFilter": "عرض كافة النشاطات",
+    "endOfTimeline": "نهاية السجل الزمني",
+    "totalEntries": "إدخال واحد | {count} إدخالات",
+    "groups": {
+      "today": "اليوم",
+      "yesterday": "أمس",
+      "thisWeek": "هذا الأسبوع",
+      "thisMonth": "هذا الشهر",
+      "earlier": "في وقت سابق"
+    },
+    "author": "بواسطة {name}",
+    "meta": {
+      "cabinet": "غرفة {name}",
+      "teeth": "الأسنان: {list}",
+      "total": "الإجمالي: {amount}",
+      "number": "رقم {value}",
+      "via": "عبر {channel}",
+      "template": "النموذج: {key}",
+      "docType": "النوع: {type}"
+    },
+    "categories": {
+      "all": "كافة الأحداث",
+      "visit": "الزيارات السريرية",
+      "treatment": "الإجراءات العلاجية",
+      "financial": "المعاملات المالية",
+      "communication": "المراسلات والتواصل",
+      "medical": "التاريخ الطبي",
+      "document": "المستندات والوثائق",
+      "note": "الملاحظات السريرية"
+    }
+  },
+  "alerts": {
+    "title": "تنبيه واحد | {count} تنبيهات سريرية",
+    "label": "التنبيهات السريرية والطبية"
+  },
+  "editDemographics": "تعديل البيانات الشخصية",
+  "editEmergencyContact": "تعديل بيانات الطوارئ",
+  "editBilling": "تعديل بيانات الفوترة",
+  "editMedicalHistory": "تعديل السجل الطبي",
+  "medicalSnapshot": {
+    "title": "المعلومات الطبية والتحذيرات",
+    "allergiesLabel": "التحسس الدوائي",
+    "allergiesEmpty": "لا توجد حساسية دوائية مسجلة",
+    "allergiesNotReviewed": "لم يتم فحص السجل الطبي بعد",
+    "completeHistory": "استكمال التاريخ الطبي",
+    "reviewedOn": "تمت المراجعة في {date}",
+    "conditions": {
+      "pregnantWeek": "حامل · الأسبوع {week}",
+      "anticoagulantInr": "مميع دم · INR {inr}",
+      "smokerFreq": "مدخن · {freq} سجائر/يوم"
+    }
+  },
+  "personalInfo": {
+    "title": "المعلومات الشخصية",
+    "ageLabel": "{age} سنة",
+    "birthWithAge": "{date} ({age} سنة)"
+  },
+  "contactInfo": {
+    "title": "بيانات الاتصال والعنوان",
+    "copyPhone": "نسخ رقم الهاتف",
+    "copyEmail": "نسخ البريد الإلكتروني",
+    "address": "العنوان الوطني / السكني",
+    "addEmergency": "إضافة جهة اتصال للطوارئ",
+    "addGuardian": "إضافة ولي أمر / وصي قانوني",
+    "guardianRequired": "يتطلب ولي أمر قانوني (قاصر)"
+  },
+  "administrative": {
+    "title": "البيانات الإدارية والملف"
+  },
+  "header": {
+    "ariaLabel": "ترويسة ملف المريض"
+  },
+  "quickActions": {
+    "ariaLabel": "الإجراءات السريعة للمريض"
+  },
+  "onboarding": {
+    "label": "إنشاء أول ملف مريض",
+    "description": "أسرع وسيلة لتجربة السجل الطبي، وجدول المواعيد، والتقديرات المالية عملياً."
+  }
+}

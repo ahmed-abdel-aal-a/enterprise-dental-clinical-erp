@@ -1,0 +1,55 @@
+{
+  "patients_odontogram": {
+    "11111111-1111-4111-8111-111111111101": {
+      "patient_name": "أحمد إبراهيم خليل",
+      "teeth": {
+        "16": {"state": "filled", "material": "composite", "surfaces": ["O", "M"], "notes": "حشوة كومبوزيت تجميلية سطحين"},
+        "17": {"state": "sound"},
+        "26": {"state": "endo", "material": "zirconia_crown", "surfaces": ["MOD"], "notes": "علاج جذور مكتمل مع تاج زيركون"},
+        "36": {"state": "cavity", "surfaces": ["O"], "notes": "تسوس سطح إطباقي يحتاج حشو"},
+        "46": {"state": "sound"},
+        "47": {"state": "filled", "material": "amalgam", "surfaces": ["O"], "notes": "حشوة أملغم قديمة مستقرة"}
+      }
+    },
+    "11111111-1111-4111-8111-111111111102": {
+      "patient_name": "سارة محمود الشامي",
+      "teeth": {
+        "11": {"state": "sound"},
+        "21": {"state": "sound"},
+        "14": {"state": "filled", "material": "composite", "surfaces": ["D"], "notes": "حشوة ضاحك علوي"},
+        "36": {"state": "endo", "material": "temporary", "surfaces": ["O"], "notes": "جلسة سحب عصب أولى - حشو مؤقت"},
+        "48": {"state": "extracted", "notes": "مخلوع سابقاً"}
+      }
+    },
+    "11111111-1111-4111-8111-111111111105": {
+      "patient_name": "طارق يوسف منصور",
+      "teeth": {
+        "36": {"state": "implant", "system": "Straumann SLA", "notes": "زرعة سويسرية مدمجة بالعظم مع تاج زيركون"},
+        "37": {"state": "implant", "system": "Straumann SLA", "notes": "زرعة ضرس ثاني"},
+        "46": {"state": "crown", "material": "porcelain_fused_to_metal"},
+        "18": {"state": "missing"},
+        "28": {"state": "missing"}
+      }
+    },
+    "11111111-1111-4111-8111-111111111109": {
+      "patient_name": "ياسمين حسام النجار",
+      "teeth": {
+        "13": {"state": "veneer", "material": "E-Max", "shade": "BL2", "notes": "عدسة فينير إيماكس"},
+        "12": {"state": "veneer", "material": "E-Max", "shade": "BL2"},
+        "11": {"state": "veneer", "material": "E-Max", "shade": "BL2"},
+        "21": {"state": "veneer", "material": "E-Max", "shade": "BL2"},
+        "22": {"state": "veneer", "material": "E-Max", "shade": "BL2"},
+        "23": {"state": "veneer", "material": "E-Max", "shade": "BL2"}
+      }
+    },
+    "11111111-1111-4111-8111-111111111114": {
+      "patient_name": "زياد حازم الشناوي",
+      "teeth": {
+        "54": {"state": "sound"},
+        "55": {"state": "pulpotomy", "notes": "بتر لب مع تاج ستانلس ستيل SSC"},
+        "75": {"state": "space_maintainer", "notes": "حافظ مسافة حلقة وشريط (Band & Loop)"},
+        "85": {"state": "sound"}
+      }
+    }
+  }
+}

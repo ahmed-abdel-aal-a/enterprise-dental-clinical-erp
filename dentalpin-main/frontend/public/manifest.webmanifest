@@ -1,0 +1,20 @@
+{
+  "name": "DentApex - نظام إدارة عيادة الأسنان",
+  "short_name": "DentApex",
+  "description": "النظام الذكي المتكامل لإدارة عيادات ومراكز طب الأسنان",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0EA5E9",
+  "orientation": "any",
+  "dir": "rtl",
+  "lang": "ar",
+  "icons": [
+    {
+      "src": "/logo-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

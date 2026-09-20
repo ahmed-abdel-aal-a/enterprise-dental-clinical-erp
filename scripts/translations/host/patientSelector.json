@@ -1,0 +1,18 @@
+{
+  "createOption": "إنشاء مريض باسم \"{query}\"",
+  "createOptionEmpty": "إنشاء مريض جديد",
+  "newBadge": "جديد",
+  "duplicateWarning": "يوجد مريض باسم {name} مسجل بنفس رقم الهاتف",
+  "useExisting": "استخدام هذا المريض",
+  "createForm": {
+    "title": "مريض جديد",
+    "back": "العودة للبحث",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "phone": "رقم الهاتف",
+    "phoneHint": "يمكنك إضافة الهاتف لاحقاً في ملف المريض.",
+    "submit": "إنشاء واختيار",
+    "cancel": "إلغاء",
+    "errorGeneric": "تعذر إنشاء ملف المريض. يرجى المحاولة مجدداً."
+  }
+}

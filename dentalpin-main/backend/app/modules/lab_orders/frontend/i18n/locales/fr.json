@@ -1,0 +1,27 @@
+{
+  "labOrders": {
+    "title": "Travaux de laboratoire",
+    "add": "Nouveau travail",
+    "patient": "Patient",
+    "lab": "Laboratoire",
+    "loading": "Chargement…",
+    "selectPatient": "Sélectionner le patient",
+    "selectLab": "Sélectionner le laboratoire",
+    "workType": "Type de travail",
+    "tooth": "Dent / référence",
+    "impressionType": "Empreinte",
+    "antagonistInfo": "Informations antagonistes",
+    "shade": "Teinte",
+    "sentDate": "Date d'envoi",
+    "expectedDate": "Date prévue",
+    "status": "Statut",
+    "notes": "Notes",
+    "save": "Envoyer",
+    "cancel": "Annuler",
+    "noLabsHint": "Créez d'abord un contact de laboratoire dans Contacts.",
+    "workTypes": {"crown":"Couronne","bridge":"Bridge","denture":"Prothèse","implant":"Implant","veneer":"Facette","orthodontic":"Orthodontie","repair":"Réparation","other":"Autre"},
+    "impressionTypes": {"alginate":"Alginate","pvs_silicone":"PVS / silicone","digital_scan":"Empreinte numérique","other":"Autre"},
+    "statuses": {"sent":"Envoyé","in_progress":"En cours","ready":"Prêt","received":"Reçu","cancelled":"Annulé"}
+  },
+  "nav": {"labOrdersForm":"Nouveau travail de laboratoire","labOrdersStatus":"Travaux de laboratoire"}
+}

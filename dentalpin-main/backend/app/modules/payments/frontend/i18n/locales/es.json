@@ -1,0 +1,303 @@
+{
+  "payments": {
+    "nav": {
+      "payments": "Cobros",
+      "reports": "Informe de pagos"
+    },
+    "balance": {
+      "debt": "Debe",
+      "credit": "A cuenta",
+      "paid": "Total cobrado"
+    },
+    "list": {
+      "title": "Cobros",
+      "subtitle": "Pagos del paciente, anticipos sobre presupuesto y a cuenta.",
+      "empty": "Sin cobros registrados.",
+      "new": "Nuevo cobro",
+      "searchPlaceholder": "Paciente o referencia",
+      "filterDateFrom": "Desde",
+      "filterDateTo": "Hasta",
+      "filterMethod": "Método",
+      "filterPatient": "Paciente",
+      "filter": {
+        "method": "Método",
+        "hasRefunds": "Con reembolsos",
+        "hasUnallocated": "Sin asignar",
+        "patient": "Paciente",
+        "withDebt": "Con deuda",
+        "paymentStatus": "Cobro"
+      },
+      "sort": {
+        "paymentDate": "Fecha",
+        "amount": "Importe"
+      },
+      "budgetStatus": {
+        "paid": "Cobrado",
+        "partial": "Parcial",
+        "unpaid": "Sin cobro"
+      },
+      "row": {
+        "debtTooltip": "Saldo pendiente del paciente",
+        "creditTooltip": "Saldo a favor del paciente",
+        "allocationsLabel": "Asignación",
+        "refundedLabel": "Devuelto",
+        "noPatient": "Sin paciente"
+      },
+      "columnDate": "Fecha",
+      "columnPatient": "Paciente",
+      "columnAmount": "Importe",
+      "columnMethod": "Método",
+      "columnAllocations": "Asignación",
+      "columnNet": "Neto",
+      "columnActions": "Acciones"
+    },
+    "detail": {
+      "title": "Cobro {reference}",
+      "amount": "Importe",
+      "method": "Método",
+      "date": "Fecha",
+      "recordedBy": "Registrado por",
+      "allocations": "Asignaciones",
+      "refunds": "Devoluciones",
+      "refund": "Devolver",
+      "refundedTotal": "Devuelto",
+      "netAmount": "Neto",
+      "reference": "Referencia",
+      "notes": "Notas"
+    },
+    "new": {
+      "title": "Registrar cobro",
+      "patient": "Paciente",
+      "patientPlaceholder": "Buscar paciente...",
+      "unknownPatient": "Paciente desconocido",
+      "amount": "Importe",
+      "suggestedHint": "Pendiente de cobrar: {amount}",
+      "useSuggested": "usar este importe",
+      "method": "Método",
+      "moreMethods": "Más opciones",
+      "date": "Fecha",
+      "today": "Hoy",
+      "advanced": "Opciones avanzadas",
+      "reference": "Referencia",
+      "referencePlaceholder": "Nº autorización tarjeta, identificador transferencia...",
+      "notes": "Notas",
+      "allocations": "Distribución",
+      "allocationsHint": "Divide el cobro entre presupuestos o déjalo a cuenta del paciente.",
+      "addAllocation": "Añadir asignación",
+      "allocationToBudget": "A presupuesto",
+      "allocationOnAccount": "A cuenta",
+      "sumLabel": "Suma:",
+      "sumMismatch": "no coincide con el importe",
+      "submit": "Registrar",
+      "submitWithAmount": "Cobrar {amount}",
+      "cancel": "Cancelar",
+      "errPatient": "Selecciona un paciente",
+      "errAmount": "Introduce un importe mayor que 0",
+      "errSum": "La suma de asignaciones debe coincidir con el importe",
+      "errUnknown": "No se pudo registrar el cobro. Intenta de nuevo."
+    },
+    "methods": {
+      "cash": "Efectivo",
+      "card": "Tarjeta",
+      "bank_transfer": "Transferencia",
+      "direct_debit": "Domiciliación",
+      "insurance": "Seguro",
+      "other": "Otro"
+    },
+    "refund": {
+      "title": "Devolver cobro",
+      "amount": "Importe",
+      "method": "Método",
+      "reason": "Motivo",
+      "note": "Detalles",
+      "submit": "Devolver",
+      "reasonCodes": {
+        "duplicate": "Pago duplicado",
+        "overpaid": "Cobro excesivo",
+        "treatment_cancelled": "Tratamiento cancelado",
+        "dispute": "Disputa",
+        "other": "Otro"
+      }
+    },
+    "ledger": {
+      "title": "Estado de cuenta",
+      "totalPaid": "Total cobrado",
+      "totalEarned": "Tratamiento ejecutado",
+      "patientCredit": "Saldo a favor del paciente",
+      "clinicReceivable": "Pendiente de cobro",
+      "onAccount": "A cuenta",
+      "empty": "Sin movimientos."
+    },
+    "budgetCard": {
+      "title": "Cobros del presupuesto",
+      "budgetTotal": "Presupuestado",
+      "collected": "Cobrado",
+      "pending": "Pendiente",
+      "collect": "Cobrar",
+      "empty": "Sin cobros imputados a este presupuesto.",
+      "collectedLabel": "Cobrado",
+      "pendingLabel": "Pendiente",
+      "outOfTotal": "de {total} en total",
+      "settled": "Cobrado completo",
+      "history": "Historial de cobros",
+      "payment": "Cobro",
+      "emptyDetailed": "Aún no hay cobros. Pulsa \"Cobrar\" para registrar el primero."
+    },
+    "budgetCollect": {
+      "title": "Cobrar presupuesto",
+      "amountLabel": "Importe a cobrar",
+      "methodLabel": "Método de pago",
+      "dateLabel": "Fecha del cobro",
+      "today": "Hoy",
+      "quickFull": "Completo",
+      "optionalDetails": "Añadir referencia o notas (opcional)",
+      "referenceLabel": "Referencia",
+      "referencePlaceholder": "Ej. número de operación TPV",
+      "notesLabel": "Notas internas",
+      "submit": "Cobrar",
+      "cancel": "Cancelar",
+      "success": "Cobro registrado",
+      "errorGeneric": "No se pudo registrar el cobro",
+      "noteAppliedToBudget": "se imputarán al presupuesto.",
+      "notePendingAfter": "Quedará pendiente",
+      "noteFullySettled": "Se cobra el presupuesto completo. Queda saldado.",
+      "noteToBudget": "se imputan al presupuesto y",
+      "noteExcessToOnAccount": "quedan a cuenta del paciente.",
+      "noteBudgetSettled": "El presupuesto ya está cobrado.",
+      "noteToOnAccount": "se ingresarán a cuenta del paciente."
+    },
+    "pendingCharges": {
+      "title": "Pendiente de cobrar",
+      "count": "{n} sesiones",
+      "more": "+ {n} más",
+      "collect": "Cobrar {amount}",
+      "unnamedSession": "Sesión sin etiqueta"
+    },
+    "patientPanel": {
+      "title": "Estado de cuenta",
+      "kpis": {
+        "totalPaid": "Total pagado",
+        "debt": "Adeudado a clínica",
+        "onAccount": "A cuenta"
+      },
+      "sidebar": {
+        "title": "Resumen",
+        "credit": "Saldo a favor",
+        "lastPayment": "Último pago",
+        "noLastPayment": "Sin pagos aún",
+        "totalEarned": "Tratamiento ejecutado"
+      },
+      "banner": {
+        "debtTitle": "Adeuda {amount} a la clínica",
+        "debtDescription": "Total cobrado menor que el tratamiento ejecutado.",
+        "creditTitle": "Tiene {amount} a su favor",
+        "creditDescription": "Saldo cobrado por encima del tratamiento ejecutado."
+      },
+      "cobrar": "Registrar pago",
+      "timeline": {
+        "title": "Movimientos",
+        "empty": "Sin movimientos registrados",
+        "emptyCta": "Registrar primer pago",
+        "loadError": "No se pudo cargar el estado de cuenta.",
+        "retry": "Reintentar",
+        "drPrefix": "Dr. {name}",
+        "types": {
+          "payment": "Pago",
+          "refund": "Devolución",
+          "earned": "Tratamiento realizado"
+        },
+        "treatmentStatus": {
+          "planned": "Planificado",
+          "performed": "Realizado",
+          "completed": "Completado",
+          "cancelled": "Cancelado",
+          "in_progress": "En curso"
+        },
+        "rowMenu": {
+          "detail": "Ver detalle",
+          "refund": "Reembolsar",
+          "reallocate": "Asignar a presupuesto…"
+        }
+      },
+      "refundModal": {
+        "title": "Reembolsar pago",
+        "amount": "Importe a devolver",
+        "method": "Método de devolución",
+        "reason": "Motivo",
+        "note": "Detalles (opcional)",
+        "submit": "Confirmar reembolso",
+        "cancel": "Cancelar",
+        "errorGeneric": "No se pudo registrar el reembolso"
+      }
+    },
+    "reports": {
+      "title": "Informe de cobros",
+      "subtitle": "Cobros, devoluciones, saldos paciente y tendencias del periodo.",
+      "cardDescription": "Cobros, devoluciones, saldos paciente, antigüedad y tendencias.",
+      "period": "Periodo",
+      "refresh": "Actualizar",
+      "collected": "Cobrado",
+      "refunded": "Devuelto",
+      "net": "Neto",
+      "patientCredit": "Saldo a favor pacientes",
+      "patientCreditHint": "A cuenta o anticipos.",
+      "clinicReceivable": "Pendiente de cobro",
+      "refundRatio": "Tasa devoluciones",
+      "byMethod": "Por método",
+      "byProfessional": "Por profesional",
+      "byProfessionalHint": "Tratamiento ejecutado, no cobrado.",
+      "aging": "Antigüedad de cobros pendientes",
+      "agingHint": "Pacientes con saldo pendiente por antigüedad de la deuda.",
+      "refunds": "Devoluciones por motivo",
+      "refundsHint": "Distribución de devoluciones por causa registrada.",
+      "bucket": "{range} días",
+      "unknownProfessional": "Sin profesional",
+      "countShort": "{n} mov.",
+      "countPatients": "{n} pacientes",
+      "granularity": {
+        "day": "Día",
+        "week": "Semana",
+        "month": "Mes"
+      },
+      "hero": {
+        "netCollected": "Cobrado neto",
+        "netCollectedHint": "Cobros menos devoluciones del periodo.",
+        "receivable": "Pendiente de cobro",
+        "receivableHint": "Tratamiento ejecutado aún no cobrado, por antigüedad.",
+        "vsPrevious": "vs. periodo anterior",
+        "transactionsCount": "{n} transacciones en el periodo"
+      },
+      "trend": {
+        "title": "Evolución del cobro",
+        "subtitle": "Neto del periodo. La línea discontinua compara con devoluciones."
+      },
+      "empty": {
+        "noDataTitle": "Sin datos en este rango",
+        "noDataDescription": "Ajusta el periodo o registra un cobro para empezar a ver el informe.",
+        "noTrend": "No hay puntos suficientes para dibujar la tendencia.",
+        "noMethods": "Sin cobros por método en el periodo.",
+        "noProfessionals": "Sin tratamiento ejecutado en el periodo.",
+        "noReceivable": "Sin pacientes con deuda."
+      },
+      "drilldown": {
+        "viewPayments": "Ver cobros del periodo",
+        "viewPatients": "Ver pacientes con deuda"
+      }
+    },
+    "target": {
+      "label": "Destino",
+      "placeholder": "Selecciona destino",
+      "onAccount": "A cuenta del paciente",
+      "onAccountHint": "Queda como saldo a cuenta del paciente. No se imputa a ninguna factura ni presupuesto hasta que lo asignes.",
+      "budgetHint": "Se imputará a este presupuesto y a sus facturas emitidas.",
+      "lockedBudget": "Se imputará al presupuesto {budget} y a sus facturas."
+    },
+    "reallocate": {
+      "title": "Asignar a presupuesto",
+      "hint": "El cobro de {amount} pasará íntegro al presupuesto elegido y a sus facturas emitidas.",
+      "submit": "Asignar",
+      "success": "Cobro asignado al presupuesto",
+      "error": "No se pudo reasignar el cobro. Intenta de nuevo."
+    }
+  }
+}

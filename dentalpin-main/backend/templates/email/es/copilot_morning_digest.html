@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Briefing del día - {{ clinic_name }}{% endblock %}
+
+{% block content %}
+<h2>Briefing del {{ today }}</h2>
+
+{% if appointments is not none %}
+<h3>Citas de hoy ({{ appointments | length }})</h3>
+{% if appointments %}
+<div class="info-box">
+    {% for a in appointments %}
+    <div class="info-row">
+        <div style="flex: 1;">
+            <div class="label">{{ a.start_time[11:16] if a.start_time else '' }}</div>
+            <div class="value">{{ a.patient_name or '—' }}</div>
+        </div>
+        <div style="flex: 1;">
+            <div class="label">Estado</div>
+            <div class="value">{{ a.status }}</div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>No hay citas programadas para hoy.</p>
+{% endif %}
+{% endif %}
+
+{% if recalls is not none %}
+<h3>Rellamadas vencidas ({{ recalls | length }})</h3>
+{% if recalls %}
+<div class="info-box">
+    {% for r in recalls %}
+    <div class="info-row">
+        <div style="flex: 1;">
+            <div class="label">{{ r.reason }}</div>
+            <div class="value">{{ r.patient_name or '—' }}{% if r.phone %} · {{ r.phone }}{% endif %}</div>
+        </div>
+        <div style="flex: 1;">
+            <div class="label">Prioridad</div>
+            <div class="value">{{ r.priority }}</div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>No hay rellamadas vencidas.</p>
+{% endif %}
+{% endif %}
+
+{% if budgets is not none %}
+<h3>Presupuestos sin respuesta ({{ budgets | length }})</h3>
+{% if budgets %}
+<div class="info-box">
+    {% for b in budgets %}
+    <div class="info-row">
+        <div style="flex: 1;">
+            <div class="label">{{ b.number }}</div>
+            <div class="value">{{ b.patient_name or '—' }}</div>
+        </div>
+        <div style="flex: 1;">
+            <div class="label">Importe</div>
+            <div class="value">{{ b.total }}</div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>No hay presupuestos pendientes de respuesta.</p>
+{% endif %}
+{% endif %}
+
+<p style="color: #71717a; font-size: 14px;">
+    Resumen automático generado por el copiloto de DentalPin. Puedes
+    desactivarlo o cambiar la hora en Ajustes → Copilot.
+</p>
+{% endblock %}

@@ -1,0 +1,72 @@
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-dental_clinic}
+      POSTGRES_USER: ${POSTGRES_USER:-dental}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-dental} -d ${POSTGRES_DB:-dental_clinic}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      SERVICE_FQDN_BACKEND_8000: ${BACKEND_FQDN}
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-dental}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-dental_clinic}
+      SECRET_KEY: ${SECRET_KEY}
+      ENVIRONMENT: production
+      ALLOWED_ORIGINS: ${FRONTEND_URL}
+      STORAGE_BACKEND: local
+      STORAGE_LOCAL_PATH: /app/storage
+      # Demo deployments set SEED_ON_STARTUP=1 in Coolify env so a wiped
+      # DB volume self-heals on next restart: alembic recreates the
+      # schema and seed_demo.py repopulates it (idempotent — no-op when
+      # the demo clinic already exists). Real production deployments
+      # leave it unset so seed never runs.
+      SEED_ON_STARTUP: ${SEED_ON_STARTUP:-0}
+      SEED_LANG: ${SEED_LANG:-es}
+    volumes:
+      - storage_data:/app/storage
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8000/health', timeout=2).status == 200 else 1)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 60s
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile.prod
+      args:
+        API_BASE_URL: ${BACKEND_URL}
+    environment:
+      SERVICE_FQDN_FRONTEND_3000: ${FRONTEND_FQDN}
+      NUXT_PUBLIC_API_BASE_URL: ${BACKEND_URL}
+    depends_on:
+      backend:
+        condition: service_started
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:3000/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 60s
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  storage_data:

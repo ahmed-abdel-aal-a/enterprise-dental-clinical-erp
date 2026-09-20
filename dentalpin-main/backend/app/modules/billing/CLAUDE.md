@@ -1,0 +1,109 @@
+# Billing module
+
+Invoices, payments, credit notes, PDF generation.
+
+## Public API
+
+Routes mounted at `/api/v1/billing/`.
+
+## Dependencies
+
+`manifest.depends = ["patients", "catalog", "budget", "payments"]`
+(billing → payments only; see ADR 0010).
+
+## Permissions
+
+`billing.read`, `billing.write`, `billing.admin`.
+
+## Tools exposed
+
+Agent tools in `tools.py` — **READ ONLY** (no issuing/voiding: invoice
+emission stays manual; Veri*Factu chaining is irreversible).
+
+| Tool | Category | Wraps | Permission |
+|---|---|---|---|
+| `list_invoices` | READ | `InvoiceService.list_invoices` | `billing.read` |
+| `get_invoice` | READ | `InvoiceService.get_invoice(include_payments=False)` | `billing.read` |
+
+**Off-books boundary.** Invoice axis only: no paid/pending amounts, no
+payments join — `get_invoice` is hard-wired to
+`include_payments=False` so the two axes can't be juxtaposed. Enforced
+by tests in `tests/test_module_tools.py`.
+
+## Events emitted
+
+- `invoice.issued`
+- `invoice.sent`
+- `invoice.paid`
+
+## Events consumed
+
+| Event | Handler | Mode | Effect |
+|---|---|---|---|
+| `payment.allocated` | `events.py:on_payment_allocated` | transactional (ADR 0019) | `payment_bridge.reconcile_payment` — mirror the payment's budget allocations onto `invoice_payments` of that budget's open invoices (FIFO, preferred invoice first via `context.prefer_invoice_id`), unlink LIFO on reallocation, recompute status. Issue #178. |
+| `payment.refunded` | `events.py:on_payment_refunded` | transactional | Recompute status of invoices linked to the refunded payment. |
+| `clinic.created` | `events.py:on_clinic_created` | own session (published after setup commits) | Default `FAC` / `RECT` series. |
+
+The legacy ``budget.completed`` subscription was removed in 2026-04 —
+that event was never published.
+
+## Lifecycle
+
+- `removable=False`. Fiscal data has legal retention (see verifactu
+  module for AEAT specifics).
+
+## Gotchas
+
+- **`BudgetItem.invoiced_quantity` is a derived cache, never a
+  counter.** `service.resync_invoiced_quantities` recomputes it from the
+  live `invoice_items` (credit-note lines subtract, deleted/voided
+  documents don't count). Call it after any mutation of a line carrying
+  `budget_item_id` — `create_from_budget`, void/delete, item edits and
+  credit notes already do. Never `+=`/`-=` it by hand (issue #175).
+- **Compliance hooks live in compliance modules**, not here. The
+  `verifactu` module attaches via `BillingComplianceHook` on
+  `invoice.issued` to chain into AEAT. Don't import verifactu from
+  billing — the relation is via hooks + events.
+- **PDF generation uses WeasyPrint** (`pdf.py`). Requires the system
+  fonts present in the production image.
+- **Quote discounts are always folded into invoice lines.**
+  `create_from_budget` stores the line discount + the prorated global
+  discount share (`budget.pricing.allocate_global_discount`) on each
+  `InvoiceItem` — absolute (prorated by invoiced quantity) unless a
+  percentage line discount is the only discount. Never add an
+  invoice-level discount: Verifactu derives `BaseImponible` per line
+  from `line_subtotal - line_discount` and `ImporteTotal` from
+  `invoice.total`; a header discount would desync the AEAT record
+  (issue #167). The from-budget wizard mirrors this via
+  `items[].global_discount_share` from the budget API.
+- **Credit notes** are issued via the same workflow as invoices,
+  flagged via the document type. Don't introduce a parallel pipeline.
+- **Budget ↔ invoice bridge (`payment_bridge.py`, issue #178).** One
+  rule: money allocated to a budget is money for that budget's
+  invoices. Three entry points, all in-tx: the `payment.allocated`
+  subscriber, `issue_invoice` (sweeps anticipos already collected on
+  the quote into the fresh invoice — it may be born `paid`), and the
+  orchestrator `POST /invoices/{id}/payments` (allocates to
+  `invoice.budget_id` when set, `on_account` + explicit link for manual
+  invoices). `reconcile_payment` is idempotent (objective − current);
+  never write `invoice_payments` for a from-budget invoice anywhere
+  else. Lock order is **budget row → invoice rows** (`lock_budget`).
+- **`compute_paid_summary` is the only paid arithmetic.** Refunds are
+  subtracted proportionally there; any other surface (reports' patient
+  summary, lists) must reuse it / `compute_paid_summaries_for_invoices`
+  instead of summing `invoice_payments.amount` raw.
+
+## Related ADRs
+
+- `docs/adr/0001-modular-plugin-architecture.md`
+- `docs/adr/0003-event-bus-over-direct-imports.md`
+- `docs/adr/0010-payments-as-primitive-module.md`
+- `docs/adr/0019-transactional-event-handlers.md`
+
+## CHANGELOG
+
+See `./CHANGELOG.md`.
+
+## Billing party on drafts
+
+Drafts store no billing data. `InvoiceWorkflowService.issue` snapshots `Patient.effective_billing_name` / `effective_billing_tax_id` (explicit billing fields, else patient name and DNI/NIE — never a passport). `has_complete_billing_info` is the same rule, so the UI warning and the issue gate agree (modulo the country hook waiver). The from-budget wizard reads `POST /api/v1/payments/summary/by-budgets` to hide payment terms on fully collected budgets (`payments` is in `depends`).

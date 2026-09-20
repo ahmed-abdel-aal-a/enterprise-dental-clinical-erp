@@ -1,0 +1,47 @@
+# ==============================================================================
+# DentApex Arabic Web Simulator - Apache / cPanel Configuration
+# Subfolder: /dentapex/
+# ==============================================================================
+
+Options -Indexes
+
+# Block direct access to sensitive key files, dotfiles, and configurations
+<FilesMatch "^\.|\.(key|env|ini|log)$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /dentapex/
+
+  # Route AI Copilot requests to PHP proxy if accessed locally
+  RewriteRule ^api/copilot/chat$ api/copilot/chat.php [L,QSA]
+
+  # Don't rewrite actual files or directories
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # SPA fallback: Route all other requests to index.html
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Caching & MIME types
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/json "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Disable caching for index.html to ensure users always receive latest app bundle
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+  </FilesMatch>
+</IfModule>

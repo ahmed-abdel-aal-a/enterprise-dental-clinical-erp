@@ -1,0 +1,113 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dentalpin"
+version = "2.0.0"
+description = "Open source dental clinic management software"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.109.0",
+    "uvicorn[standard]>=0.27.0",
+    "sqlalchemy[asyncio]>=2.0.25",
+    "asyncpg>=0.29.0",
+    "pydantic[email]>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    "python-jose[cryptography]>=3.3.0",
+    "cryptography>=42.0.0",
+    "bcrypt>=4.0.0",
+    "python-multipart>=0.0.6",
+    "alembic>=1.13.0",
+    "slowapi>=0.1.9",
+    "weasyprint>=62.0",
+    "jinja2>=3.1.0",
+    "apscheduler>=3.10.0",
+    "aiofiles>=23.0.0",
+    # Shipped IANA timezone database so zoneinfo works regardless of
+    # which Python base image the backend runs on (Alpine ships with
+    # no system tzdata by default).
+    "tzdata>=2024.1",
+    # Locale-aware currency formatting (PDFs, emails). Stdlib has no
+    # equivalent of Intl.NumberFormat; babel is the de facto standard.
+    "babel>=2.14",
+    # Verifactu (AEAT) module dependencies. httpx for mTLS submissions,
+    # lxml for SOAP response parsing, qrcode for the per-invoice QR.
+    "httpx>=0.26.0",
+    "lxml>=5.0.0",
+    "qrcode[pil]>=7.4.0",
+    # Image processing for media module: thumbnail generation + EXIF
+    # extraction on upload. Drives the photo gallery UX.
+    "Pillow>=10.0.0",
+    # migration_import module: zstd unwrap for DPMF files (.dpm.zst /
+    # .dpm.zst.enc). cryptography (already above) handles AES-256-GCM
+    # + scrypt for the DPME envelope.
+    "zstandard>=0.22.0",
+    # copilot agentic layer: OpenAI is the only live LLM provider in v1
+    # (app/core/llm/). The Provider protocol is vendor-agnostic, so
+    # Anthropic/Ollama slot in later without touching callers.
+    "openai>=1.40",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.23.0",
+    "httpx>=0.26.0",
+    "ruff>=0.1.0",
+]
+
+[project.entry-points."dentalpin.modules"]
+patients = "app.modules.patients:PatientsModule"
+patients_clinical = "app.modules.patients_clinical:PatientsClinicalModule"
+agenda = "app.modules.agenda:AgendaModule"
+patient_timeline = "app.modules.patient_timeline:PatientTimelineModule"
+catalog = "app.modules.catalog:CatalogModule"
+budget = "app.modules.budget:BudgetModule"
+billing = "app.modules.billing:BillingModule"
+odontogram = "app.modules.odontogram:OdontogramModule"
+treatment_plan = "app.modules.treatment_plan:TreatmentPlanModule"
+media = "app.modules.media:MediaModule"
+notifications = "app.modules.notifications:NotificationsModule"
+reports = "app.modules.reports:ReportsModule"
+schedules = "app.modules.schedules:SchedulesModule"
+recalls = "app.modules.recalls:RecallsModule"
+verifactu = "app.modules.verifactu:VerifactuModule"
+migration_import = "app.modules.migration_import:MigrationImportModule"
+copilot = "app.modules.copilot:CopilotModule"
+expenses = "app.modules.expenses:ExpensesModule"
+india_gst = "app.modules.india_gst:IndiaGstModule"
+patient_relationships = "app.modules.patient_relationships:PatientRelationshipsModule"
+recall_reminders = "app.modules.recall_reminders:RecallRemindersModule"
+contacts = "app.modules.contacts:ContactsModule"
+integrations = "app.modules.integrations:IntegrationsModule"
+staff_tasks = "app.modules.staff_tasks:StaffTasksModule"
+medical_reference = "app.modules.medical_reference:MedicalReferenceModule"
+inventory = "app.modules.inventory:InventoryModule"
+treatment_consumables = "app.modules.treatment_consumables:TreatmentConsumablesModule"
+lab_orders = "app.modules.lab_orders:LabOrdersModule"
+activity_journal = "app.modules.activity_journal:ActivityJournalModule"
+medication_catalog = "app.modules.medication_catalog:MedicationCatalogModule"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+# Slow-marked suites — opt-in with `-m <mark>` or included in CI via
+# an explicit step. Unmarked runs exclude them to keep local TDD fast.
+markers = [
+    "alembic_roundtrip: full base → head → base migration cycle (slow, needs DB)",
+]
+addopts = "-m 'not alembic_roundtrip'"
