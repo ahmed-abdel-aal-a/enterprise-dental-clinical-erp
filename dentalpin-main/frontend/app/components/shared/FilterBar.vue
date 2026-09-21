@@ -123,7 +123,7 @@ function onReset() {
         <slot />
       </div>
       <UButton
-        v-show="hasOverflow"
+        v-if="hasOverflow"
         variant="outline"
         color="neutral"
         icon="i-lucide-sliders-horizontal"
