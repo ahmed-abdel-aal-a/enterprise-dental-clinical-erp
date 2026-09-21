@@ -25,8 +25,9 @@ const DEMO_CLINIC: Clinic = {
  * ``useClinic()`` (``useI18n``, ``useToast``) would throw.
  */
 export function useClinicState() {
+  const config = useRuntimeConfig()
   return {
-    currentClinic: useState<Clinic | null>('clinic:current', () => DEMO_CLINIC)
+    currentClinic: useState<Clinic | null>('clinic:current', () => config.public.demoMode ? DEMO_CLINIC : null)
   }
 }
 
@@ -183,10 +184,12 @@ export function useClinic() {
 
   // Initialize clinic when auth state changes
   watch(() => auth.isAuthenticated.value, async (isAuth) => {
-    if (isAuth && !currentClinic.value) {
-      await fetchClinic()
-    } else if (!isAuth) {
-      currentClinic.value = null
+    if (isAuth) {
+      if (!currentClinic.value || (!config.public.demoMode && currentClinic.value.id.startsWith('demo-'))) {
+        await fetchClinic()
+      }
+    } else {
+      currentClinic.value = config.public.demoMode ? DEMO_CLINIC : null
       membership.value = null
     }
   }, { immediate: true })

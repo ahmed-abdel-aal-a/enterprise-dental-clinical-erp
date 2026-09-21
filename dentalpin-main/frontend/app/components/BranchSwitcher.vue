@@ -7,6 +7,7 @@ import type { Branch } from '~/types'
 
 const { t } = useI18n()
 const router = useRouter()
+const config = useRuntimeConfig()
 const {
   currentBranch,
   activeBranches,
@@ -16,7 +17,7 @@ const {
 } = useBranch()
 
 onMounted(async () => {
-  if (activeBranches.value.length === 0) {
+  if (activeBranches.value.length === 0 || (!config.public.demoMode && currentBranch.value?.id === 'br-main')) {
     await fetchBranches()
   }
 })

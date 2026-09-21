@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const config = useRuntimeConfig()
 const { t, locale } = useI18n()
 const isRtl = computed(() => locale.value === 'ar')
 const auth = useAuth()
@@ -299,8 +300,6 @@ function isActive(to: string): boolean {
           : (isRtl ? 'md:mr-60 md:ml-0' : 'md:ml-60 md:mr-0')
       ]"
     >
-      <DemoBanner />
-
       <!-- Header -->
       <header class="sticky top-0 z-40 flex items-center h-14 px-3 sm:px-4 bg-surface border-b border-subtle">
         <!-- Mobile hamburger -->
@@ -369,7 +368,7 @@ function isActive(to: string): boolean {
 
       <!-- Live Showcase Banner & 24/7 Mobile Offline / License Banners -->
       <ClientOnly>
-        <DemoShowcaseBanner />
+        <DemoShowcaseBanner v-if="config.public.demoMode" />
         <OfflineStatusBanner />
         <LicenseBanner />
       </ClientOnly>

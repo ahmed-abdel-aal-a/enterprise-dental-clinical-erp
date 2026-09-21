@@ -14,14 +14,16 @@ const DEFAULT_DEMO_BRANCH: Branch = {
 }
 
 export function useBranchState() {
+  const config = useRuntimeConfig()
   return {
-    branches: useState<Branch[]>('clinic:branches', () => [DEFAULT_DEMO_BRANCH]),
-    currentBranch: useState<Branch | null>('clinic:current_branch', () => DEFAULT_DEMO_BRANCH),
+    branches: useState<Branch[]>('clinic:branches', () => config.public.demoMode ? [DEFAULT_DEMO_BRANCH] : []),
+    currentBranch: useState<Branch | null>('clinic:current_branch', () => config.public.demoMode ? DEFAULT_DEMO_BRANCH : null),
     isLoading: useState<boolean>('clinic:branches_loading', () => false)
   }
 }
 
 export function useBranch() {
+  const config = useRuntimeConfig()
   const api = useApi()
   const auth = useAuth()
   const toast = useToast()
@@ -35,6 +37,12 @@ export function useBranch() {
   const BRANCH_STORAGE_KEY = 'dentapex_active_branch_id'
 
   async function fetchBranches(activeOnly = true): Promise<void> {
+    if (config.public.demoMode || !config.public.apiBaseUrl) {
+      branches.value = [DEFAULT_DEMO_BRANCH]
+      currentBranch.value = DEFAULT_DEMO_BRANCH
+      return
+    }
+
     if (!auth.isAuthenticated.value) {
       return
     }
@@ -169,6 +177,18 @@ export function useBranch() {
       return false
     }
   }
+
+  // Auto-fetch branches on auth state change
+  watch(() => auth.isAuthenticated.value, async (isAuth) => {
+    if (isAuth) {
+      if (branches.value.length === 0 || (!config.public.demoMode && branches.value.some(b => b.id.startsWith('br-main')))) {
+        await fetchBranches()
+      }
+    } else {
+      branches.value = config.public.demoMode ? [DEFAULT_DEMO_BRANCH] : []
+      currentBranch.value = config.public.demoMode ? DEFAULT_DEMO_BRANCH : null
+    }
+  }, { immediate: true })
 
   return {
     branches,

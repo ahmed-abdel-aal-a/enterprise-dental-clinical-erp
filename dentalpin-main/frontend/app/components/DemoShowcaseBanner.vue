@@ -88,8 +88,9 @@ const toast = useToast()
 const isMinimized = ref(false)
 const resetting = ref(false)
 
+const config = useRuntimeConfig()
 const isVisible = computed(() => {
-  return !isMinimized.value
+  return Boolean(config.public.demoMode) && !isMinimized.value
 })
 
 const whatsappPhone = '201000000000'
