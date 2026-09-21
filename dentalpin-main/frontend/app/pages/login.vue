@@ -24,8 +24,8 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 const isLoading = ref(false)
 const formState = reactive({
-  email: '',
-  password: ''
+  email: 'admin@dental.com',
+  password: 'DentApex2026!'
 })
 const errorMessage = ref('')
 const emailError = ref('')

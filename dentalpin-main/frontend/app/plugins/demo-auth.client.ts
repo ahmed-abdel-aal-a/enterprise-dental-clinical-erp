@@ -3,6 +3,8 @@ import { useDemoStore } from '~/stores/useDemoStore'
 
 export default defineNuxtPlugin(async (nuxtApp) => {
   if (!import.meta.client) return
+  const config = useRuntimeConfig()
+  if (!config.public.demoMode) return
 
   const demoStore = useDemoStore()
   const auth = useAuth()
