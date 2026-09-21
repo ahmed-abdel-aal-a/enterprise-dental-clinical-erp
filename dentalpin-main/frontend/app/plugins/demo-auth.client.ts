@@ -4,7 +4,12 @@ import { useDemoStore } from '~/stores/useDemoStore'
 export default defineNuxtPlugin(async (nuxtApp) => {
   if (!import.meta.client) return
   const config = useRuntimeConfig()
-  if (!config.public.demoMode) return
+  if (!config.public.demoMode) {
+    localStorage.removeItem('dentapex_demo_mode')
+    const outbox = useOutbox()
+    outbox.isOfflineMode.value = false
+    return
+  }
 
   const demoStore = useDemoStore()
   const auth = useAuth()

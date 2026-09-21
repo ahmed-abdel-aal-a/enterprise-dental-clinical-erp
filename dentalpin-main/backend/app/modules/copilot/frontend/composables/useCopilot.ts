@@ -167,16 +167,10 @@ export function useCopilot() {
     messages.value.push({ kind: 'text', role: 'user', text })
     busy.value = true
 
-    const isDemo = import.meta.client && (
-      localStorage.getItem('dentapex_demo_mode') === 'true' ||
-      window.location.hostname.includes('pages.dev') ||
-      window.location.hostname.includes('cloudflare') ||
-      !config.public.apiBaseUrl
-    )
+    const isDemo = Boolean(config.public.demoMode)
 
-    // In demo mode, bypass local backend completely and stream directly via Cloudflare Function
+    // In demo mode, bypass local backend completely and stream directly via Cloudflare Function / PHP proxy
     if (isDemo) {
-      outbox.isOfflineMode.value = true
       phase.value = 'writing'
       messages.value.push({ kind: 'text', role: 'assistant', text: '', streaming: true })
 
@@ -217,98 +211,35 @@ export function useCopilot() {
         { content: text },
         {
           onEvent: (event, data) => {
-            outbox.isOfflineMode.value = false
             handle(event, data)
           },
-          onError: async () => {
-            if (edgeWorkerUrl || typeof window !== 'undefined') {
-              outbox.isOfflineMode.value = true
-              phase.value = 'writing'
-              messages.value.push({ kind: 'text', role: 'assistant', text: '', streaming: true })
-
-              const history = messages.value
-                .filter((msg): msg is TextUiMessage => msg.kind === 'text')
-                .map(msg => ({ role: msg.role, content: msg.text }))
-
-              await nightCopilot.streamNightChat(
-                text,
-                history,
-                (chunk) => {
-                  const last = lastStreamingAssistant()
-                  if (last) last.text += chunk
-                },
-                () => {
-                  const last = lastStreamingAssistant()
-                  if (last) last.streaming = false
-                  busy.value = false
-                  phase.value = null
-                },
-                (err) => {
-                  const last = lastStreamingAssistant()
-                  if (last) {
-                    last.text += `\n${err}`
-                    last.streaming = false
-                  }
-                  busy.value = false
-                  phase.value = null
-                }
-              )
+          onError: async (errMsg) => {
+            phase.value = null
+            busy.value = false
+            const last = lastStreamingAssistant()
+            if (last) {
+              last.text += `\n⚠️ ${errMsg || 'تعذر استكمال المحادثة حالياً.'}`
+              last.streaming = false
             } else {
-              phase.value = null
-              busy.value = false
               messages.value.push({
                 kind: 'text',
                 role: 'assistant',
-                text: 'تعذر إكمال طلبك حالياً. يرجى المحاولة بعد قليل.',
+                text: `⚠️ ${errMsg || 'تعذر استكمال المحادثة حالياً. يرجى المحاولة لاحقاً.'}`,
                 streaming: false
               })
             }
           }
         }
       )
-    } catch {
-      if (edgeWorkerUrl || typeof window !== 'undefined') {
-        outbox.isOfflineMode.value = true
-        phase.value = 'writing'
-        messages.value.push({ kind: 'text', role: 'assistant', text: '', streaming: true })
-
-        const history = messages.value
-          .filter((msg): msg is TextUiMessage => msg.kind === 'text')
-          .map(msg => ({ role: msg.role, content: msg.text }))
-
-        await nightCopilot.streamNightChat(
-          text,
-          history,
-          (chunk) => {
-            const last = lastStreamingAssistant()
-            if (last) last.text += chunk
-          },
-          () => {
-            const last = lastStreamingAssistant()
-            if (last) last.streaming = false
-            busy.value = false
-            phase.value = null
-          },
-          (err) => {
-            const last = lastStreamingAssistant()
-            if (last) {
-              last.text += `\n${err}`
-              last.streaming = false
-            }
-            busy.value = false
-            phase.value = null
-          }
-        )
-      } else {
-        phase.value = null
-        busy.value = false
-        messages.value.push({
-          kind: 'text',
-          role: 'assistant',
-          text: 'تعذر الاتصال بخادم العيادة حالياً. يرجى التأكد من تشغيل جهاز العيادة.',
-          streaming: false
-        })
-      }
+    } catch (err: unknown) {
+      phase.value = null
+      busy.value = false
+      messages.value.push({
+        kind: 'text',
+        role: 'assistant',
+        text: '⚠️ تعذر الاتصال بالمساعد الذكي للعيادة حالياً. يرجى التأكد من تشغيل الخدمة والمحاولة لاحقاً.',
+        streaming: false
+      })
     } finally {
       busy.value = false
       phase.value = null
